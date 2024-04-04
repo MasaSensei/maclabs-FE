@@ -1,0 +1,205 @@
+.wptwaContainer {
+  max-width: 400px;
+  position: fixed;
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  font-family: helvetica;
+  font-size: 13px;
+  line-height: 1.4em;
+  max-width: 400px;
+  max-height: 100%;
+  overflow-y: auto;
+  z-index: 100000;
+}
+
+.wptwaBox {
+  max-width: calc(100% - 40px);
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(26, 161, 48, 1);
+  text-align: left;
+  background: white;
+  border: 1px solid #f5f5f5;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.02);
+  padding: 20px 20px 10px;
+  margin: 20px 20px 0;
+  position: relative;
+  border-radius: 6px 6px 0 0;
+  transition: all 0.2s;
+}
+
+.wptwaBox::before {
+  content: "";
+  position: absolute;
+  height: 13px;
+  border: 1px solid #f5f5f5;
+  background-color: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 255, 255, 1);
+  z-index: 2;
+  box-shadow: none;
+  background: white;
+  transform: none;
+  bottom: 0;
+  width: 19px;
+  right: 17px;
+}
+
+.wptwaBox::after {
+  background-color: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 255, 255, 1);
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  right: 22px;
+  width: 13px;
+  height: 13px;
+  background: white;
+  transform: rotate(45deg);
+  z-index: 1;
+  border: 1px solid #f5f5f5;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.02);
+}
+
+.wptwaDescription {
+  background-color: rgba(69, 183, 78, 0.9);
+  color: rgba(255, 255, 255, 1);
+  border-radius: 6px 6px 0 0;
+  padding: 20px;
+  padding-right: 30px;
+  margin: -20px -20px 10px;
+}
+
+.wptwaClose::before {
+  background-color: rgba(255, 255, 255, 1);
+  content: "";
+  display: block;
+  background: white;
+  width: 15px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%) rotate(45deg);
+}
+
+.wptwaClose::after {
+  background-color: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+  content: "";
+  display: block;
+  background: white;
+  width: 15px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.wptwaClose {
+  visibility: visible;
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.wptwaAccount {
+  color: inherit;
+  display: block;
+  padding: 10px 10px;
+  margin: 0 -10px -1px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 3;
+}
+
+.wptwaFace {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  float: left;
+  position: relative;
+}
+
+.wptwaFace::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  bottom: 0;
+  right: -5px;
+  background: transparent
+    url("https://macnesia.co.id/service/images/logo-green-small.png") center
+    center no-repeat;
+  background-size: cover;
+  z-index: 9999;
+}
+
+.wptwaInfo {
+  position: relative;
+  top: 2px;
+  color: inherit;
+  float: left;
+  width: calc(100% - 55px);
+}
+
+.wptwaTitle {
+  font-size: 11px;
+  line-height: 100%;
+  opacity: 0.5;
+}
+
+.wptwaName {
+  font-weight: bold;
+  display: block;
+}
+
+.wptwaClearfix::before {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.wptwaClearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.wptwaHandler {
+  background-color: rgba(69, 183, 78, 0.9);
+  color: rgba(255, 255, 255, 1);
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  line-height: 120%;
+  white-space: nowrap;
+  text-align: center;
+  transition: all 0.3s;
+  position: relative;
+  margin: 20px;
+  z-index: 9999;
+}
+
+.wptwaHandler:hover {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.svg {
+  fill: rgba(255, 255, 255, 1);
+  max-width: 15px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+}

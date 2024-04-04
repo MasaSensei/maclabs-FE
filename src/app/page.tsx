@@ -1,113 +1,264 @@
-import Image from "next/image";
+"use client";
+
+import Cores from "@/components/core";
+import Layouts from "@/components/layouts";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Steps from "@/data/steps";
+import Devices from "@/data/device_list.json";
+import { YouTubeEmbed } from "@next/third-parties/google";
+import { FaCheckCircle } from "react-icons/fa";
+import { RiArrowRightSFill } from "react-icons/ri";
+import Experiences from "@/data/experiences.json";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <section className="min-h-screen bg-center bg-black bg-[url('/images/ML-FOTO-05.webp')] bg-cover">
+        <div className="px-4 mx-auto flex items-center max-w-screen h-screen max-w-screen-xl text-center">
+          <div className="container relative">
+            <div className="grid grid-cols-1 mt-12 lg:mt-0 gap-[30px]">
+              <motion.h1
+                className="text-white font-bold uppercase drop-shadow-2xl lg:text-7xl text-xl leading-normal relative"
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+              >
+                Welcome To Maclabs.co.id
+              </motion.h1>
+              <motion.p
+                className="text-white italic text-2xl"
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.7 }}
+              >
+                One Stop Solution For Apple Device
+              </motion.p>
+              <motion.div
+                className="lg:px-96 flex items-center justify-center"
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.9 }}
+              >
+                <Cores.Button variant={"default"} className="lg:w-full w-1/2">
+                  <Link href={"/"} target="_blank">
+                    Contact Us
+                  </Link>
+                </Cores.Button>
+              </motion.div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      </section>
+      <Layouts.Section variant={"secondary"}>
+        <Cores.Title
+          title="For All Mac Devices, All Problems"
+          content="Apapun permasalahan perangkat Apple Anda, Service Mac? Maclabs.co.id Solusinya!"
         />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
+          {Devices.map((device) => (
+            <Cores.Card
+              caseType="blog"
+              key={device.id}
+              images={device.image}
+              name={device.name}
+              content={device.content}
+              link={device.link}
+            />
+          ))}
+        </div>
+      </Layouts.Section>
+      <Layouts.Section variant={"default"}>
+        <Cores.Title
+          title="Bagaimana Cara Kami Bekerja"
+          content="Dapatkan tiga langkah mudah hanya di Maclabs.co.id"
+        />
+        <div className="flex flex-wrap lg:flex-nowrap justify-center items-center overflow-hidden gap-4">
+          {Steps.map((step) => (
+            <div
+              className={`relative group flex items-center justify-center flex-col text-center`}
+              key={step.id}
+            >
+              <div
+                className={`${
+                  step.id === 1 && "border-2 border-red-500"
+                } p-6 rounded-full flex items-center group-hover:border-red-500 group-hover:border-2 transition-color duration-300 justify-center w-32 h-32 shadow-lg
+            `}
+              >
+                <span className="text-black">{step.icon}</span>
+              </div>
+              <h4 className="text-2xl w-3/4 mb-0 mt-6">
+                <span className="font-bold">Step {step.id}.</span> {step.title}
+              </h4>
+              <p className="mt-2.5 mx-auto w-72">{step.description}</p>
+            </div>
+          ))}
+        </div>
+      </Layouts.Section>
+      <Layouts.Section variant={"secondary"}>
+        <Cores.Title
+          title="Benefits Untuk Anda"
+          content="Apa keuntungan yang Anda dapat jika melakukan service perangkat Apple anda di Maclabs.id?"
+        />
+        <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-4 gap-2">
+          <div className="relative min-w-full lg:min-w-72 lg:mt-14">
+            <div className="flex lg:text-right lg:flex-row-reverse mb-2">
+              <div>
+                <div className="bg-red-500 md:mr-0 bg-red-600 rounded-full text-white w-14 h-14 my-0 lg:mx-4 mr-4 text-xl text-center flex items-center justify-center">
+                  01
+                </div>
+              </div>
+              <div className="min-h-48 pt-4 text-xl">
+                <h5 className="font-bold text-2xl capitalize mb-0 text-slate-800">
+                  Berkualitas
+                </h5>
+                <p className="mt-2.5 mb-0 text-sm">
+                  Kami mengutamakan kualitas. Setiap perangkat yang sudah
+                  selesai, selalu dilakukan running test dan Quality Control.
+                </p>
+              </div>
+            </div>
+            <div className="flex lg:text-right lg:flex-row-reverse mb-2">
+              <div>
+                <div className="bg-red-500 md:mr-0 bg-red-600 rounded-full text-white w-14 h-14 my-0 lg:mx-4 mr-4 text-xl text-center flex items-center justify-center">
+                  02
+                </div>
+              </div>
+              <div className="min-h-48 pt-4 text-xl">
+                <h5 className="font-bold text-2xl capitalize mb-0 text-slate-800">
+                  Tepat Waktu
+                </h5>
+                <p className="mt-2.5 mb-0 text-sm">
+                  Kami sangat menghargai waktu Anda. Untuk penggantian part bisa
+                  di tunggu, kecuali perbaikan Logic Board estimasi 2-3 hari.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="relative hidden lg:inline-block min-w-72 min-w-full w-full lg:mt-14">
+            <YouTubeEmbed videoid="fA2GqKMNfKY" />
+          </div>
+          <div className="relative min-w-full lg:min-w-72 lg:mt-14">
+            <div className="flex lg:text-left lg:flex-row mb-2">
+              <div>
+                <div className="bg-red-500 md:ml-0 bg-red-600 rounded-full text-white w-14 h-14 my-0 lg:mx-4 mr-4 text-xl text-center flex items-center justify-center">
+                  03
+                </div>
+              </div>
+              <div className="min-h-48 pt-4 text-xl">
+                <h5 className="font-bold text-2xl capitalize mb-0 text-slate-800">
+                  Harga Kompetitif & Transparan
+                </h5>
+                <p className="mt-2.5 mb-0 text-sm">
+                  Harga yang kami tawarkan sangat beralasan. Anda bisa mengecek
+                  terlebih dahulu harga sparepart yang akan diganti sebelum
+                  memutuskan untuk melakukan penggantian.
+                </p>
+              </div>
+            </div>
+            <div className="flex lg:text-left lg:flex-row mb-2">
+              <div>
+                <div className="bg-red-500 md:ml-0 bg-red-600 rounded-full text-white w-14 h-14 my-0 lg:mx-4 mr-4 text-xl text-center flex items-center justify-center">
+                  04
+                </div>
+              </div>
+              <div className="min-h-48 pt-4 text-xl">
+                <h5 className="font-bold text-2xl capitalize mb-0 text-slate-800">
+                  Bergaransi
+                </h5>
+                <p className="mt-2.5 mb-0 text-sm">
+                  Layanan garansi selama 90 Hari sampai dengan 1 Tahun. Anda
+                  dapat mengklaim kembali device tersebut tanpa adanya biaya
+                  tambahan dalam masa garansi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Layouts.Section>
+      <Layouts.Section variant={"default"}>
+        <Cores.Title
+          title="Pengalaman Kami"
+          content="We are proud of our victories and achievements!"
+        />
+        <div className="grid lg:grid-cols-4 lg:pt-10 pt-5 md:grid-cols-2 grid-cols-1 gap-8">
+          {Experiences.map((experience) => (
+            <div
+              className="relative min-h-1 px-4 text-center"
+              key={experience.id}
+            >
+              <div
+                className={`${
+                  experience.id === 2 && "border-red-600"
+                } lg:w-52 lg:h-52 mt-0 w-56 h-56 mt-0 mx-auto rounded-full flex flex-col justify-center items-center bg-white border-2 border-transparent shadow-xl border-solid transition-color hover:border-red-600 duration-300`}
+              >
+                <h5 className="lg:text-4xl text-3xl mb-0">
+                  {experience.title}
+                </h5>
+                <p className="mt-2 text-sm">{experience.content}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Layouts.Section>
+      <Layouts.Section variant={"secondary"}>
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-8">
+          <div className="relative min-w-1/2">
+            <YouTubeEmbed videoid="_s-rk06tOxk" />
+          </div>
+          <div className="relative w-full">
+            <Cores.Title
+              title="Buy, Sell, Trade"
+              content="Anda bosan dengan perangkat Apple lama dan berencana untuk menukar dengan perangkat Apple yang baru?"
+            />
+            <p className="mt-6 text-slate-800">
+              Berencana upgrade perangkat Apple? MACLABS.ID menyediakan tukar
+              tambah dan jual beli produk terbaru
+            </p>
+            <ul className="mt-0 flex flex-col items-start gap-2 justify-start mx-0 mb-3 pt-2.5 px-0 pb-0 list-none">
+              <li className="flex justify-center items-center">
+                <FaCheckCircle className="text-red-600" />
+                <span className="ml-3">
+                  {" "}
+                  Kami akan membayar sesuai perangkat Apple Anda!
+                </span>
+              </li>
+              <li className="flex justify-center items-center">
+                <FaCheckCircle className="text-red-600" />
+                <span className="ml-3">
+                  {" "}
+                  Kami akan membayar sesuai perangkat Apple Anda!
+                </span>
+              </li>
+              <li className="flex justify-center items-center">
+                <FaCheckCircle className="text-red-600" />
+                <span className="ml-3">
+                  {" "}
+                  Kami akan membayar sesuai perangkat Apple Anda!
+                </span>
+              </li>
+            </ul>
+            <div className="grid lg:grid-cols-2 mt-9 gap-8 grid-cols-1">
+              <Cores.Button variant={"default"} className="w-1/2">
+                <Link href="https://maclabs.id/">
+                  Jual Perangkat{" "}
+                  <span className="ml-2">
+                    <RiArrowRightSFill />
+                  </span>
+                </Link>
+              </Cores.Button>
+              <Cores.Button variant={"secondary"} className="w-1/2">
+                <Link href="https://maclabs.id/">
+                  Sell Now{" "}
+                  <span className="ml-2">
+                    <RiArrowRightSFill />
+                  </span>
+                </Link>
+              </Cores.Button>
+            </div>
+          </div>
+        </div>
+      </Layouts.Section>
+    </>
   );
 }

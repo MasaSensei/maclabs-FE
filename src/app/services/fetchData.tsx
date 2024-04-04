@@ -1,0 +1,94 @@
+"use client";
+
+import Cores from "@/components/core";
+import { detailServices } from "@/services/detailServices";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+
+const FetchData = () => {
+  const [data, setData] = useState([]);
+
+  const devices = [
+    {
+      id: 1,
+      image: "/images/MACBOOK-A1534-2016.webp",
+      name: "Macbook",
+    },
+    {
+      id: 2,
+      image: "/images/image-removebg-preview-6-300x300-1.webp",
+      name: "iMac",
+    },
+    {
+      id: 3,
+      image: "/images/mac-mini-3.webp",
+      name: "Mac-Mini",
+    },
+    {
+      id: 4,
+      image: "/images/mac-pro-tabung.webp",
+      name: "Mac-Pro",
+    },
+  ];
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await detailServices();
+      setData(res?.data);
+    };
+    fetchData();
+  }, []);
+  return (
+    <div className="mx-auto">
+      {devices.map((device) => (
+        <div className="w-full bg-gray-500 rounded-lg my-2" key={device?.id}>
+          <h1 className="text-3xl bg-red-500 rounded-lg text-center text-white py-5">
+            Services {device?.name}
+          </h1>
+          <div className="grid lg:grid-cols-3 grid-cols-1">
+            <div className="flex col-span-3 items-center justify-center">
+              <Image
+                src={device?.image}
+                width={400}
+                height={400}
+                alt={device?.name.toLowerCase()}
+              />
+            </div>
+          </div>
+          <div className="grid lg:grid-cols-3 grid-cols-1 pb-8 gap-5">
+            {data
+              ?.filter(
+                (item: any) => item.category === device?.name?.toLowerCase()
+              )
+              .map((item: any) => (
+                <div className="text-center">
+                  <Cores.Button variant={"default"} className="flex mx-2">
+                    <Link
+                      href={`/services/${device.name.toLowerCase()}/${
+                        item?.url
+                      }`}
+                    >
+                      {item?.name}
+                    </Link>
+                  </Cores.Button>
+                </div>
+              ))}
+            {!data ||
+              (data.filter(
+                (item: any) => item.category === device?.name?.toLowerCase()
+              ).length === 0 && (
+                <div className="text-center col-span-3">
+                  <Cores.Button variant={"default"} className="flex mx-2">
+                    <h2 className="cursor-pointer">Service {device?.name}</h2>
+                  </Cores.Button>
+                </div>
+              ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default FetchData;

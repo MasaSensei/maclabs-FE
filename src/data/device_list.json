@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "MacBook",
+    "image": "/images/devices/device-macbook.webp",
+    "content": "Macbook bermasalah? Maclabs dapat menangani segala jenis kerusakan seperti Macbook Mati Total, Not charging, Water Damage hanya dalam beberapa hari tanpa harus ganti Logic Board. Setiap kerusakan akan selalu diberikan informasi yang jelas dari Admin kami. Punya masalah Macbook? Konsultasi Sekarang!",
+    "link": "/services/macbook"
+  },
+  {
+    "id": 2,
+    "name": "iMac",
+    "image": "/images/devices/device-imac.webp",
+    "content": "iMac Anda bermasalah? Maclabs dapat menangani segala jenis kerusakan seperti iMac Mati Total, Power Supply Bermasalah atau karena korsleting listrik hanya dalam beberapa hari tanpa harus ganti Logic Board. Setiap kerusakan akan selalu diberikan informasi yang jelas dari Admin kami. Punya masalah iMac? Konsultasi Sekarang!",
+    "link": "/services/imac"
+  },
+  {
+    "id": 3,
+    "name": "Mac-Mini",
+    "image": "/images/devices/device-mac-mini.webp",
+    "content": "Mac Mini Anda bermasalah? Maclabs dapat menangani segala jenis kerusakan seperti Power Supply Bermasalah atau ingin cleaning Mac Mini hanya dalam beberapa hari tanpa harus ganti Logic Board. Setiap kerusakan akan selalu diberikan informasi yang jelas dari Admin kami. Punya masalah Mac Mini Konsultasi Sekarang!",
+    "link": "/services/mac-mini"
+  },
+  {
+    "id": 4,
+    "name": "Mac-Pro",
+    "image": "/images/devices/mac-pro.webp",
+    "content": "Mac Pro Anda bermasalah? Maclabs dapat menangani segala jenis kerusakan seperti Power Supply Bermasalah atau ingin cleaning Mac Pro hanya dalam beberapa hari tanpa harus ganti Logic Board. Setiap kerusakan akan selalu diberikan informasi yang jelas dari Admin kami. Punya masalah Mac Pro Konsultasi Sekarang!",
+    "link": "/services/mac-pro"
+  }
+]
