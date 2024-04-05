@@ -1,7 +1,8 @@
+"use client";
+
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -9,6 +10,8 @@ import {
 import Image from "next/image";
 import Cores from "..";
 import Link from "next/link";
+
+import { useRef } from "react";
 
 interface CardProps {
   images?: string;
@@ -21,6 +24,7 @@ interface CardProps {
 
 const MyCard: React.FC<CardProps> = (props) => {
   const { images, name, content, link, caseType, icon } = props;
+
   switch (caseType) {
     case "blog":
       return (

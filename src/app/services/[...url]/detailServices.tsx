@@ -1,7 +1,7 @@
 "use client";
 
-import { detailServices, getDetailServicesId } from "@/services/detailServices";
-import { DetailServices } from "@/types/detailServices";
+import { getDetailServicesId } from "@/services/detailServices";
+import type { DetailServices } from "@/types/detailServices";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -49,7 +49,7 @@ const DetailServices = () => {
         </h1>
         <div className="w-full flex justify-center my-3">
           <Image
-            src={data?.data[0]?.image || ""}
+            src={`/images/services/${data?.data[0]?.image}` || ""}
             width={400}
             height={400}
             alt={data?.data[0]?.name.toLowerCase() || ""}

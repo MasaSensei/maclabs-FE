@@ -11,7 +11,7 @@ import { Slide, ToastContainer, toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 
-const HomeVisitFormSchema = z.object({
+const PickupDeliveryFormSchema = z.object({
   name: z.string().nonempty("Masukkan Nama Anda"),
   jenisPerangkat: z.string().nonempty("Masukkan Device Anda"),
   email: z
@@ -26,13 +26,13 @@ const HomeVisitFormSchema = z.object({
   problem: z.string().nonempty("Masukkan Problem Anda"),
 });
 
-const HomeVisitForm = () => {
+const PickupDeliveryForm = () => {
   const {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm<z.infer<typeof HomeVisitFormSchema>>({
-    resolver: zodResolver(HomeVisitFormSchema),
+  } = useForm<z.infer<typeof PickupDeliveryFormSchema>>({
+    resolver: zodResolver(PickupDeliveryFormSchema),
   });
 
   const fields = [
@@ -138,9 +138,9 @@ const HomeVisitForm = () => {
     },
   ];
 
-  const onSubmit = async (data: z.infer<typeof HomeVisitFormSchema>) => {
+  const onSubmit = async (data: z.infer<typeof PickupDeliveryFormSchema>) => {
     const formData = {
-      service_type: "home_visit",
+      service_type: "pickup_delivery",
       customerService: "Dini",
       ...data,
     };
@@ -201,6 +201,40 @@ const HomeVisitForm = () => {
             </Button>
           </div>
         </div>
+        <div className="grid lg:grid-cols-12 mt-5">
+          <div className="lg:col-span-12">
+            <h1 className="text-xl uppercase my-5 text-center font-bold">
+              Syarat dan ketentuan Free Pickup & Delivery
+            </h1>
+            <ul className="text-sm list-disc text-start">
+              <li className="mt-2">
+                Free Pickup & Delivery hanya berlaku untuk wilayah JADETABEK
+              </li>
+              <li className="mt-2">
+                Pastikan customer dan kurir mengecek bersama kondisi unit di
+                saat pengambilan atau pengantaran ( unit sebelum & sesudah di
+                perbaiki )
+              </li>
+              <li className="mt-2">
+                Pastikan tidak ada akesoris menempel pada unit yang akan di
+                perbaiki.
+              </li>
+              <li className="mt-2">
+                Unit akan kami pickup & delivery dengan memakai bubble wrap anti
+                static
+              </li>
+              <li className="mt-2">
+                Kontak kurir akan kami informasikan setelah kami menerima form
+                ini
+              </li>
+              <li className="mt-2">
+                Kami akan kenakan biaya pengambilan dan pengantaran kurir jika
+                ada pembatalan secara sepihak dari customer atau tidak setuju
+                untuk melakukan perbaikan. ( batal servis )
+              </li>
+            </ul>
+          </div>
+        </div>
       </Layouts.Form>
       <ToastContainer
         position="top-center"
@@ -219,4 +253,4 @@ const HomeVisitForm = () => {
   );
 };
 
-export default HomeVisitForm;
+export default PickupDeliveryForm;

@@ -46,7 +46,7 @@ const ControllerInput: React.FC<ControllerInputProps> = (props) => {
                   placeholder={placeholder}
                 >
                   {options.map((item: any) => (
-                    <SelectItem key={item.value} value={item.value}>
+                    <SelectItem key={item.value} value={item.label}>
                       {item.label}
                     </SelectItem>
                   ))}
@@ -63,6 +63,7 @@ const ControllerInput: React.FC<ControllerInputProps> = (props) => {
                   {...field}
                   placeholder={placeholder}
                   type={type}
+                  min={new Date().toISOString().split("T")[0]}
                   defaultValue={defaultValue}
                 />
               ) : (

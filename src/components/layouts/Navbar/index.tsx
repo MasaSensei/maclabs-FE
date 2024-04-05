@@ -11,10 +11,12 @@ import {
 import Image from "next/image";
 import { CiMenuBurger } from "react-icons/ci";
 import menus from "@/data/menus.json";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathname = usePathname();
   return (
-    <header className="flex bg-sky-200 h-20 relative z-10 fixed w-full shirnk-0 items-center px-4 md:px-6">
+    <header className="flex bg-sky-200 h-20 relative z-10 sticky top-0 w-full shirnk-0 items-center px-4 md:px-6">
       <Sheet>
         <div className="flex justify-around items-center gap-8">
           <SheetTrigger asChild>
@@ -41,11 +43,21 @@ const Navbar = () => {
             />
           </Link>
           <div className="grid gap-2 py-6">
+            <Link
+              href={"/"}
+              className={`text-xl ${
+                pathname === "/" && "text-red-500"
+              } font-semibold`}
+            >
+              Home
+            </Link>
             {menus.map((menu, index) => (
               <Link
                 key={index}
                 href={menu.link}
-                className="text-xl font-semibold"
+                className={`text-xl ${
+                  pathname.includes(menu.link) ? "text-red-500" : "text-black"
+                } font-semibold`}
               >
                 {menu.name}
               </Link>
@@ -64,6 +76,20 @@ const Navbar = () => {
       <div className="ml-auto">
         <NavigationMenu className="hidden lg:flex">
           <NavigationMenuList>
+            <NavigationMenuLink
+              asChild
+              className="text-lg font-semibold"
+              href={"/"}
+            >
+              <Link
+                href={"/"}
+                className={`group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${
+                  pathname === "/" ? "bg-gray-100 text-gray-900" : "bg-sky-200"
+                }`}
+              >
+                Home
+              </Link>
+            </NavigationMenuLink>
             {menus.map((menu, index) => (
               <NavigationMenuLink
                 key={index}
@@ -71,7 +97,11 @@ const Navbar = () => {
                 className="text-lg font-semibold"
               >
                 <Link
-                  className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-sky-200 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+                  className={`group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${
+                    pathname.includes(menu.link)
+                      ? "bg-gray-100 text-gray-900"
+                      : "bg-sky-200"
+                  }`}
                   href={menu.link}
                   target="_blank"
                 >

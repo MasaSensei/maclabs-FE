@@ -1,13 +1,13 @@
 import Cores from "@/components/core";
 import Layouts from "@/components/layouts";
-import HomeVisitForm from "./formHomeVisit";
+import PickupDeliveryForm from "./formPickupDelivery";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home Service Perbaikan Mac-Devices - Maclabs.co.id",
+  title: "Pickup Delivery Mac-Devices - Maclabs.co.id",
   description:
-    "Home Service perbaikan terbaik untuk perangkat Mac Anda. Teknisi profesional kami siap membawa layanan berkualitas langsung ke pintu Anda.",
-  keywords: "Home Service, Home Visit, MacLabs Home Visit",
+    "Service All Mac Devices Jakarta seperti Macbook, iMac, Mac Mini dan Mac Pro. Menerima pergantian Part yang bergaransi dan berkualitas",
+  keywords: "Pickup Delivery, Pickup & Delivery, MacLabs Pickup & Delivery",
   icons: [
     {
       rel: "icon",
@@ -22,20 +22,20 @@ export const metadata: Metadata = {
   ],
 };
 
-const HomevisitPage = () => {
+const PickupDeliveryPage = () => {
   return (
     <Layouts.Section variant={"secondary"}>
       <Cores.Title
-        title={"Home Visit"}
-        content="Isi Form Di Bawah Ini Untuk Reservasi Home Visit"
+        title={"Pickup & Delivery"}
+        content="Isi Form Di Bawah Ini Untuk Reservasi Pickup & Delivery"
       />
       <div className="bg-white p-5 rounded-lg">
         <div className="container">
-          <HomeVisitForm />
+          <PickupDeliveryForm />
         </div>
       </div>
     </Layouts.Section>
   );
 };
 
-export default HomevisitPage;
+export default PickupDeliveryPage;

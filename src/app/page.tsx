@@ -1,8 +1,5 @@
-"use client";
-
 import Cores from "@/components/core";
 import Layouts from "@/components/layouts";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Steps from "@/data/steps";
 import Devices from "@/data/device_list.json";
@@ -10,6 +7,27 @@ import { YouTubeEmbed } from "@next/third-parties/google";
 import { FaCheckCircle } from "react-icons/fa";
 import { RiArrowRightSFill } from "react-icons/ri";
 import Experiences from "@/data/experiences.json";
+import Motion from "./motion";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Spesialis Service Macbook | iMac | Mac Mini - Maclabs.co.id",
+  description:
+    "Service All Mac Devices Jakarta seperti Macbook, iMac, Mac Mini dan Mac Pro. Menerima pergantian Part yang bergaransi dan berkualitas",
+  keywords: "service mac, service macbook, service imac, macbook mati total",
+  icons: [
+    {
+      rel: "icon",
+      type: "image/png",
+      url: "/images/cropped-logo-ml.webp",
+    },
+    {
+      rel: "apple-touch-icon",
+      sizes: "180x180",
+      url: "/images/cropped-logo-ml.webp",
+    },
+  ],
+};
 
 export default function Home() {
   return (
@@ -17,36 +35,7 @@ export default function Home() {
       <section className="min-h-screen bg-center bg-black bg-[url('/images/ML-FOTO-05.webp')] bg-cover">
         <div className="px-4 mx-auto flex items-center max-w-screen h-screen max-w-screen-xl text-center">
           <div className="container relative">
-            <div className="grid grid-cols-1 mt-12 lg:mt-0 gap-[30px]">
-              <motion.h1
-                className="text-white font-bold uppercase drop-shadow-2xl lg:text-7xl text-xl leading-normal relative"
-                initial={{ y: 100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-              >
-                Welcome To Maclabs.co.id
-              </motion.h1>
-              <motion.p
-                className="text-white italic text-2xl"
-                initial={{ y: 100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1, delay: 0.7 }}
-              >
-                One Stop Solution For Apple Device
-              </motion.p>
-              <motion.div
-                className="lg:px-96 flex items-center justify-center"
-                initial={{ y: 100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1, delay: 0.9 }}
-              >
-                <Cores.Button variant={"default"} className="lg:w-full w-1/2">
-                  <Link href={"/"} target="_blank">
-                    Contact Us
-                  </Link>
-                </Cores.Button>
-              </motion.div>
-            </div>
+            <Motion />
           </div>
         </div>
       </section>

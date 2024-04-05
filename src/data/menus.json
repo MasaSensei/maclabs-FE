@@ -1,9 +1,5 @@
 [
   {
-    "name": "Home",
-    "link": "/"
-  },
-  {
     "name": "Services",
     "link": "/services"
   },

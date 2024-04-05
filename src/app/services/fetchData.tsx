@@ -11,22 +11,18 @@ const FetchData = () => {
 
   const devices = [
     {
-      id: 1,
       image: "/images/MACBOOK-A1534-2016.webp",
       name: "Macbook",
     },
     {
-      id: 2,
       image: "/images/image-removebg-preview-6-300x300-1.webp",
       name: "iMac",
     },
     {
-      id: 3,
       image: "/images/mac-mini-3.webp",
       name: "Mac-Mini",
     },
     {
-      id: 4,
       image: "/images/mac-pro-tabung.webp",
       name: "Mac-Pro",
     },
@@ -41,8 +37,8 @@ const FetchData = () => {
   }, []);
   return (
     <div className="mx-auto">
-      {devices.map((device) => (
-        <div className="w-full bg-gray-500 rounded-lg my-2" key={device?.id}>
+      {devices.map((device, index) => (
+        <div className="w-full bg-gray-500 rounded-lg my-2" key={index}>
           <h1 className="text-3xl bg-red-500 rounded-lg text-center text-white py-5">
             Services {device?.name}
           </h1>
@@ -62,7 +58,7 @@ const FetchData = () => {
                 (item: any) => item.category === device?.name?.toLowerCase()
               )
               .map((item: any) => (
-                <div className="text-center">
+                <div className="text-center" key={item?.id}>
                   <Cores.Button variant={"default"} className="flex mx-2">
                     <Link
                       href={`/services/${device.name.toLowerCase()}/${
