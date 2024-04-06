@@ -2,7 +2,9 @@ import axios from "axios";
 
 const detailServices = async () => {
   try {
-    const response = await axios.get(`${process.env.SERVER}/detail_services`);
+    const response = await axios.get(
+      `https://server.maclabs.co.id/api/detail_services`
+    );
     return response?.data;
   } catch (error) {
     console.log(error);
@@ -15,7 +17,7 @@ const getDetailServicesId = async (category: number, url: string) => {
   }
   try {
     const response = await axios.get(`
-      ${process.env.SERVER}/detail_services?category=${category}&url=${url}`);
+    https://server.maclabs.co.id/api/detail_services?category=${category}&url=${url}`);
     return response?.data;
   } catch (error) {
     throw error;

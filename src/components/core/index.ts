@@ -6,6 +6,7 @@ import MyInput from "./Input/input";
 import MySelect from "./Select";
 import MyTextArea from "./TextArea";
 import MyLabel from "./Label";
+import Popup from "./Popup";
 
 const Cores = {
   Title,
@@ -16,6 +17,7 @@ const Cores = {
   Select: MySelect,
   TextArea: MyTextArea,
   Label: MyLabel,
+  Popup,
 };
 
 export default Cores;

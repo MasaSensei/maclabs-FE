@@ -32,14 +32,13 @@ const WhatsappPopup = () => {
           <span className={styles.wptwaClose} onClick={closePopup}></span>
           <div>
             <Link
-              href="https://wa.me/628165454883"
-              id="cs-883"
+              href="https://wa.me/62818850509"
               target={"_blank"}
-              className={`${styles.wptwaAccount} cs-883`}
+              className={`${styles.wptwaAccount}`}
             >
               <div className={styles.wptwaFace}>
                 <Image
-                  src="/images/whatsapp/customerserviceman.webp"
+                  src="/images/maclabs-cs.webp"
                   alt="whatsapp"
                   width={50}
                   height={50}
@@ -48,7 +47,7 @@ const WhatsappPopup = () => {
               </div>
               <div className={styles.wptwaInfo}>
                 <span className={styles.wptwaTitle}>Customer Support</span>
-                <span className={styles.wptwaName}>Kiky</span>
+                <span className={styles.wptwaName}>Ayu</span>
               </div>
               <div className={styles.wptwaClearfix}></div>
             </Link>

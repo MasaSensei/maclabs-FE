@@ -57,7 +57,7 @@ const Motion = () => {
         transition={{ duration: 1, delay: 0.9 }}
       >
         <Cores.Button variant={"default"} className="lg:w-full w-1/2">
-          <Link href={"/"} target="_blank">
+          <Link href={"https://wa.me/62818850509"} target="_blank">
             Contact Us
           </Link>
         </Cores.Button>

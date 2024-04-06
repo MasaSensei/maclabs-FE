@@ -3,7 +3,7 @@ import axios from "axios";
 const sendEmail = async (data: any) => {
   try {
     const response = await axios.post(
-      `${process.env.SERVER}/send-reservation-email`,
+      `https://server.maclabs.co.id/api/send-reservation-email`,
       data
     );
     return response?.data;

@@ -229,7 +229,7 @@ export default function Home() {
             </ul>
             <div className="grid lg:grid-cols-2 mt-9 gap-8 grid-cols-1">
               <Cores.Button variant={"default"} className="w-1/2">
-                <Link href="https://maclabs.id/">
+                <Link href="https://wa.me/62818850509" target="_blank">
                   Jual Perangkat{" "}
                   <span className="ml-2">
                     <RiArrowRightSFill />
@@ -237,7 +237,7 @@ export default function Home() {
                 </Link>
               </Cores.Button>
               <Cores.Button variant={"secondary"} className="w-1/2">
-                <Link href="https://maclabs.id/">
+                <Link href="https://wa.me/62818850509" target="_blank">
                   Sell Now{" "}
                   <span className="ml-2">
                     <RiArrowRightSFill />

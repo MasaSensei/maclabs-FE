@@ -12,6 +12,7 @@ import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -51,6 +52,8 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-KRM4XB7" />
+      <GoogleAnalytics gaId="AW-459096540" />
       <body className={inter.className}>
         <Layouts.Navbar />
         {pathname !== "/" && <Fragments.Jumbotron />}
@@ -116,7 +119,8 @@ export default function RootLayout({
               className="lg:text-5xl text-2xl text-red-500"
             >
               <Link
-                href="tel:+62818850509"
+                href="https://wa.me/62818850509"
+                target="_blank"
                 className="flex items-center justify-center"
               >
                 <span className="relative py-0 pl-0 pr-2">
@@ -149,6 +153,7 @@ export default function RootLayout({
           </div>
         </Layouts.Section>
         <Cores.WhatsappPopup />
+        {pathname === "/" && <Cores.Popup />}
         <Layouts.Footer />
       </body>
     </html>
