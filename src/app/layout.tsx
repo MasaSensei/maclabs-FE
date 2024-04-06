@@ -116,7 +116,7 @@ export default function RootLayout({
                 opacity: hasAnimated ? 1 : 0,
               }}
               transition={{ duration: 1, delay: 0.7 }}
-              className="lg:text-5xl text-2xl text-red-500"
+              className="lg:text-5xl text-2xl text-green-500 hover:text-green-700 transition-color duration-300"
             >
               <Link
                 href="https://wa.me/62818850509"

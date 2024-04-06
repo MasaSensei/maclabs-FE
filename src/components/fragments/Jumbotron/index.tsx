@@ -24,11 +24,14 @@ const Jumbotron = () => {
           </h3>
         </div>
       </div>
-      <div className="bg-sky-800 bg-opacity-70 absolute bottom-0 w-full">
-        <Breadcrumb className="container text-white py-5 uppercase font-bold">
+      <div className="bg-zinc-800 bg-opacity-70 absolute bottom-0 w-full">
+        <Breadcrumb className="container py-5 uppercase font-bold">
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink className="lg:text-2xl text-base" href="/">
+              <BreadcrumbLink
+                className="lg:text-2xl hover:text-white duration-300 transition ease-in-out text-base"
+                href="/"
+              >
                 Home
               </BreadcrumbLink>
             </BreadcrumbItem>
@@ -41,7 +44,7 @@ const Jumbotron = () => {
                   <BreadcrumbSeparator />
                   <BreadcrumbItem key={index}>
                     <BreadcrumbLink
-                      className="lg:text-2xl text-base"
+                      className="lg:text-2xl hover:text-white duration-300 transition ease-in-out text-base"
                       href={`/${breadcrumbPath}`}
                     >
                       {item.replaceAll("-", " ")}

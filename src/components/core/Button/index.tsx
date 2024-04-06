@@ -4,11 +4,11 @@ import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center hover:bg-red-700 transition-color duration-300",
+  "inline-flex items-center justify-center hover:bg-gray-900 transition-color duration-300",
   {
     variants: {
       variant: {
-        default: "bg-red-500 text-white",
+        default: "bg-gray-800 text-white",
         secondary: "bg-white text-black hover:text-white",
       },
     },

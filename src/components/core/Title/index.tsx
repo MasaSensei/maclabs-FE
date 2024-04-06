@@ -43,7 +43,7 @@ const Title: React.FC<TitleProps> = (props) => {
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: hasAnimated ? 0 : 100, opacity: hasAnimated ? 1 : 0 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="text-center font-bold lg:text-4xl text-2xl text-red-600"
+        className="text-center font-bold lg:text-4xl text-2xl text-zinc-900"
       >
         {title}
       </motion.h2>

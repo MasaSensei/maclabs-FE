@@ -39,7 +39,7 @@ const FetchData = () => {
     <div className="mx-auto">
       {devices.map((device, index) => (
         <div className="w-full bg-gray-500 rounded-lg my-2" key={index}>
-          <h1 className="text-3xl bg-red-500 rounded-lg text-center text-white py-5">
+          <h1 className="text-3xl bg-zinc-800 rounded-lg text-center text-white py-5">
             Services {device?.name}
           </h1>
           <div className="grid lg:grid-cols-3 grid-cols-1">

@@ -16,7 +16,7 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const pathname = usePathname();
   return (
-    <header className="flex bg-sky-200 h-20 relative z-10 sticky top-0 w-full shirnk-0 items-center px-4 md:px-6">
+    <header className="flex bg-zinc-400 h-20 relative z-10 sticky top-0 w-full shirnk-0 items-center px-4 md:px-6">
       <Sheet>
         <div className="flex justify-around items-center gap-8">
           <SheetTrigger asChild>
@@ -84,7 +84,7 @@ const Navbar = () => {
               <Link
                 href={"/"}
                 className={`group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${
-                  pathname === "/" ? "bg-gray-100 text-gray-900" : "bg-sky-200"
+                  pathname === "/" ? "bg-gray-100 text-gray-900" : "bg-zinc-400"
                 }`}
               >
                 Home
@@ -100,7 +100,7 @@ const Navbar = () => {
                   className={`group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${
                     pathname.includes(menu.link)
                       ? "bg-gray-100 text-gray-900"
-                      : "bg-sky-200"
+                      : "bg-zinc-400"
                   }`}
                   href={menu.link}
                   target="_blank"
