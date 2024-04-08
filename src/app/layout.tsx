@@ -50,13 +50,22 @@ export default function RootLayout({
     };
   }, [isInView]);
 
+  const disableJumbotron = [
+    "/",
+    "/alt-ads-1/",
+    "/alt-ads-2/",
+    "/alt-ads-3/",
+    "/alt-ads-4/",
+    "/alt-ads-5/",
+  ];
+
   return (
     <html lang="en">
       <GoogleTagManager gtmId="GTM-KRM4XB7" />
       <GoogleAnalytics gaId="AW-459096540" />
       <body className={inter.className}>
         <Layouts.Navbar />
-        {pathname !== "/" && <Fragments.Jumbotron />}
+        {!disableJumbotron.includes(pathname) && <Fragments.Jumbotron />}
         {children}
         <Layouts.Section variant={"default"}>
           <Cores.Title
@@ -104,9 +113,11 @@ export default function RootLayout({
               waktu yang cepat, diagnosa yang akurat, dan part yang berkualitas!
               Service Macbook menjadi mudah dengan lokasi kami yang strategis di
               Jakarta Pusat, karena Anda bisa mengunjungi alamat kami yang
-              berlokasi di Senayan Trade Center. Sibuk untuk visit store? Kami
-              menyediakan kurir khusus untuk menjangkau area lainnya seperti
-              Sudirman, Kuningan, Ambassador, dan sekitarnya.
+              berlokasi di <b>Senayan Trade Center</b>. Sibuk untuk visit store?
+              Kami menyediakan kurir khusus untuk menjangkau area lainnya
+              seperti
+              <b> Sudirman</b>, <b>Kuningan</b>, <b>Ambassador</b>, dan
+              sekitarnya.
             </motion.p>
 
             <motion.h3
@@ -153,7 +164,7 @@ export default function RootLayout({
           </div>
         </Layouts.Section>
         <Cores.WhatsappPopup />
-        {pathname === "/" && <Cores.Popup />}
+        {disableJumbotron.includes(pathname) && <Cores.Popup />}
         <Layouts.Footer />
       </body>
     </html>

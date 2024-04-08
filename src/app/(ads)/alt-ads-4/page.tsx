@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function Home() {
+export default function AltAds4() {
   return (
     <>
       <section className="min-h-screen bg-center bg-black bg-[url('/images/ML-FOTO-05.webp')] bg-cover">
@@ -57,6 +57,7 @@ export default function Home() {
           ))}
         </div>
       </Layouts.Section>
+
       <Layouts.Section variant={"default"}>
         <Cores.Title
           title="Bagaimana Cara Kami Bekerja"
@@ -87,7 +88,7 @@ export default function Home() {
       <Layouts.Section variant={"secondary"}>
         <Cores.Title
           title="Benefits Untuk Anda"
-          content="Apa keuntungan yang Anda dapat jika melakukan service perangkat Apple anda di Maclabs.id?"
+          content="Apa keuntungan yang akan Kalian dapatkan di Maclabs.id?"
         />
         <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-4 gap-2">
           <div className="relative min-w-full lg:min-w-72 lg:mt-14">
@@ -161,86 +162,6 @@ export default function Home() {
                   tambahan dalam masa garansi.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </Layouts.Section>
-      <Layouts.Section variant={"default"}>
-        <Cores.Title
-          title="Pengalaman Kami"
-          content="We are proud of our victories and achievements!"
-        />
-        <div className="grid lg:grid-cols-4 lg:pt-10 pt-5 md:grid-cols-2 grid-cols-1 gap-8">
-          {Experiences.map((experience) => (
-            <div
-              className="relative min-h-1 px-4 text-center"
-              key={experience.id}
-            >
-              <div
-                className={`${
-                  experience.id === 2 && "border-red-600"
-                } lg:w-52 lg:h-52 mt-0 w-56 h-56 mt-0 mx-auto rounded-full flex flex-col justify-center items-center bg-white border-2 border-transparent shadow-xl border-solid transition-color hover:border-red-600 duration-300`}
-              >
-                <h5 className="lg:text-4xl text-3xl mb-0">
-                  {experience.title}
-                </h5>
-                <p className="mt-2 text-sm">{experience.content}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Layouts.Section>
-      <Layouts.Section variant={"secondary"}>
-        <div className="grid lg:grid-cols-2 grid-cols-1 gap-8">
-          <div className="relative min-w-1/2">
-            <YouTubeEmbed videoid="_s-rk06tOxk" />
-          </div>
-          <div className="relative w-full">
-            <Cores.Title
-              title="Buy, Sell, Trade"
-              content="Anda bosan dengan perangkat Apple lama dan berencana untuk menukar dengan perangkat Apple yang baru?"
-            />
-            <p className="mt-6 text-slate-800">
-              Berencana upgrade perangkat Apple? MACLABS.ID menyediakan tukar
-              tambah dan jual beli produk terbaru
-            </p>
-            <ul className="mt-0 flex flex-col items-start gap-2 justify-start mx-0 mb-3 pt-2.5 px-0 pb-0 list-none">
-              <li className="flex justify-center items-center">
-                <FaCheckCircle className="text-red-600" />
-                <span className="ml-3">
-                  {" "}
-                  Kami akan membayar sesuai perangkat Apple Anda!
-                </span>
-              </li>
-              <li className="flex justify-center items-center">
-                <FaCheckCircle className="text-red-600" />
-                <span className="ml-3"> Perangkat baru yang terjamin!</span>
-              </li>
-              <li className="flex justify-center items-center">
-                <FaCheckCircle className="text-red-600" />
-                <span className="ml-3">
-                  {" "}
-                  Nikmati perangkat baru yang kami berikan!
-                </span>
-              </li>
-            </ul>
-            <div className="grid lg:grid-cols-2 mt-9 gap-8 grid-cols-1">
-              <Cores.Button variant={"default"} className="w-1/2">
-                <Link href="https://wa.me/62818850509" target="_blank">
-                  Jual Perangkat{" "}
-                  <span className="ml-2">
-                    <RiArrowRightSFill />
-                  </span>
-                </Link>
-              </Cores.Button>
-              <Cores.Button variant={"secondary"} className="w-1/2">
-                <Link href="https://wa.me/62818850509" target="_blank">
-                  Beli Baru{" "}
-                  <span className="ml-2">
-                    <RiArrowRightSFill />
-                  </span>
-                </Link>
-              </Cores.Button>
             </div>
           </div>
         </div>

@@ -12,11 +12,42 @@ import Image from "next/image";
 import { CiMenuBurger } from "react-icons/ci";
 import menus from "@/data/menus.json";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const pathname = usePathname();
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const adsPages = [
+    "/",
+    "/alt-ads-1/",
+    "/alt-ads-2/",
+    "/alt-ads-3/",
+    "/alt-ads-4/",
+    "/alt-ads-5/",
+  ];
   return (
-    <header className="flex bg-zinc-400 h-20 relative z-10 sticky top-0 w-full shirnk-0 items-center px-4 md:px-6">
+    <header
+      className={`flex bg-zinc-400 ${
+        scroll ? "bg-opacity-100 border-b border-zinc-300" : "bg-opacity-0"
+      } h-20 z-10 fixed w-full shirnk-0 items-center transition duration-300 ease-in-out  px-4 md:px-6`}
+    >
       <Sheet>
         <div className="flex justify-around items-center gap-8">
           <SheetTrigger asChild>
@@ -46,7 +77,7 @@ const Navbar = () => {
             <Link
               href={"/"}
               className={`text-xl ${
-                pathname === "/" && "text-red-500"
+                adsPages.includes(pathname) && "text-red-500"
               } font-semibold`}
             >
               Home
@@ -84,8 +115,12 @@ const Navbar = () => {
               <Link
                 href={"/"}
                 className={`group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${
-                  pathname === "/" ? "bg-gray-100 text-gray-900" : "bg-zinc-400"
-                }`}
+                  adsPages.includes(pathname)
+                    ? "bg-gray-100 text-gray-900"
+                    : scroll
+                    ? "bg-opacity-0 text-gray-900"
+                    : "bg-opacity-0"
+                } `}
               >
                 Home
               </Link>
@@ -100,7 +135,9 @@ const Navbar = () => {
                   className={`group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${
                     pathname.includes(menu.link)
                       ? "bg-gray-100 text-gray-900"
-                      : "bg-zinc-400"
+                      : scroll
+                      ? "bg-opacity-0 text-gray-900"
+                      : "bg-opacity-0 text-white"
                   }`}
                   href={menu.link}
                   target="_blank"

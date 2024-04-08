@@ -53,6 +53,16 @@ const ContactForm = () => {
 
   const onSubmit = (data: z.infer<typeof ContactFormSchema>) => {
     console.log(data);
+    const { name, phone, email, message } = data;
+    const whatsappMessage = `
+    Name: ${name}
+    Whatsapp Number: ${phone}
+    Email: ${email}
+    Message: ${message}`;
+    const whatsappLink = `https://wa.me/62818850509/?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+    window.open(whatsappLink, "_blank");
   };
 
   return (

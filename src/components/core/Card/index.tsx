@@ -17,7 +17,7 @@ interface CardProps {
   images?: string;
   icon?: React.ReactNode;
   name: string;
-  content: string;
+  content?: string;
   link?: string;
   caseType: "blog" | "default";
 }
@@ -64,8 +64,10 @@ const MyCard: React.FC<CardProps> = (props) => {
               target="_blank"
             >
               <CardHeader className="flex flex-col items-center justify-center">
-                {icon}
-                <CardTitle className="pt-4 text-red-500 uppercase font-bold text-2xl">
+                <span className="lg:text-5xl text-2xl text-zinc-500 group-hover:text-zinc-700 transition-color duration-300">
+                  {icon}
+                </span>
+                <CardTitle className="pt-4 text-zinc-500 group-hover:text-zinc-700 transition-color duration-300 uppercase font-bold text-2xl">
                   {name}
                 </CardTitle>
               </CardHeader>

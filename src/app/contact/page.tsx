@@ -34,7 +34,8 @@ const ContactPage = () => {
           <div className="w-full px-4">
             <div className="flex items-center flex-col justify-center gap-8">
               <Link
-                href="/"
+                href="https://wa.me/62818850509/"
+                target="_blank"
                 className="flex group hover:bg-green-500 hover:text-white p-5 rounded-lg transition ease-in-out duration-300  items-center gap-5 justify-center"
               >
                 <span className="text-4xl text-green-500 group-hover:text-white transition ease-in-out duration-300">

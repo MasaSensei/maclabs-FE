@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function Home() {
+export default function AltAds2() {
   return (
     <>
       <section className="min-h-screen bg-center bg-black bg-[url('/images/ML-FOTO-05.webp')] bg-cover">
@@ -39,24 +39,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Layouts.Section variant={"secondary"}>
-        <Cores.Title
-          title="For All Mac Devices, All Problems"
-          content="Apapun permasalahan perangkat Apple Anda, Service Mac? Maclabs.co.id Solusinya!"
-        />
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
-          {Devices.map((device) => (
-            <Cores.Card
-              caseType="blog"
-              key={device.id}
-              images={device.image}
-              name={device.name}
-              content={device.content}
-              link={device.link}
-            />
-          ))}
-        </div>
-      </Layouts.Section>
+
       <Layouts.Section variant={"default"}>
         <Cores.Title
           title="Bagaimana Cara Kami Bekerja"
@@ -87,7 +70,7 @@ export default function Home() {
       <Layouts.Section variant={"secondary"}>
         <Cores.Title
           title="Benefits Untuk Anda"
-          content="Apa keuntungan yang Anda dapat jika melakukan service perangkat Apple anda di Maclabs.id?"
+          content="Apa keuntungan yang akan Kalian dapatkan di Maclabs.id?"
         />
         <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-4 gap-2">
           <div className="relative min-w-full lg:min-w-72 lg:mt-14">
@@ -198,18 +181,18 @@ export default function Home() {
           <div className="relative w-full">
             <Cores.Title
               title="Buy, Sell, Trade"
-              content="Anda bosan dengan perangkat Apple lama dan berencana untuk menukar dengan perangkat Apple yang baru?"
+              content="Anda bosan dengan perangkat yang lama dan berencana untuk menukar dengan perangkat yang baru?"
             />
             <p className="mt-6 text-slate-800">
-              Berencana upgrade perangkat Apple? MACLABS.ID menyediakan tukar
-              tambah dan jual beli produk terbaru
+              Berencana upgrade perangkat? MACLABS.ID menyediakan tukar tambah
+              dan jual beli produk terbaru
             </p>
             <ul className="mt-0 flex flex-col items-start gap-2 justify-start mx-0 mb-3 pt-2.5 px-0 pb-0 list-none">
               <li className="flex justify-center items-center">
                 <FaCheckCircle className="text-red-600" />
                 <span className="ml-3">
                   {" "}
-                  Kami akan membayar sesuai perangkat Apple Anda!
+                  Kami akan membayar sesuai perangkat Anda!
                 </span>
               </li>
               <li className="flex justify-center items-center">
@@ -235,7 +218,7 @@ export default function Home() {
               </Cores.Button>
               <Cores.Button variant={"secondary"} className="w-1/2">
                 <Link href="https://wa.me/62818850509" target="_blank">
-                  Beli Baru{" "}
+                  Beli Baru
                   <span className="ml-2">
                     <RiArrowRightSFill />
                   </span>
