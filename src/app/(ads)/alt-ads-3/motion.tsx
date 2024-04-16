@@ -44,21 +44,13 @@ const Motion = () => {
         animate={{ y: hasAnimated ? 0 : 100, opacity: hasAnimated ? 1 : 0 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        Welcome To MacLabs.co.id
+        Pengerjaan Express
       </motion.h1>
-      <motion.p
-        className="text-white italic text-2xl"
-        initial={{ y: 100, opacity: 0 }}
-        animate={{ y: hasAnimated ? 0 : 100, opacity: hasAnimated ? 1 : 0 }}
-        transition={{ duration: 1, delay: 0.7 }}
-      >
-        One Stop Solution
-      </motion.p>
       <motion.div
         className="lg:px-96 flex items-center justify-center"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: hasAnimated ? 0 : 100, opacity: hasAnimated ? 1 : 0 }}
-        transition={{ duration: 1, delay: 0.9 }}
+        transition={{ duration: 1, delay: 0.7 }}
       >
         <Cores.Button variant={"default"} className="w-full">
           <Link href={"https://wa.me/62818850509"} target="_blank">

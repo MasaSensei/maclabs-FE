@@ -15,9 +15,9 @@ const BenefitLists = [
   {
     id: 2,
     icon: <RiMacLine />,
-    name: "Repair All Apple Device",
+    name: "Repair Logicboard Expert",
     content:
-      "Maclabs.co.id menerima perbaikan perangkat Apple seperti Macbook, iMac, Mac Mini, dan Mac Pro dengan segala jenis kerusakan. Berkualitas dan bergaransi hingga 90 Hari",
+      "Maclabs.co.id menerima perbaikan perangkat pada logicboard Macbook, iMac, Mac Mini, dan Mac Pro dengan segala jenis kerusakan. Berkualitas dan bergaransi hingga 90 Hari",
   },
   {
     id: 3,

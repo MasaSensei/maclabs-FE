@@ -119,7 +119,7 @@ const Navbar = () => {
                     ? "bg-gray-100 text-gray-900"
                     : scroll
                     ? "bg-opacity-0 text-gray-900"
-                    : "bg-opacity-0"
+                    : "bg-opacity-0 text-white"
                 } `}
               >
                 Home

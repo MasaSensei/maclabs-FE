@@ -108,7 +108,7 @@ export default function AltAds2() {
             </div>
           </div>
           <div className="relative hidden lg:inline-block min-w-72 min-w-full w-full lg:mt-14">
-            <YouTubeEmbed videoid="fA2GqKMNfKY" />
+            <YouTubeEmbed videoid="9LbWheup1Q0" />
           </div>
           <div className="relative min-w-full lg:min-w-72 lg:mt-14">
             <div className="flex lg:text-left lg:flex-row mb-2">
@@ -176,7 +176,7 @@ export default function AltAds2() {
       <Layouts.Section variant={"secondary"}>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-8">
           <div className="relative min-w-1/2">
-            <YouTubeEmbed videoid="_s-rk06tOxk" />
+            <YouTubeEmbed videoid="9LbWheup1Q0" />
           </div>
           <div className="relative w-full">
             <Cores.Title
@@ -207,8 +207,8 @@ export default function AltAds2() {
                 </span>
               </li>
             </ul>
-            <div className="grid lg:grid-cols-2 mt-9 gap-8 grid-cols-1">
-              <Cores.Button variant={"default"} className="w-1/2">
+            <div className="grid lg:grid-cols-2 mt-9 lg:gap-8 gap-3 grid-rows-1">
+              <Cores.Button variant={"default"} className="lg:w-1/2 w-full">
                 <Link href="https://wa.me/62818850509" target="_blank">
                   Jual Perangkat{" "}
                   <span className="ml-2">
@@ -216,7 +216,7 @@ export default function AltAds2() {
                   </span>
                 </Link>
               </Cores.Button>
-              <Cores.Button variant={"secondary"} className="w-1/2">
+              <Cores.Button variant={"secondary"} className="lg:w-1/2 w-full">
                 <Link href="https://wa.me/62818850509" target="_blank">
                   Beli Baru
                   <span className="ml-2">

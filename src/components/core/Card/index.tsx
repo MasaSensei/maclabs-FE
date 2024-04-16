@@ -78,10 +78,10 @@ const MyCard: React.FC<CardProps> = (props) => {
           ) : (
             <>
               <CardHeader className="flex flex-col items-center justify-center">
-                <span className="lg:text-5xl text-2xl text-zinc-500 group-hover:text-zinc-700 transition-color duration-300">
+                <span className="text-5xl text-zinc-500 group-hover:text-zinc-700 transition-color duration-300">
                   {icon}
                 </span>
-                <CardTitle className="pt-4 text-zinc-500 group-hover:text-zinc-700 transition-color duration-300 uppercase font-bold text-2xl">
+                <CardTitle className="pt-4 text-zinc-500 group-hover:text-zinc-700 transition-color duration-300 uppercase font-bold text-center text-2xl">
                   {name}
                 </CardTitle>
               </CardHeader>
