@@ -19,6 +19,10 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `${baseUrl}/cara-reset-smc`,
+      lastModified: new Date(),
+    },
+    {
       url: `${baseUrl}/services`,
       lastModified: new Date(),
     },

@@ -22,7 +22,7 @@ const Popup = () => {
           <div className="space-y-6">
             <Link href={"https://wa.me/62818850509"} target="_blank">
               <Image
-                src={"/images/maclabs-free-pickup-delivery-01.webp"}
+                src={"/images/maclabs-free-pickup-delivery.webp"}
                 alt="popup"
                 width={600}
                 height={600}
