@@ -5,6 +5,7 @@ import { YouTubeEmbed } from "@next/third-parties/google";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://maclabs.co.id/"),
   title: "Pickup Delivery Mac-Devices - Maclabs.co.id",
   description:
     "Service All Mac Devices Jakarta seperti Macbook, iMac, Mac Mini dan Mac Pro. Menerima pergantian Part yang bergaransi dan berkualitas",
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
       url: "/images/cropped-logo-ml.webp",
     },
   ],
+  alternates: {
+    canonical: `https://maclabs.co.id/pickup-delivery/`,
+  },
 };
 
 const PickupDeliveryPage = () => {

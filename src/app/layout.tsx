@@ -106,7 +106,7 @@ export default function RootLayout({
                 opacity: hasAnimated ? 1 : 0,
               }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="mb-6 leading-6"
+              className="mb-6 leading-6 text-slate-800"
             >
               MacLabs menerima segala jenis kerusakan pada perangkat Mac Anda
               dari kerusakan ringan hingga berat yang dapat diselesaikan dengan

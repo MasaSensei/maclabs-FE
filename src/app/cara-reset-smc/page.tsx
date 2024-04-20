@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://maclabs.co.id/"),
   title: "Cara Melakukan Reset SMC Pada Mac - Maclabs.co.id",
   description:
     "SMC atau System Management Controller pada Macbook dapat direset dengan cara berikut 1. Shut down mac terlebih dahulu 2. Lalu tekan tombol...",

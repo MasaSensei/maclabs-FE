@@ -60,11 +60,7 @@ const FetchData = () => {
               .map((item: any) => (
                 <div className="text-center" key={item?.id}>
                   <Cores.Button variant={"default"} className="flex mx-2">
-                    <Link
-                      href={`/services/${device.name.toLowerCase()}/${
-                        item?.url
-                      }`}
-                    >
+                    <Link href={`/computer-services/${item?.url}`}>
                       {item?.name}
                     </Link>
                   </Cores.Button>

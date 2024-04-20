@@ -24,4 +24,15 @@ const getDetailServicesId = async (category: number, url: string) => {
   }
 };
 
-export { detailServices, getDetailServicesId };
+const getDetailServicesByUrl = async (url: string) => {
+  try {
+    const response = await axios.get(
+      `https://server.maclabs.co.id/api/detail_services?url=${url}`
+    );
+    return response?.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export { detailServices, getDetailServicesId, getDetailServicesByUrl };

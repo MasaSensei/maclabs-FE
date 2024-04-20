@@ -1,6 +1,6 @@
 "use client";
 
-import { getDetailServicesId } from "@/services/detailServices";
+import { getDetailServicesByUrl } from "@/services/detailServices";
 import type { DetailServices } from "@/types/detailServices";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -14,20 +14,12 @@ const DetailServices = () => {
   const [data, setData] = useState<DetailServices>();
 
   const pathname = usePathname();
-  const idByPathname: idByPathname = {
-    macbook: 1,
-    imac: 2,
-    "mac-mini": 3,
-    "mac-pro": 4,
-  };
   const url = pathname.split("/").filter(Boolean);
 
   useEffect(() => {
     const fetchData = async () => {
-      const category = idByPathname[url[1]];
-      const res: DetailServices | undefined = await getDetailServicesId(
-        category,
-        url[2]
+      const res: DetailServices | undefined = await getDetailServicesByUrl(
+        url[1]
       );
       if (res && res?.data?.length > 0) {
         setData(res);

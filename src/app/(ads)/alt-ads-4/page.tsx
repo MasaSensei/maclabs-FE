@@ -11,6 +11,7 @@ import Motion from "./motion";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://maclabs.co.id/"),
   title: "Spesialis Service Macbook | iMac | Mac Mini - Maclabs.co.id",
   description:
     "Service All Mac Devices Jakarta seperti Macbook, iMac, Mac Mini dan Mac Pro. Menerima pergantian Part yang bergaransi dan berkualitas",

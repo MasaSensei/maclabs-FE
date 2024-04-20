@@ -4,6 +4,7 @@ import FetchData from "./fetchData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://maclabs.co.id/"),
   title: "Services Mac-Devices - Maclabs.co.id",
   description:
     "Service perangkat Macbook, Mac Mini, Mac Pro. Segala jenis kerusakan. Macbook mati total. Service Mac not charging. Bergaransi....",
@@ -21,6 +22,12 @@ export const metadata: Metadata = {
       url: "/images/cropped-logo-ml.webp",
     },
   ],
+  alternates: {
+    canonical: `https://maclabs.co.id/computer-services/`,
+    languages: {
+      "en-US": "https://maclabs.co.id/computer-services/",
+    },
+  },
 };
 
 const ServicesPage = () => {

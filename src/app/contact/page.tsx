@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://maclabs.co.id/"),
   title: "Hubungi Kami Sekarang! | Contact Us - Maclabs.co.id",
   description:
     "Service All Mac Devices Jakarta seperti Macbook, iMac, Mac Mini dan Mac Pro. Menerima pergantian Part yang bergaransi dan berkualitas",
@@ -23,6 +24,9 @@ export const metadata: Metadata = {
       url: "/images/cropped-logo-ml.webp",
     },
   ],
+  alternates: {
+    canonical: `https://maclabs.co.id/contact/`,
+  },
 };
 
 const ContactPage = () => {

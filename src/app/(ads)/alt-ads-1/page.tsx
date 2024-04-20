@@ -6,6 +6,7 @@ import ServicesList from "@/data/services";
 import Image from "next/image";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://maclabs.co.id/"),
   title: "Spesialis Service Macbook | iMac | Mac Mini - Maclabs.co.id",
   description:
     "Service All Mac Devices Jakarta seperti Macbook, iMac, Mac Mini dan Mac Pro. Menerima pergantian Part yang bergaransi dan berkualitas",
