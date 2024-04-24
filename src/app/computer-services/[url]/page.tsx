@@ -15,6 +15,7 @@ export const generateMetadata = async ({
 
   return {
     metadataBase: new URL("https://maclabs.co.id/"),
+    manifest: "https://maclabs.co.id/manifest.webmanifest",
     title: `${data?.data[0]?.name} - Maclabs.co.id`,
     description: data?.data[0]?.meta_description,
     keywords: data?.data[0]?.meta_keyword,
@@ -32,6 +33,9 @@ export const generateMetadata = async ({
     ],
     openGraph: {
       title: data?.data[0]?.name,
+      type: "article",
+      authors: "Maclabs.co.id",
+      publishedTime: data?.data[0]?.created_at,
       images: [`/images/services/${data?.data[0]?.image}`],
       description: data?.data[0]?.meta_description,
       url: `https://maclabs.co.id/computer-services/${url}`,

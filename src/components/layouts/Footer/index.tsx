@@ -55,12 +55,6 @@ const Footer = () => {
           ></iframe>
         </div>
       </div>
-      <div className="bg-zinc-400 text-center py-5">
-        <h4 className="text-gray-900 font-semibold">
-          <span className="font-bold text-red-500">MACNESIA.REPAIR.GROUP </span>
-          - POWERED BY PT.MACNESIA INTI TEKNOLOGI Copyright© 2021. MacLabs.co.id
-        </h4>
-      </div>
     </footer>
   );
 };

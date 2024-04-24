@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Gallery 1",
+    "image": "/images/gallery-1.webp"
+  },
+  {
+    "title": "Gallery 2",
+    "image": "/images/gallery-2.webp"
+  },
+  {
+    "title": "Gallery 3",
+    "image": "/images/gallery-3.webp"
+  },
+  {
+    "title": "Gallery 4",
+    "image": "/images/gallery-4.webp"
+  },
+  {
+    "title": "Gallery 5",
+    "image": "/images/gallery-5.webp"
+  },
+  {
+    "title": "Gallery 6",
+    "image": "/images/gallery-6.webp"
+  },
+  {
+    "title": "Gallery 7",
+    "image": "/images/gallery-7.webp"
+  }
+]

@@ -23,7 +23,7 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
-      url: `${baseUrl}/computer-services/`,
+      url: `${baseUrl}/services/`,
       lastModified: new Date(),
     },
     {

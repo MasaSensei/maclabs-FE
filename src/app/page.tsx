@@ -9,6 +9,8 @@ import { RiArrowRightSFill } from "react-icons/ri";
 import Experiences from "@/data/experiences.json";
 import Motion from "./motion";
 import { Metadata } from "next";
+import Image from "next/image";
+import Galleries from "@/data/gallery.json";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclabs.co.id/"),
@@ -247,6 +249,24 @@ export default function Home() {
               </Cores.Button>
             </div>
           </div>
+        </div>
+      </Layouts.Section>
+      <Layouts.Section variant={"default"}>
+        <Cores.Title title="Gallery" content="Maclabs Gallery" />
+        <div className="m-1 flex flex-wrap md:m-2">
+          {Galleries.slice(0, 6).map((gallery, index) => (
+            <div className="flex w-1/3 flex-wrap" key={index}>
+              <div className="w-full p-1 md:p-2">
+                <Image
+                  src={gallery.image}
+                  alt={gallery.title}
+                  width={500}
+                  className="block h-96 w-full rounded-lg object-cover object-center"
+                  height={500}
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </Layouts.Section>
     </>
