@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Command-D",
+    "description": "Menduplikasi file yang dipilih."
+  },
+  {
+    "name": "Command-E",
+    "description": "Mengeluarkan disk atau volume yang dipilih."
+  },
+  {
+    "name": "Command-F",
+    "description": "Memulai pencarian Spotlight di jendela Finder."
+  },
+  {
+    "name": "Command-I",
+    "description": "Menampilkan jendela Dapatkan Info untuk file yang dipilih."
+  },
+  {
+    "name": "Command-R",
+    "description": "Ketika sebuah alias dipilih di Finder: menampilkan file asli untuk alias yang dipilih."
+  },
+  {
+    "name": "Shift-Command-C",
+    "description": "Membuka jendela Komputer."
+  },
+  {
+    "name": "Shift-Command-D",
+    "description": "Membuka folder desktop."
+  },
+  {
+    "name": "Shift-Command-F",
+    "description": "Membuka jendela terbaru, menampilkan semua file yang baru ditampilkan atau diubah."
+  },
+  {
+    "name": "Shift-Command-G",
+    "description": "Membuka jendela Buka Folder."
+  },
+  {
+    "name": "Shift-Command-H",
+    "description": "Membuka folder Utama akun pengguna macOS."
+  },
+  {
+    "name": "Shift-Command-I",
+    "description": "Membuka iCloud Drive."
+  },
+  {
+    "name": "Option-Command-L",
+    "description": "Membuka folder Unduhan."
+  },
+  {
+    "name": "Shift-Command-N",
+    "description": "Membuat folder baru."
+  },
+  {
+    "name": "Shift-Command-O",
+    "description": "Membuka folder Dokumen."
+  },
+  {
+    "name": "Shift-Command-P",
+    "description": "Menampilkan atau menyembunyikan panel Pratinjau."
+  },
+  {
+    "name": "Shift-Command-R",
+    "description": "Membuka jendela AirDrop."
+  },
+  {
+    "name": "Shift-Command-T",
+    "description": "Menampilkan atau menyembunyikan bar tab di jendela Finder."
+  },
+  {
+    "name": "Control-Shift-Command-T",
+    "description": "Menambahkan item Finder yang dipilih ke Dock."
+  },
+  {
+    "name": "Shift-Command-U",
+    "description": "Membuka folder Utilitas."
+  },
+  {
+    "name": "Option-Command-D",
+    "description": "Menampilkan dan menyembunyikan Dock."
+  },
+  {
+    "name": "Control-Command-T",
+    "description": "Menyembunyikan atau menampilkan bar jalur di jendela Finder."
+  },
+  {
+    "name": "Option-Command-S",
+    "description": "Menyembunyikan atau menampilkan Bar samping di jendela Finder."
+  },
+  {
+    "name": "Command–Garis miring (/)",
+    "description": "Menyembunyikan atau menampilkan bar status di jendela Finder."
+  },
+  {
+    "name": "Command-N",
+    "description": "Membuka jendela Finder baru."
+  },
+  {
+    "name": "Option-Command-N",
+    "description": "Membuat Folder Cerdas baru."
+  },
+  {
+    "name": "Option-Command-T",
+    "description": "Menampilkan atau menyembunyikan bar alat bila satu tab dibuka di jendela Finder saat ini."
+  },
+  {
+    "name": "Option-Command-V",
+    "description": "Memindahkan file di Papan Klip dari lokasi aslinya ke lokasi saat ini."
+  },
+  {
+    "name": "Command–Kurung Siku Kiri ([)",
+    "description": "Membuka folder sebelumnya."
+  },
+  {
+    "name": "Command–Kurung Siku Kanan ([):",
+    "description": "Membuka folder berikutnya."
+  },
+  {
+    "name": "Command–Panah Atas",
+    "description": "Membuka folder yang berisi folder saat ini."
+  },
+  {
+    "name": "Command–Control–Panah Atas",
+    "description": " Membuka folder yang berisi folder saat ini di jendela baru."
+  },
+  {
+    "name": "Command–Panah Bawah",
+    "description": "Membuka item yang dipilih."
+  },
+  {
+    "name": "Panah Kanan",
+    "description": "Membuka folder yang dipilih. Fungsi ini hanya dapat digunakan di tampilan daftar."
+  },
+  {
+    "name": "Panah Kiri",
+    "description": "Menutup folder yang dipilih. Fungsi ini hanya dapat digunakan di tampilan daftar."
+  },
+  {
+    "name": "Command-Delete",
+    "description": "Memindahkan item yang dipilih ke Tong Sampah."
+  }
+]

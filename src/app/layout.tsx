@@ -13,6 +13,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
+import Galleries from "@/data/gallery.json";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -161,6 +162,33 @@ export default function RootLayout({
                 />
               ))}
             </motion.div>
+          </div>
+        </Layouts.Section>
+        <Layouts.Section variant={"secondary"}>
+          <Cores.Title title="Gallery" content="Maclabs Gallery" />
+          <div className="m-1 flex flex-wrap md:m-2">
+            {Galleries.slice(0, 6).map((gallery, index) => (
+              <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                animate={{
+                  y: hasAnimated ? 0 : 100,
+                  opacity: hasAnimated ? 1 : 0,
+                }}
+                transition={{ duration: 1, delay: 0.5 + index * 0.1 }}
+                className="flex w-1/3 flex-wrap"
+                key={index}
+              >
+                <div className="w-full p-1 md:p-2">
+                  <Image
+                    src={gallery.image}
+                    alt={gallery.title}
+                    width={500}
+                    className="block h-96 w-full rounded-lg object-cover object-center"
+                    height={500}
+                  />
+                </div>
+              </motion.div>
+            ))}
           </div>
         </Layouts.Section>
         <Cores.WhatsappPopup />

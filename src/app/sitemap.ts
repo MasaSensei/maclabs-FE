@@ -27,6 +27,10 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `${baseUrl}/shortcut-macbook/`,
+      lastModified: new Date(),
+    },
+    {
       url: `${baseUrl}/contact/`,
       lastModified: new Date(),
     },
@@ -38,6 +42,8 @@ export default async function sitemap() {
       url: `${baseUrl}/pickup-delivery/`,
       lastModified: new Date(),
     },
+    { url: `${baseUrl}/apple-event-wwdc-2023/`, lastModified: new Date() },
+    { url: `${baseUrl}/cara-hemat-baterai-macbook/`, lastModified: new Date() },
     ...computerServices,
   ];
 }

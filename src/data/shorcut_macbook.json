@@ -1,0 +1,94 @@
+[
+  {
+    "name": "Command-X",
+    "description": "Memotong item dan menyalinnya ke Papan Klip."
+  },
+  {
+    "name": "Command-C",
+    "description": "Menyalin item ke Papan Klip."
+  },
+  {
+    "name": "Command-V",
+    "description": "Menempel / paste dari Papan Klip."
+  },
+  {
+    "name": "Command-Z",
+    "description": "Mengurungkan perintah sebelumnya atau Undo."
+  },
+  {
+    "name": "Shift-Command-Z",
+    "description": "sebagai lawan perintah urungkan atau Redo."
+  },
+  {
+    "name": "Command-A",
+    "description": "Memilih semua item."
+  },
+  {
+    "name": "Command-F",
+    "description": "Mencari item dalam dokumen atau membuka jendela Pencarian."
+  },
+  {
+    "name": "Command-G",
+    "description": "Mencari kemunculan berikutnya dari item yang sebelumnya ditemukan."
+  },
+  {
+    "name": "Command-H",
+    "description": "Menyembunyikan jendela di depan app."
+  },
+  {
+    "name": "Command-M",
+    "description": "Memperkecil tampilan jendela depan ke Dock."
+  },
+  {
+    "name": "Command-O",
+    "description": "Membuka item yang dipilih atau membuka dialog untuk memilih file yang akan dibuka."
+  },
+  {
+    "name": "Command-P",
+    "description": "Mencetak dokumen yang digunakan."
+  },
+  {
+    "name": "Command-S",
+    "description": "Menyimpan dokumen yang digunakan"
+  },
+  {
+    "name": "Command-T",
+    "description": "Membuka item yang dipilih atau membuka jendela baru."
+  },
+  {
+    "name": "Command-W",
+    "description": "Menutup jendela depan. Untuk menutup semua jendela aplikasi, tekan Option-Command-W."
+  },
+  {
+    "name": "Option-Command-Esc",
+    "description": "Menutup paksa aplikasi."
+  },
+  {
+    "name": "Command–Bar spasi",
+    "description": "Menampilkan atau menyembunyikan bidang pencarian Spotlight."
+  },
+  {
+    "name": "Control–Command–Bar spasi",
+    "description": "Menampilkan Penampil Karakter, tempat Anda dapat memilih emoji."
+  },
+  {
+    "name": "Control-Command-F",
+    "description": "Menggunakan app dalam layar penuh."
+  },
+  {
+    "name": "Command-Tab",
+    "description": "Beralih ke app yang terakhir digunakan."
+  },
+  {
+    "name": "Shift-Command-5",
+    "description": "Mengambil jepretan layar atau merekam layar. Atau gunakan Shift-Command-3 atau Shift-Command-4."
+  },
+  {
+    "name": "Shift-Command-N",
+    "description": "Membuat folder baru di Finder."
+  },
+  {
+    "name": "Command-Koma (,)",
+    "description": "Membuka preferensi untuk app depan."
+  }
+]
