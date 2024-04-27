@@ -44,6 +44,22 @@ export default async function sitemap() {
     },
     { url: `${baseUrl}/apple-event-wwdc-2023/`, lastModified: new Date() },
     { url: `${baseUrl}/cara-hemat-baterai-macbook/`, lastModified: new Date() },
+    {
+      url: `${baseUrl}/cara-mengatasi-mac-sering-mati-sendiri/`,
+      lastModified: new Date(),
+    },
+    { url: `${baseUrl}/cara-reset-smc/`, lastModified: new Date() },
+    { url: `${baseUrl}/fitur-macos-ventura/`, lastModified: new Date() },
+    { url: `${baseUrl}/shortcut-macbook/`, lastModified: new Date() },
+    {
+      url: `${baseUrl}/tips-melindungi-perangkat-mac-dari-malware/`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/tips-memakai-macbook-pemula/`,
+      lastModified: new Date(),
+    },
+    { url: `${baseUrl}/tips-merawat-macbook/`, lastModified: new Date() },
     ...computerServices,
   ];
 }
