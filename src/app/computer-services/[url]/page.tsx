@@ -38,12 +38,12 @@ export const generateMetadata = async ({
       publishedTime: data?.data[0]?.created_at,
       images: [`/images/services/${data?.data[0]?.image}`],
       description: data?.data[0]?.meta_description,
-      url: `https://maclabs.co.id/computer-services/${url}`,
+      url: `https://maclabs.co.id/computer-services/${url}/`,
     },
     alternates: {
-      canonical: `https://maclabs.co.id/computer-services/${url}`,
+      canonical: `https://maclabs.co.id/computer-services/${url}/`,
       languages: {
-        "en-US": `https://maclabs.co.id/computer-services/${url}`,
+        "en-US": `https://maclabs.co.id/computer-services/${url}/`,
       },
     },
   };

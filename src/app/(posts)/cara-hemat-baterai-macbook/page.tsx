@@ -69,7 +69,7 @@ const CaraHematBateraiMacbookPage = () => {
       },
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": "https://maclabs.co.id/cara-reset-smc/",
+        "@id": "https://maclabs.co.id/cara-hemat-baterai-macbook/",
       },
     },
   };
