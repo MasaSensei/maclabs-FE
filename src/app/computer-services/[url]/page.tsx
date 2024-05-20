@@ -33,11 +33,22 @@ export const generateMetadata = async ({
     ],
     openGraph: {
       title: data?.data[0]?.name,
+      siteName: "Maclabs.co.id",
+      description: data?.data[0]?.meta_description,
       type: "article",
       authors: "Maclabs.co.id",
       publishedTime: data?.data[0]?.created_at,
-      images: [`/images/services/${data?.data[0]?.image}`],
-      description: data?.data[0]?.meta_description,
+      modifiedTime: data?.data[0]?.updated_at,
+      images: [
+        {
+          url: `/images/services/${data?.data[0]?.image}`,
+          width: 800,
+          height: 600,
+        },
+      ],
+      locale: "en_US",
+      section: data?.data[0]?.name,
+      tags: [data?.data[0]?.meta_keyword, data.data.name],
       url: `https://maclabs.co.id/computer-services/${url}/`,
     },
     alternates: {
