@@ -27,8 +27,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tips Memakai MacBook Untuk Pemula Hingga Mahir  - Maclabs.co.id",
     type: "article",
+    siteName: "Maclabs Service Mac Devices",
     publishedTime: `${new Date().toISOString()}`,
-    authors: ["https://maclabs.co.id/"],
+    authors: "MacLabs.co.id",
     description:
       "Anda kebingungan memakai MacBook? Maclabs.id akan memberikan tips untuk memakai MacBook untuk pemula, menengah maupun mahir. Berikut tipsnya.",
     url: "https://maclabs.co.id/tips-memakai-macbook-pemula/",
@@ -40,6 +41,9 @@ export const metadata: Metadata = {
         alt: "Maclabs",
       },
     ],
+    section: "MacBook",
+    locale: "en-US",
+    tags: ["Macbook", "Apple Device", "Macbook Pro", "Macbook Air", "Pemula"],
   },
   alternates: {
     canonical: `https://maclabs.co.id/tips-memakai-macbook-pemula/`,

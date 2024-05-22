@@ -28,10 +28,14 @@ export const metadata: Metadata = {
     title: "Apple Event WWDC 2023 - Maclabs.co.id",
     type: "article",
     publishedTime: `${new Date().toISOString()}`,
-    authors: ["https://maclabs.co.id/"],
+    authors: "MacLabs.co.id",
+    siteName: "Maclabs Service Mac Devices",
     description:
       "Jadwal dan Tempat Event WWDC 2023 dan rumor beberapa produk yang akan diumumkan pada event kali ini seperti iPhone 15 Pro dan Headset AR/VR.",
     url: "https://maclabs.co.id/apple-event-wwdc-2023/",
+    section: "Blog",
+    locale: "en-US",
+    tags: ["apple device", "wwdc", "iphone 15 pro", "headset ar vr"],
     images: [
       {
         url: "https://maclabs.co.id/images/cropped-logo-ml.webp",

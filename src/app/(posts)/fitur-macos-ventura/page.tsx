@@ -27,8 +27,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Fitur MacOS Ventura - Maclabs.co.id",
     type: "article",
+    siteName: "Maclabs Service Mac Devices",
     publishedTime: `${new Date().toISOString()}`,
-    authors: ["https://maclabs.co.id/"],
+    authors: "MacLabs.co.id",
     description:
       "Beberapa fitur baru MacOS Ventura yaitu Stage Manager, Continuity Camera, Passkey, Share Tab Safari hingga Spotlight yang memudahkan pengguna",
     url: "https://maclabs.co.id/fitur-macos-ventura/",
@@ -40,6 +41,9 @@ export const metadata: Metadata = {
         alt: "Maclabs",
       },
     ],
+    section: "MacBook",
+    locale: "en-US",
+    tags: ["MacBook", "ventura", "mac-os"],
   },
   alternates: {
     canonical: `https://maclabs.co.id/fitur-macos-ventura/`,

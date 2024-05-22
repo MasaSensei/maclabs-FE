@@ -27,8 +27,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tips Merawat MacBook - Maclabs.co.id",
     type: "article",
+    siteName: "Maclabs Service Mac Devices",
     publishedTime: `${new Date().toISOString()}`,
-    authors: ["https://maclabs.co.id/"],
+    authors: "MacLabs.co.id",
     description:
       "Kali ini Maclabs.id akan memberikan tips untuk merawat MacBook menjadi lebih awet dan tidak cepat rusak dengan beberapa cara berikut",
     url: "https://maclabs.co.id/tips-merawat-macbook/",
@@ -40,6 +41,9 @@ export const metadata: Metadata = {
         alt: "Maclabs",
       },
     ],
+    section: "MacBook",
+    locale: "en-US",
+    tags: ["Macbook", "Apple Device", "Macbook Pro", "Macbook Air", "merawat"],
   },
   alternates: {
     canonical: `https://maclabs.co.id/tips-merawat-macbook/`,

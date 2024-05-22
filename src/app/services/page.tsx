@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     url: "https://maclabs.co.id/services/",
     images: ["/images/cropped-logo-ml.webp"],
     type: "website",
-    siteName: "Maclabs.co.id",
+    siteName: "Maclabs Service Mac Devices",
     locale: "id_ID",
   },
   alternates: {

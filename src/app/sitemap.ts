@@ -7,7 +7,7 @@ export default async function sitemap() {
     if (item && item.url) {
       return {
         url: `${baseUrl}/computer-services/${item.url}/`,
-        lastModified: new Date(),
+        lastModified: item.updated_at ? new Date(item.updated_at) : new Date(),
       };
     } else {
       return [];

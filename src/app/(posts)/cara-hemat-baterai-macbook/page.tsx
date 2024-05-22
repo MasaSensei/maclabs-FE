@@ -28,7 +28,8 @@ export const metadata: Metadata = {
     title: "Cara Hemat Baterai Macbook - Maclabs.co.id",
     type: "article",
     publishedTime: `${new Date().toISOString()}`,
-    authors: ["https://maclabs.co.id/"],
+    siteName: "Maclabs Service Mac Devices",
+    authors: "MacLabs.co.id",
     description:
       "Untuk mereset SMC (System Management Controller) pada MacBook, langkah pertama adalah mematikan MacBook Anda sepenuhnya. Setelah itu, tahan tombol Shift, Control, Option, dan tombol daya secara bersamaan selama beberapa detik. Kemudian, lepaskan semua tombol secara bersamaan dan nyalakan kembali MacBook Anda. Tindakan ini membantu memperbaiki masalah seperti kinerja baterai yang buruk, kipas yang berjalan terus-menerus, atau masalah koneksi perangkat keras lainnya.",
     url: "https://maclabs.co.id/cara-hemat-baterai-macbook/",
@@ -40,6 +41,9 @@ export const metadata: Metadata = {
         alt: "Maclabs",
       },
     ],
+    tags: ["MacBook", "Apple Device", "Battery", "Charger"],
+    section: "Blog",
+    locale: "en-US",
   },
   alternates: {
     canonical: `https://maclabs.co.id/cara-hemat-baterai-macbook/`,

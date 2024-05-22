@@ -22,6 +22,22 @@ export const metadata: Metadata = {
       url: "/images/cropped-logo-ml.webp",
     },
   ],
+  openGraph: {
+    title: "Pickup Delivery Mac-Devices - Maclabs.co.id",
+    description:
+      "Service All Mac Devices Jakarta seperti Macbook, iMac, Mac Mini dan Mac Pro. Menerima pergantian Part yang bergaransi dan berkualitas",
+    url: "https://maclabs.co.id/pickup-delivery/",
+    type: "website",
+    images: [
+      {
+        url: "https://maclabs.co.id/images/cropped-logo-ml.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    siteName: "Maclabs Service Mac Devices",
+    locale: "en_US",
+  },
   alternates: {
     canonical: `https://maclabs.co.id/pickup-delivery/`,
   },

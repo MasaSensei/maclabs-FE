@@ -29,8 +29,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Shortcut MacBook - Maclabs.co.id",
     type: "article",
+    siteName: "Maclabs Service Mac Devices",
     publishedTime: `${new Date().toISOString()}`,
-    authors: ["https://maclabs.co.id/"],
+    authors: "MacLabs.co.id",
     description:
       "Untuk mereset SMC (System Management Controller) pada MacBook, langkah pertama adalah mematikan MacBook Anda sepenuhnya. Setelah itu, tahan tombol Shift, Control, Option, dan tombol daya secara bersamaan selama beberapa detik. Kemudian, lepaskan semua tombol secara bersamaan dan nyalakan kembali MacBook Anda. Tindakan ini membantu memperbaiki masalah seperti kinerja baterai yang buruk, kipas yang berjalan terus-menerus, atau masalah koneksi perangkat keras lainnya.",
     url: "https://maclabs.co.id/shortcut-macbook/",
@@ -42,6 +43,9 @@ export const metadata: Metadata = {
         alt: "Maclabs",
       },
     ],
+    section: "MacBook",
+    locale: "en-US",
+    tags: ["MacBook", "shortcut"],
   },
   alternates: {
     canonical: `https://maclabs.co.id/shortcut-macbook/`,

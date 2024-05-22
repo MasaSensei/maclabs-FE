@@ -28,8 +28,27 @@ export const metadata: Metadata = {
       url: "/images/cropped-logo-ml.webp",
     },
   ],
+  openGraph: {
+    title: "Spesialis Service Macbook | iMac | Mac Mini - Maclabs.co.id",
+    description:
+      "Service All Mac Devices Jakarta seperti Macbook, iMac, Mac Mini dan Mac Pro. Menerima pergantian Part yang bergaransi dan berkualitas",
+    url: "https://maclabs.co.id/",
+    type: "website",
+    images: [
+      {
+        url: "https://maclabs.co.id/images/cropped-logo-ml.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    siteName: "Maclabs Service Mac Devices",
+    locale: "en-US",
+  },
   alternates: {
     canonical: "https://maclabs.co.id/",
+    languages: {
+      "en-US": "https://maclabs.co.id/",
+    },
   },
 };
 

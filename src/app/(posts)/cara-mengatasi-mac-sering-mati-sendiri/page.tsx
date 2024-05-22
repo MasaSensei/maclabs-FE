@@ -27,8 +27,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Cara Mengatasi Mac Sering Mati Sendiri - Maclabs.co.id",
     type: "article",
+    siteName: "Maclabs Service Mac Devices",
     publishedTime: `${new Date().toISOString()}`,
-    authors: ["https://maclabs.co.id/"],
+    authors: "MacLabs.co.id",
     description:
       "Mac sering mati sendiri? Bagaimana caranya? Banyak penyebab yang menyebabkan Mac mati sendiri. Berikut penyebab dan cara mengatasinya",
     url: "https://maclabs.co.id/cara-mengatasi-mac-sering-mati-sendiri/",
@@ -39,6 +40,15 @@ export const metadata: Metadata = {
         height: 630,
         alt: "Maclabs",
       },
+    ],
+    section: "Blog",
+    locale: "en-US",
+    tags: [
+      "Macbook",
+      "Apple Device",
+      "Macbook Pro",
+      "Macbook Air",
+      "Mati Sendiri",
     ],
   },
   alternates: {

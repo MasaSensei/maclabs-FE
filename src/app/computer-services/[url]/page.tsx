@@ -33,7 +33,7 @@ export const generateMetadata = async ({
     ],
     openGraph: {
       title: data?.data[0]?.name,
-      siteName: "Maclabs.co.id",
+      siteName: "Maclabs Service Mac Devices",
       description: data?.data[0]?.meta_description,
       type: "article",
       authors: "Maclabs.co.id",

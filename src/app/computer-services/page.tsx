@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     description:
       "Service perangkat Macbook, Mac Mini, Mac Pro. Segalaenis kerusakan. Macbook mati total. Service Mac not charging. Bergaransi....",
     url: "https://maclabs.co.id/computer-services/",
-    siteName: "Maclabs.co.id",
-    section: "Services Mac-Devices",
+    siteName: "Maclabs Service Mac Devices",
+    type: "website",
     images: [
       {
         url: "https://maclabs.co.id/images/cropped-logo-ml.webp",
@@ -37,8 +37,6 @@ export const metadata: Metadata = {
       },
     ],
     locale: "en_US",
-    authors: ["https://maclabs.co.id/"],
-    tags: ["macbook", "imac", "mac mini", "mac pro"],
   },
   alternates: {
     canonical: `https://maclabs.co.id/computer-services/`,

@@ -22,6 +22,22 @@ export const metadata: Metadata = {
       url: "/images/cropped-logo-ml.webp",
     },
   ],
+  openGraph: {
+    title: "Home Service Perbaikan Mac-Devices - Maclabs.co.id",
+    description:
+      "Home Service perbaikan terbaik untuk perangkat Mac Anda. Teknisi profesional kami siap membawa layanan berkualitas langsung ke pintu Anda.",
+    url: "https://maclabs.co.id/home-visit/",
+    type: "website",
+    images: [
+      {
+        url: "https://maclabs.co.id/images/cropped-logo-ml.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    siteName: "Maclabs Service Mac Devices",
+  },
   alternates: {
     canonical: `https://maclabs.co.id/home-visit/`,
   },
