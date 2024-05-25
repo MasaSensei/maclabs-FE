@@ -7,11 +7,12 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclabs.co.id/"),
   manifest: "https://maclabs.co.id/manifest.webmanifest",
-  title: "Cara Hemat Baterai Macbook - Maclabs.co.id",
+  title:
+    "Tips Hemat Baterai: Cara Efektif Menghemat Daya MacBook - Maclabs.co.id",
   description:
-    "daya baterai pada Macbook sering kali cepat habis ketika digunakan. Anda juga harus tahu berapa lama waktu normal daya tahan baterai Mac.",
+    "emukan cara efektif menghemat daya baterai MacBook di Jakarta, Tangerang, Bekasi, dan Depok. Dapatkan tips hemat baterai untuk memperpanjang masa pakai perangkat Anda. Pelajari strategi hemat energi yang dapat membantu Anda tetap produktif tanpa khawatir kehabisan daya saat bekerja atau bersantai di rumah.",
   keywords:
-    "service, service mac, service imac, service macbook, service mac-devices, service macbook jakarta, reset smc, reset smc macbook, smc macbook, smc mac",
+    "cara menghemat baterai macbook, tips hemat baterai, memperpanjang masa pakai baterai, cara efektif hemat daya, tips menghemat daya macbook, optimalkan baterai macbook, jakarta, tangerang, bekasi, depok, maclabs.co.id",
   icons: [
     {
       rel: "icon",
@@ -25,13 +26,14 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Cara Hemat Baterai Macbook - Maclabs.co.id",
+    title:
+      "Tips Hemat Baterai: Cara Efektif Menghemat Daya MacBook - Maclabs.co.id",
     type: "article",
     publishedTime: `${new Date().toISOString()}`,
     siteName: "Maclabs Service Mac Devices",
     authors: "MacLabs.co.id",
     description:
-      "Untuk mereset SMC (System Management Controller) pada MacBook, langkah pertama adalah mematikan MacBook Anda sepenuhnya. Setelah itu, tahan tombol Shift, Control, Option, dan tombol daya secara bersamaan selama beberapa detik. Kemudian, lepaskan semua tombol secara bersamaan dan nyalakan kembali MacBook Anda. Tindakan ini membantu memperbaiki masalah seperti kinerja baterai yang buruk, kipas yang berjalan terus-menerus, atau masalah koneksi perangkat keras lainnya.",
+      "emukan cara efektif menghemat daya baterai MacBook di Jakarta, Tangerang, Bekasi, dan Depok. Dapatkan tips hemat baterai untuk memperpanjang masa pakai perangkat Anda. Pelajari strategi hemat energi yang dapat membantu Anda tetap produktif tanpa khawatir kehabisan daya saat bekerja atau bersantai di rumah.",
     url: "https://maclabs.co.id/cara-hemat-baterai-macbook/",
     images: [
       {
@@ -43,12 +45,12 @@ export const metadata: Metadata = {
     ],
     tags: ["MacBook", "Apple Device", "Battery", "Charger"],
     section: "Blog",
-    locale: "en-US",
+    locale: "id-ID",
   },
   alternates: {
     canonical: `https://maclabs.co.id/cara-hemat-baterai-macbook/`,
     languages: {
-      "en-US": "https://maclabs.co.id/cara-hemat-baterai-macbook/",
+      "id-ID": "https://maclabs.co.id/cara-hemat-baterai-macbook/",
     },
   },
 };
@@ -57,7 +59,8 @@ const CaraHematBateraiMacbookPage = () => {
   const jsonLdData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: "Cara Hemat Baterai Macbook - Maclabs.co.id",
+    headline:
+      "Tips Hemat Baterai: Cara Efektif Menghemat Daya MacBook - Maclabs.co.id",
     description:
       "daya baterai pada Macbook sering kali cepat habis ketika digunakan. Anda juga harus tahu berapa lama waktu normal daya tahan baterai Mac.",
     image: "https://maclabs.co.id/images/cropped-logo-ml.webp",

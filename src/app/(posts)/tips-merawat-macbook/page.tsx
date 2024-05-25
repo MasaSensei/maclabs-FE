@@ -7,11 +7,11 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclabs.co.id/"),
   manifest: "https://maclabs.co.id/manifest.webmanifest",
-  title: "Tips Merawat MacBook - Maclabs.co.id",
+  title: "Cara Efektif Merawat MacBook Anda - Maclabs.co.id",
   description:
-    "Kali ini Maclabs.id akan memberikan tips untuk merawat MacBook menjadi lebih awet dan tidak cepat rusak dengan beberapa cara berikut",
+    "Pelajari tips merawat MacBook Anda dengan baik di Jakarta, Depok, Tangerang, dan Bekasi. Temukan panduan lengkap untuk menjaga kinerja dan umur panjang MacBook Anda. Kunjungi MacLabs.co.id untuk informasi lebih lanjut.",
   keywords:
-    "service, service mac, service imac, service macbook, service mac-devices, service macbook jakarta, cara merawat macbook, tips merawat macbook, tips merawat mac",
+    "tips merawat macbook, cara merawat macbook, panduan perawatan macbook, perawatan macbook, menjaga kinerja macbook, tips perawatan macbook, jakarta, depok, tangerang, bekasi, maclabs.co.id",
   icons: [
     {
       rel: "icon",
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Tips Merawat MacBook - Maclabs.co.id",
+    title: "Cara Efektif Merawat MacBook Anda - Maclabs.co.id",
     type: "article",
     siteName: "Maclabs Service Mac Devices",
     publishedTime: `${new Date().toISOString()}`,
     authors: "MacLabs.co.id",
     description:
-      "Kali ini Maclabs.id akan memberikan tips untuk merawat MacBook menjadi lebih awet dan tidak cepat rusak dengan beberapa cara berikut",
+      "Pelajari tips merawat MacBook Anda dengan baik di Jakarta, Depok, Tangerang, dan Bekasi. Temukan panduan lengkap untuk menjaga kinerja dan umur panjang MacBook Anda. Kunjungi MacLabs.co.id untuk informasi lebih lanjut.",
     url: "https://maclabs.co.id/tips-merawat-macbook/",
     images: [
       {
@@ -42,13 +42,13 @@ export const metadata: Metadata = {
       },
     ],
     section: "MacBook",
-    locale: "en-US",
+    locale: "id-ID",
     tags: ["Macbook", "Apple Device", "Macbook Pro", "Macbook Air", "merawat"],
   },
   alternates: {
     canonical: `https://maclabs.co.id/tips-merawat-macbook/`,
     languages: {
-      "en-US": "https://maclabs.co.id/tips-merawat-macbook/",
+      "id-ID": "https://maclabs.co.id/tips-merawat-macbook/",
     },
   },
 };

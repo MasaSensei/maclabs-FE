@@ -6,10 +6,12 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclabs.co.id/"),
-  title: "Pickup Delivery Mac-Devices - Maclabs.co.id",
+  title:
+    "Pickup & Delivery: Service MacBook, Mac Mini, iMac, dan Mac Pro Mudah dan Praktis - Maclabs.co.id",
   description:
-    "Service All Mac Devices Jakarta seperti Macbook, iMac, Mac Mini dan Mac Pro. Menerima pergantian Part yang bergaransi dan berkualitas",
-  keywords: "Pickup Delivery, Pickup & Delivery, MacLabs Pickup & Delivery",
+    "Jangan repot lagi membawa perangkat Apple Anda ke layanan service. Dapatkan layanan pickup & delivery untuk MacBook, iMac, Mac Mini, dan Mac Pro di Jakarta, Depok, Tangerang, dan Bekasi. Hemat waktu dan tenaga dengan layanan kami.",
+  keywords:
+    "pickup delivery service macbook, layanan pickup delivery mac, service mac mini, service imac, service mac pro, perbaikan mac jemput antar, perawatan mac jemput antar, layanan mac apple, jakarta, depok, tangerang, bekasi, maclabs.co.id",
   icons: [
     {
       rel: "icon",
@@ -23,9 +25,10 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Pickup Delivery Mac-Devices - Maclabs.co.id",
+    title:
+      "Pickup & Delivery: Service MacBook, Mac Mini, iMac, dan Mac Pro Mudah dan Praktis - Maclabs.co.id",
     description:
-      "Service All Mac Devices Jakarta seperti Macbook, iMac, Mac Mini dan Mac Pro. Menerima pergantian Part yang bergaransi dan berkualitas",
+      "Jangan repot lagi membawa perangkat Apple Anda ke layanan service. Dapatkan layanan pickup & delivery untuk MacBook, iMac, Mac Mini, dan Mac Pro di Jakarta, Depok, Tangerang, dan Bekasi. Hemat waktu dan tenaga dengan layanan kami.",
     url: "https://maclabs.co.id/pickup-delivery/",
     type: "website",
     images: [
@@ -36,10 +39,13 @@ export const metadata: Metadata = {
       },
     ],
     siteName: "Maclabs Service Mac Devices",
-    locale: "en_US",
+    locale: "id-ID",
   },
   alternates: {
     canonical: `https://maclabs.co.id/pickup-delivery/`,
+    languages: {
+      "id-ID": "https://maclabs.co.id/pickup-delivery/",
+    },
   },
 };
 

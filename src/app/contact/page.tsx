@@ -7,11 +7,12 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclabs.co.id/"),
-  title: "Hubungi Kami Sekarang! | Contact Us - Maclabs.co.id",
+  title:
+    "Kontak Layanan Service MacBook, Mac Mini, iMac, dan Mac Pro - Maclabs.co.id",
   description:
-    "Service All Mac Devices Jakarta seperti Macbook, iMac, Mac Mini dan Mac Pro. Menerima pergantian Part yang bergaransi dan berkualitas",
+    "Hubungi kami untuk layanan servis MacBook, Mac Mini, iMac, dan Mac Pro di Jakarta, Depok, Tangerang, dan Bekasi. Dapatkan informasi lebih lanjut dan konsultasi gratis. Kunjungi MacLabs.co.id untuk detail kontak.",
   keywords:
-    "Punya permasalahan Macbook? Hubungi kontak kami sekarang untuk konsultasi permasalahan Macbook Anda secara gratis segera! Bergaransi dan....",
+    "hubungi kami, kontak layanan servis mac, servis macbook, servis mac mini, servis imac, servis mac pro, perbaikan macbook, perawatan macbook, layanan mac apple, jakarta, depok, tangerang, bekasi, maclabs.co.id",
   icons: [
     {
       rel: "icon",
@@ -25,9 +26,10 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Hubungi Kami Sekarang! | Contact Us - Maclabs.co.id",
+    title:
+      "Kontak Layanan Service MacBook, Mac Mini, iMac, dan Mac Pro - Maclabs.co.id",
     description:
-      "Service All Mac Devices Jakarta seperti Macbook, iMac, Mac Mini dan Mac Pro. Menerima pergantian Part yang bergaransi dan berkualitas",
+      "Hubungi kami untuk layanan servis MacBook, Mac Mini, iMac, dan Mac Pro di Jakarta, Depok, Tangerang, dan Bekasi. Dapatkan informasi lebih lanjut dan konsultasi gratis. Kunjungi MacLabs.co.id untuk detail kontak.",
     url: "https://maclabs.co.id/contact/",
     type: "website",
     images: [
@@ -39,12 +41,12 @@ export const metadata: Metadata = {
       },
     ],
     siteName: "Maclabs Service Mac Devices",
-    locale: "en-US",
+    locale: "id-ID",
   },
   alternates: {
     canonical: `https://maclabs.co.id/contact/`,
     languages: {
-      "en-US": "https://maclabs.co.id/contact/",
+      "id-ID": "https://maclabs.co.id/contact/",
     },
   },
 };

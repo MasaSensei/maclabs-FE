@@ -7,11 +7,11 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclabs.co.id/"),
   manifest: "https://maclabs.co.id/manifest.webmanifest",
-  title: "Fitur MacOS Ventura - Maclabs.co.id",
+  title: "Penjelasan Fitur Terbaru MacOS Ventura - Maclabs.co.id",
   description:
-    "Beberapa fitur baru MacOS Ventura yaitu Stage Manager, Continuity Camera, Passkey, Share Tab Safari hingga Spotlight yang memudahkan pengguna",
+    "Temukan panduan lengkap tentang fitur terbaru MacOS Ventura. Pelajari semua fitur baru dan peningkatan yang ditawarkan oleh MacOS Ventura, sistem operasi terbaru dari Apple. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
   keywords:
-    "service, service mac, service imac, service macbook, service mac-devices, service macbook jakarta, mac mati total, mac suka mati, mac mati sendiri",
+    "fitur macos ventura, panduan lengkap macos ventura, penjelasan fitur baru macos, sistem operasi terbaru apple, macos terbaru, pembaruan sistem operasi, maclabs.co.id",
   icons: [
     {
       rel: "icon",
@@ -25,30 +25,30 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Fitur MacOS Ventura - Maclabs.co.id",
+    title: "Penjelasan Fitur Terbaru MacOS Ventura - Maclabs.co.id",
     type: "article",
     siteName: "Maclabs Service Mac Devices",
     publishedTime: `${new Date().toISOString()}`,
     authors: "MacLabs.co.id",
     description:
-      "Beberapa fitur baru MacOS Ventura yaitu Stage Manager, Continuity Camera, Passkey, Share Tab Safari hingga Spotlight yang memudahkan pengguna",
+      "Temukan panduan lengkap tentang fitur terbaru MacOS Ventura. Pelajari semua fitur baru dan peningkatan yang ditawarkan oleh MacOS Ventura, sistem operasi terbaru dari Apple. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
     url: "https://maclabs.co.id/fitur-macos-ventura/",
     images: [
       {
-        url: "https://maclabs.co.id/images//Stage-Manager-MacOS-Ventura-1024x579-1-600x339.webp",
+        url: "https://maclabs.co.id/images/Stage-Manager-MacOS-Ventura-1024x579-1-600x339.webp",
         width: 1200,
         height: 630,
         alt: "Maclabs",
       },
     ],
     section: "MacBook",
-    locale: "en-US",
+    locale: "id-ID",
     tags: ["MacBook", "ventura", "mac-os"],
   },
   alternates: {
     canonical: `https://maclabs.co.id/fitur-macos-ventura/`,
     languages: {
-      "en-US": "https://maclabs.co.id/fitur-macos-ventura/",
+      "id-ID": "https://maclabs.co.id/fitur-macos-ventura/",
     },
   },
 };
@@ -57,9 +57,9 @@ const FiturMacOSVenturaPage = () => {
   const jsonLdData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: "Tips Merawat MacBook - Maclabs.co.id",
+    headline: "Penjelasan Fitur Terbaru MacOS Ventura - Maclabs.co.id",
     description:
-      "Beberapa fitur baru MacOS Ventura yaitu Stage Manager, Continuity Camera, Passkey, Share Tab Safari hingga Spotlight yang memudahkan pengguna",
+      "Temukan panduan lengkap tentang fitur terbaru MacOS Ventura. Pelajari semua fitur baru dan peningkatan yang ditawarkan oleh MacOS Ventura, sistem operasi terbaru dari Apple. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
     image:
       "https://maclabs.co.id/images//Stage-Manager-MacOS-Ventura-1024x579-1-600x339.webp",
     datePublished: `${new Date().toISOString()}`,
@@ -129,7 +129,7 @@ const FiturMacOSVenturaPage = () => {
               <div className="text-sm max-w-full">
                 <article className="mb-1.5 p-6 rounded-lg bg-white shadow">
                   <h1 className="text-2xl text-center uppercase font-extrabold mb-2">
-                    Fitur MacOS Ventura
+                    Penjelasan Fitur Terbaru MacOS Ventura
                   </h1>
                   <div className="w-full flex justify-center my-3">
                     <Image

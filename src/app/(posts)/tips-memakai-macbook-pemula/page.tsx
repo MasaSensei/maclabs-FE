@@ -7,11 +7,11 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclabs.co.id/"),
   manifest: "https://maclabs.co.id/manifest.webmanifest",
-  title: "Tips Memakai MacBook Untuk Pemula Hingga Mahir - Maclabs.co.id",
+  title: "Panduan Pemula Menggunakan MacBook - Maclabs.co.id",
   description:
-    "Anda kebingungan memakai MacBook? Maclabs.id akan memberikan tips untuk memakai MacBook untuk pemula, menengah maupun mahir. Berikut tipsnya.",
+    "Temukan tips memakai MacBook untuk pemula di Jakarta, Depok, Tangerang, dan Bekasi. Pelajari panduan lengkap untuk memaksimalkan penggunaan MacBook Anda dengan mudah dan efektif. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
   keywords:
-    "service, service mac, service imac, service macbook, service mac-devices, service macbook jakarta, shortcut macbook, shortcut mac",
+    "tips memakai macbook untuk pemula, panduan pemula macbook, cara menggunakan macbook, tips macbook untuk pemula, belajar macbook, pemula macbook, jakarta, depok, tangerang, bekasi, maclabs.co.id",
   icons: [
     {
       rel: "icon",
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Tips Memakai MacBook Untuk Pemula Hingga Mahir  - Maclabs.co.id",
+    title: "Panduan Pemula Menggunakan MacBook  - Maclabs.co.id",
     type: "article",
     siteName: "Maclabs Service Mac Devices",
     publishedTime: `${new Date().toISOString()}`,
     authors: "MacLabs.co.id",
     description:
-      "Anda kebingungan memakai MacBook? Maclabs.id akan memberikan tips untuk memakai MacBook untuk pemula, menengah maupun mahir. Berikut tipsnya.",
+      "Temukan tips memakai MacBook untuk pemula di Jakarta, Depok, Tangerang, dan Bekasi. Pelajari panduan lengkap untuk memaksimalkan penggunaan MacBook Anda dengan mudah dan efektif. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
     url: "https://maclabs.co.id/tips-memakai-macbook-pemula/",
     images: [
       {
@@ -42,13 +42,13 @@ export const metadata: Metadata = {
       },
     ],
     section: "MacBook",
-    locale: "en-US",
+    locale: "id-ID",
     tags: ["Macbook", "Apple Device", "Macbook Pro", "Macbook Air", "Pemula"],
   },
   alternates: {
     canonical: `https://maclabs.co.id/tips-memakai-macbook-pemula/`,
     languages: {
-      "en-US": "https://maclabs.co.id/tips-memakai-macbook-pemula/",
+      "id-ID": "https://maclabs.co.id/tips-memakai-macbook-pemula/",
     },
   },
 };
@@ -57,7 +57,7 @@ const TipsMemakaiMacbookPemulaPage = () => {
   const jsonLdData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: "Tips Memakai MacBook Untuk Pemula Hingga Mahir - Maclabs.co.id",
+    headline: "Panduan Pemula Menggunakan MacBook - Maclabs.co.id",
     description:
       "Anda kebingungan memakai MacBook? Maclabs.id akan memberikan tips untuk memakai MacBook untuk pemula, menengah maupun mahir. Berikut tipsnya.",
     image: "https://maclabs.co.id/images/cropped-logo-ml.webp",
@@ -128,7 +128,7 @@ const TipsMemakaiMacbookPemulaPage = () => {
               <div className="text-sm max-w-full">
                 <article className="mb-1.5 p-6 rounded-lg bg-white shadow">
                   <h1 className="text-2xl text-center uppercase font-extrabold mb-2">
-                    Tips Memakai MacBook Untuk Pemula Hingga Mahir
+                    Panduan Pemula Menggunakan MacBook
                   </h1>
                   <div className="w-full flex justify-center my-3">
                     <Image

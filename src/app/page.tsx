@@ -12,10 +12,12 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclabs.co.id/"),
-  title: "Spesialis Service Macbook | iMac | Mac Mini - Maclabs.co.id",
+  title:
+    "Layanan Perbaikan MacBook, iMac, Mac Mini, dan Mac Pro Terpercaya - Maclabs.co.id",
   description:
-    "Service All Mac Devices Jakarta seperti Macbook, iMac, Mac Mini dan Mac Pro. Menerima pergantian Part yang bergaransi dan berkualitas",
-  keywords: "service mac, service macbook, service imac, macbook mati total",
+    "Temukan layanan service profesional untuk MacBook, iMac, Mac Mini, dan Mac Pro di Jakarta, Depok, Tangerang, dan Bekasi. Kami mengatasi masalah seperti mati total, kinerja lambat, dan kerusakan lainnya. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
+  keywords:
+    "service macbook, service imac, service mac mini, service mac pro, perbaikan mac, perawatan mac, mac mati total, kinerja mac lambat, layanan mac apple, jakarta, depok, tangerang, bekasi, maclabs.co.id",
   icons: [
     {
       rel: "icon",
@@ -29,9 +31,10 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Spesialis Service Macbook | iMac | Mac Mini - Maclabs.co.id",
+    title:
+      "Layanan Perbaikan MacBook, iMac, Mac Mini, dan Mac Pro Terpercaya - Maclabs.co.id",
     description:
-      "Service All Mac Devices Jakarta seperti Macbook, iMac, Mac Mini dan Mac Pro. Menerima pergantian Part yang bergaransi dan berkualitas",
+      "Temukan layanan service profesional untuk MacBook, iMac, Mac Mini, dan Mac Pro di Jakarta, Depok, Tangerang, dan Bekasi. Kami mengatasi masalah seperti mati total, kinerja lambat, dan kerusakan lainnya. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
     url: "https://maclabs.co.id/",
     type: "website",
     images: [
@@ -42,12 +45,12 @@ export const metadata: Metadata = {
       },
     ],
     siteName: "Maclabs Service Mac Devices",
-    locale: "en-US",
+    locale: "id-ID",
   },
   alternates: {
     canonical: "https://maclabs.co.id/",
     languages: {
-      "en-US": "https://maclabs.co.id/",
+      "id-ID": "https://maclabs.co.id/",
     },
   },
 };

@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   manifest: "https://maclabs.co.id/manifest.webmanifest",
   title: "Apple Event WWDC 2023 - Maclabs.co.id",
   description:
-    "Jadwal dan Tempat Event WWDC 2023 dan rumor beberapa produk yang akan diumumkan pada event kali ini seperti iPhone 15 Pro dan Headset AR/VR.",
+    "Ikuti acara Apple WWDC 2023 dengan Maclabs.co.id. Dapatkan berita terbaru, pengumuman, dan inovasi dari acara tahunan pengembang Apple di Jakarta, Depok, Tangerang, dan Bekasi.",
   keywords:
-    "service, service mac, service imac, service macbook, service mac-devices, service macbook jakarta, reset smc, reset smc macbook, smc macbook, smc mac",
+    "Apple Event, WWDC 2023, berita Apple, pengumuman WWDC, inovasi Apple, pengembang Apple, WWDC Jakarta, WWDC Depok, WWDC Tangerang, WWDC Bekasi, maclabs.co.id",
   icons: [
     {
       rel: "icon",
@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     authors: "MacLabs.co.id",
     siteName: "Maclabs Service Mac Devices",
     description:
-      "Jadwal dan Tempat Event WWDC 2023 dan rumor beberapa produk yang akan diumumkan pada event kali ini seperti iPhone 15 Pro dan Headset AR/VR.",
+      "Ikuti acara Apple WWDC 2023 dengan Maclabs.co.id. Dapatkan berita terbaru, pengumuman, dan inovasi dari acara tahunan pengembang Apple di Jakarta, Depok, Tangerang, dan Bekasi.",
     url: "https://maclabs.co.id/apple-event-wwdc-2023/",
     section: "Blog",
-    locale: "en-US",
+    locale: "id-ID",
     tags: ["apple device", "wwdc", "iphone 15 pro", "headset ar vr"],
     images: [
       {
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `https://maclabs.co.id/apple-event-wwdc-2023/`,
     languages: {
-      "en-US": "https://maclabs.co.id/apple-event-wwdc-2023/",
+      "id-ID": "https://maclabs.co.id/apple-event-wwdc-2023/",
     },
   },
 };
@@ -59,7 +59,7 @@ const AppleEvent2023Page = () => {
     "@type": "BlogPosting",
     headline: "Apple Event WWDC 2023 - Maclabs.co.id",
     description:
-      "Jadwal dan Tempat Event WWDC 2023 dan rumor beberapa produk yang akan diumumkan pada event kali ini seperti iPhone 15 Pro dan Headset AR/VR.",
+      "Ikuti acara Apple WWDC 2023 dengan Maclabs.co.id. Dapatkan berita terbaru, pengumuman, dan inovasi dari acara tahunan pengembang Apple di Jakarta, Depok, Tangerang, dan Bekasi.",
     image: "https://maclabs.co.id/images/cropped-logo-ml.webp",
     datePublished: `${new Date().toISOString()}`,
     dateModified: `${new Date().toISOString()}`,

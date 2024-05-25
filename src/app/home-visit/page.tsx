@@ -6,10 +6,12 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclabs.co.id/"),
-  title: "Home Service Perbaikan Mac-Devices - Maclabs.co.id",
+  title:
+    "Home Visit: Service MacBook, Mac Mini, iMac, dan Mac Pro di Rumah Anda - Maclabs.co.id",
   description:
-    "Home Service perbaikan terbaik untuk perangkat Mac Anda. Teknisi profesional kami siap membawa layanan berkualitas langsung ke pintu Anda.",
-  keywords: "Home Service, Home Visit, MacLabs Home Visit",
+    "Dapatkan layanan home visit untuk servis MacBook, Mac Mini, iMac, dan Mac Pro di Jakarta, Depok, Tangerang, dan Bekasi. Kami datang ke rumah Anda untuk perbaikan dan perawatan perangkat Apple. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
+  keywords:
+    "home visit servis macbook, layanan home visit mac, servis mac mini, servis imac, servis mac pro, perbaikan mac di rumah, perawatan mac di rumah, layanan mac apple, jakarta, depok, tangerang, bekasi, maclabs.co.id",
   icons: [
     {
       rel: "icon",
@@ -23,9 +25,10 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Home Service Perbaikan Mac-Devices - Maclabs.co.id",
+    title:
+      "Home Visit: Service MacBook, Mac Mini, iMac, dan Mac Pro di Rumah Anda - Maclabs.co.id",
     description:
-      "Home Service perbaikan terbaik untuk perangkat Mac Anda. Teknisi profesional kami siap membawa layanan berkualitas langsung ke pintu Anda.",
+      "Dapatkan layanan home visit untuk servis MacBook, Mac Mini, iMac, dan Mac Pro di Jakarta, Depok, Tangerang, dan Bekasi. Kami datang ke rumah Anda untuk perbaikan dan perawatan perangkat Apple. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
     url: "https://maclabs.co.id/home-visit/",
     type: "website",
     images: [
@@ -35,11 +38,14 @@ export const metadata: Metadata = {
         height: 630,
       },
     ],
-    locale: "en_US",
+    locale: "id-ID",
     siteName: "Maclabs Service Mac Devices",
   },
   alternates: {
     canonical: `https://maclabs.co.id/home-visit/`,
+    languages: {
+      "id-ID": "https://maclabs.co.id/home-visit/",
+    },
   },
 };
 

@@ -9,11 +9,11 @@ import shortcuts_finder from "@/data/finder_shortcuts_macbook.json";
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclabs.co.id/"),
   manifest: "https://maclabs.co.id/manifest.webmanifest",
-  title: "Shortcut MacBook - Maclabs.co.id",
+  title: "Shortcut MacBook: Panduan Lengkap - Maclabs.co.id",
   description:
-    "Shortcut macbook adalah cara cepat untuk menjalakan suatu pada komputer dengan menekan beberapa tombol pada keyboard seperti berikut",
+    "Temukan panduan lengkap tentang shortcut pada MacBook untuk meningkatkan produktivitas Anda. Pelajari berbagai shortcut yang dapat mempercepat tugas sehari-hari Anda di MacBook. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
   keywords:
-    "service, service mac, service imac, service macbook, service mac-devices, service macbook jakarta, shortcut macbook, shortcut mac",
+    "shortcut macbook, panduan lengkap shortcut, shortcut produktivitas, shortcut keyboard macbook, panduan penggunaan shortcut, meningkatkan produktivitas, maclabs.co.id",
   icons: [
     {
       rel: "icon",
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Shortcut MacBook - Maclabs.co.id",
+    title: "Shortcut MacBook: Panduan Lengkap - Maclabs.co.id",
     type: "article",
     siteName: "Maclabs Service Mac Devices",
     publishedTime: `${new Date().toISOString()}`,
     authors: "MacLabs.co.id",
     description:
-      "Untuk mereset SMC (System Management Controller) pada MacBook, langkah pertama adalah mematikan MacBook Anda sepenuhnya. Setelah itu, tahan tombol Shift, Control, Option, dan tombol daya secara bersamaan selama beberapa detik. Kemudian, lepaskan semua tombol secara bersamaan dan nyalakan kembali MacBook Anda. Tindakan ini membantu memperbaiki masalah seperti kinerja baterai yang buruk, kipas yang berjalan terus-menerus, atau masalah koneksi perangkat keras lainnya.",
+      "Temukan panduan lengkap tentang shortcut pada MacBook untuk meningkatkan produktivitas Anda. Pelajari berbagai shortcut yang dapat mempercepat tugas sehari-hari Anda di MacBook. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
     url: "https://maclabs.co.id/shortcut-macbook/",
     images: [
       {
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
       },
     ],
     section: "MacBook",
-    locale: "en-US",
+    locale: "id-ID",
     tags: ["MacBook", "shortcut"],
   },
   alternates: {
     canonical: `https://maclabs.co.id/shortcut-macbook/`,
     languages: {
-      "en-US": "https://maclabs.co.id/shortcut-macbook/",
+      "id-ID": "https://maclabs.co.id/shortcut-macbook/",
     },
   },
 };
@@ -59,9 +59,9 @@ const ShortcutMacbookPage = () => {
   const jsonLdData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: "Shortcut MacBook - Maclabs.co.id",
+    headline: "Shortcut MacBook: Panduan Lengkap - Maclabs.co.id",
     description:
-      "Shortcut macbook adalah cara cepat untuk menjalakan suatu pada komputer dengan menekan beberapa tombol pada keyboard seperti berikut",
+      "Temukan panduan lengkap tentang shortcut pada MacBook untuk meningkatkan produktivitas Anda. Pelajari berbagai shortcut yang dapat mempercepat tugas sehari-hari Anda di MacBook. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
     image: "https://maclabs.co.id/images/cropped-logo-ml.webp",
     datePublished: `${new Date().toISOString()}`,
     dateModified: `${new Date().toISOString()}`,

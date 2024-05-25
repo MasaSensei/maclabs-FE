@@ -7,11 +7,11 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclabs.co.id/"),
   manifest: "https://maclabs.co.id/manifest.webmanifest",
-  title: "Cara Mengatasi Mac Sering Mati Sendiri - Maclabs.co.id",
+  title: "Solusi Praktis untuk Masalah MacBook Mati Sendiri - Maclabs.co.id",
   description:
-    "Mac sering mati sendiri? Bagaimana caranya? Banyak penyebab yang menyebabkan Mac mati sendiri. Berikut penyebab dan cara mengatasinya",
+    "Temukan cara mengatasi masalah MacBook yang sering mati sendiri di Jakarta, Tangerang, Bekasi, dan Depok. Dapatkan tips praktis untuk mendiagnosis dan memperbaiki perangkat Anda agar tetap stabil dan andal. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
   keywords:
-    "service, service mac, service imac, service macbook, service mac-devices, service macbook jakarta, mac mati total, mac suka mati, mac mati sendiri",
+    "cara mengatasi macbook mati sendiri, solusi macbook mati sendiri, masalah macbook mati sendiri, tips memperbaiki macbook, macbook sering mati, troubleshooting macbook, jakarta, tangerang, bekasi, depok, maclabs.co.id",
   icons: [
     {
       rel: "icon",
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Cara Mengatasi Mac Sering Mati Sendiri - Maclabs.co.id",
+    title: "Solusi Praktis untuk Masalah MacBook Mati Sendiri - Maclabs.co.id",
     type: "article",
     siteName: "Maclabs Service Mac Devices",
     publishedTime: `${new Date().toISOString()}`,
     authors: "MacLabs.co.id",
     description:
-      "Mac sering mati sendiri? Bagaimana caranya? Banyak penyebab yang menyebabkan Mac mati sendiri. Berikut penyebab dan cara mengatasinya",
+      "Temukan cara mengatasi masalah MacBook yang sering mati sendiri di Jakarta, Tangerang, Bekasi, dan Depok. Dapatkan tips praktis untuk mendiagnosis dan memperbaiki perangkat Anda agar tetap stabil dan andal. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
     url: "https://maclabs.co.id/cara-mengatasi-mac-sering-mati-sendiri/",
     images: [
       {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
       },
     ],
     section: "Blog",
-    locale: "en-US",
+    locale: "id-ID",
     tags: [
       "Macbook",
       "Apple Device",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `https://maclabs.co.id/cara-mengatasi-mac-sering-mati-sendiri/`,
     languages: {
-      "en-US": "https://maclabs.co.id/cara-mengatasi-mac-sering-mati-sendiri/",
+      "id-ID": "https://maclabs.co.id/cara-mengatasi-mac-sering-mati-sendiri/",
     },
   },
 };
@@ -63,9 +63,10 @@ const CaraMengatasiMacSeringMatiSendiriPage = () => {
   const jsonLdData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: "Tips Merawat MacBook - Maclabs.co.id",
+    headline:
+      "Solusi Praktis untuk Masalah MacBook Mati Sendiri - Maclabs.co.id",
     description:
-      "Mac sering mati sendiri? Bagaimana caranya? Banyak penyebab yang menyebabkan Mac mati sendiri. Berikut penyebab dan cara mengatasinya",
+      "Temukan cara mengatasi masalah MacBook yang sering mati sendiri di Jakarta, Tangerang, Bekasi, dan Depok. Dapatkan tips praktis untuk mendiagnosis dan memperbaiki perangkat Anda agar tetap stabil dan andal. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
     image: "https://maclabs.co.id/images/services/no-display.webp",
     datePublished: `${new Date().toISOString()}`,
     dateModified: `${new Date().toISOString()}`,
@@ -134,7 +135,7 @@ const CaraMengatasiMacSeringMatiSendiriPage = () => {
               <div className="text-sm max-w-full">
                 <article className="mb-1.5 p-6 rounded-lg bg-white shadow">
                   <h1 className="text-2xl text-center uppercase font-extrabold mb-2">
-                    Cara Mengatasi Mac Sering Mati Sendiri
+                    Solusi Praktis untuk Masalah MacBook Mati Sendiri
                   </h1>
                   <div className="w-full flex justify-center my-3">
                     <Image

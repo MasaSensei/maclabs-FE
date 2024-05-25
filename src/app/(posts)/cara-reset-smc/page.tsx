@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   manifest: "https://maclabs.co.id/manifest.webmanifest",
   title: "Cara Melakukan Reset SMC Pada Mac - Maclabs.co.id",
   description:
-    "Untuk mereset SMC (System Management Controller) pada MacBook, langkah pertama adalah mematikan MacBook Anda sepenuhnya. Setelah itu, tahan tombol Shift, Control, Option, dan tombol daya secara bersamaan selama beberapa detik. Kemudian, lepaskan semua tombol secara bersamaan dan nyalakan kembali MacBook Anda. Tindakan ini membantu memperbaiki masalah seperti kinerja baterai yang buruk, kipas yang berjalan terus-menerus, atau masalah koneksi perangkat keras lainnya.",
+    "Temukan langkah-langkah lengkap untuk melakukan reset SMC (System Management Controller) pada MacBook Anda di Jakarta, Tangerang, Bekasi, dan Depok. Dapatkan solusi untuk masalah performa dan daya baterai dengan mengunjungi Maclabs.co.id.",
   keywords:
-    "service, service mac, service imac, service macbook, service mac-devices, service macbook jakarta, reset smc, reset smc macbook, smc macbook, smc mac",
+    "cara reset smc macbook, panduan lengkap reset smc, solusi masalah performa, reset smc macbook, smc reset, troubleshooting macbook, jakarta, tangerang, bekasi, depok, maclabs.co.id",
   icons: [
     {
       rel: "icon",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     publishedTime: `${new Date().toISOString()}`,
     authors: "MacLabs.co.id",
     description:
-      "Untuk mereset SMC (System Management Controller) pada MacBook, langkah pertama adalah mematikan MacBook Anda sepenuhnya. Setelah itu, tahan tombol Shift, Control, Option, dan tombol daya secara bersamaan selama beberapa detik. Kemudian, lepaskan semua tombol secara bersamaan dan nyalakan kembali MacBook Anda. Tindakan ini membantu memperbaiki masalah seperti kinerja baterai yang buruk, kipas yang berjalan terus-menerus, atau masalah koneksi perangkat keras lainnya.",
+      "Temukan langkah-langkah lengkap untuk melakukan reset SMC (System Management Controller) pada MacBook Anda di Jakarta, Tangerang, Bekasi, dan Depok. Dapatkan solusi untuk masalah performa dan daya baterai dengan mengunjungi Maclabs.co.id.",
     url: "https://maclabs.co.id/cara-reset-smc/",
     images: [
       {
@@ -42,13 +42,13 @@ export const metadata: Metadata = {
       },
     ],
     section: "MacBook",
-    locale: "en-US",
+    locale: "id-ID",
     tags: ["MacBook", "Apple Device", "SMC", "IC SMC"],
   },
   alternates: {
     canonical: `https://maclabs.co.id/cara-reset-smc/`,
     languages: {
-      "en-US": "https://maclabs.co.id/cara-reset-smc/",
+      "id-ID": "https://maclabs.co.id/cara-reset-smc/",
     },
   },
 };
@@ -59,7 +59,7 @@ const ResetSMCPage = () => {
     "@type": "BlogPosting",
     headline: "Cara Melakukan Reset SMC Pada Mac - Maclabs.co.id",
     description:
-      "Untuk mereset SMC (System Management Controller) pada MacBook, langkah pertama adalah mematikan MacBook Anda sepenuhnya. Setelah itu, tahan tombol Shift, Control, Option, dan tombol daya secara bersamaan selama beberapa detik. Kemudian, lepaskan semua tombol secara bersamaan dan nyalakan kembali MacBook Anda. Tindakan ini membantu memperbaiki masalah seperti kinerja baterai yang buruk, kipas yang berjalan terus-menerus, atau masalah koneksi perangkat keras lainnya.",
+      "Temukan langkah-langkah lengkap untuk melakukan reset SMC (System Management Controller) pada MacBook Anda di Jakarta, Tangerang, Bekasi, dan Depok. Dapatkan solusi untuk masalah performa dan daya baterai dengan mengunjungi Maclabs.co.id.",
     image: "https://maclabs.co.id/images/cropped-logo-ml.webp",
     datePublished: `${new Date().toISOString()}`,
     dateModified: `${new Date().toISOString()}`,

@@ -6,11 +6,12 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclabs.co.id/"),
   manifest: "https://maclabs.co.id/manifest.webmanifest",
-  title: "Services Mac-Devices - Maclabs.co.id",
+  title:
+    "Layanan Service Profesional MacBook, Mac Mini, iMac, dan Mac Pro - Maclabs.co.id - Maclabs.co.id",
   description:
-    "Service perangkat Macbook, Mac Mini, Mac Pro. Segala jenis kerusakan. Macbook mati total. Service Mac not charging. Bergaransi....",
+    "Dapatkan layanan service profesional untuk MacBook, Mac Mini, iMac, dan Mac Pro di Jakarta, Depok, Tangerang, dan Bekasi. Kami menawarkan perbaikan dan perawatan berkualitas untuk semua perangkat Apple Anda. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
   keywords:
-    "service, service mac, service imac, service macbook, service mac-devices, service macbook jakarta",
+    "layanan service macbook, service mac mini, service imac, service mac pro, perbaikan macbook, perawatan macbook, layanan mac apple, jakarta, depok, tangerang, bekasi, maclabs.co.id",
   icons: [
     {
       rel: "icon",
@@ -24,19 +25,20 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Services Mac-Devices - Maclabs.co.id",
+    title:
+      "Layanan Service Profesional MacBook, Mac Mini, iMac, dan Mac Pro - Maclabs.co.id - Maclabs.co.id",
     description:
-      "Service perangkat Macbook, Mac Mini, Mac Pro. Segalaenis kerusakan. Macbook mati total. Service Mac not charging. Bergaransi....",
+      "Dapatkan layanan service profesional untuk MacBook, Mac Mini, iMac, dan Mac Pro di Jakarta, Depok, Tangerang, dan Bekasi. Kami menawarkan perbaikan dan perawatan berkualitas untuk semua perangkat Apple Anda. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
     url: "https://maclabs.co.id/services/",
     images: ["/images/cropped-logo-ml.webp"],
     type: "website",
     siteName: "Maclabs Service Mac Devices",
-    locale: "id_ID",
+    locale: "id-ID",
   },
   alternates: {
     canonical: `https://maclabs.co.id/services/`,
     languages: {
-      "en-US": "https://maclabs.co.id/services/",
+      "id-ID": "https://maclabs.co.id/services/",
     },
   },
 };
