@@ -91,6 +91,9 @@ export default function RootLayout({
                   src={"/images/google_review.webp"}
                   alt="Google Review"
                   width={500}
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL="/images/google_review.webp"
                   height={500}
                 />
               </Link>
@@ -185,6 +188,9 @@ export default function RootLayout({
                     width={500}
                     className="block h-96 w-full rounded-lg object-cover object-center"
                     height={500}
+                    loading="lazy"
+                    placeholder="blur"
+                    blurDataURL={gallery.image}
                   />
                 </div>
               </motion.div>

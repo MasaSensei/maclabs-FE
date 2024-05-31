@@ -28,6 +28,9 @@ const Popup = () => {
                 height={600}
                 layout="absolute"
                 sizes="100vw"
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL="/images/maclabs-free-pickup-delivery.webp"
                 quality={10}
               />
             </Link>

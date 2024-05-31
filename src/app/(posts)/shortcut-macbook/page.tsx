@@ -138,6 +138,9 @@ const ShortcutMacbookPage = () => {
                       width={500}
                       height={300}
                       alt="shortcut macbook"
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL="/images/services/servis-keyboard-macbook.webp"
                       className="w-full rounded-lg"
                     />
                   </div>

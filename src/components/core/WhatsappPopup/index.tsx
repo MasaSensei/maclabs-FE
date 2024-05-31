@@ -42,6 +42,9 @@ const WhatsappPopup = () => {
                   alt="whatsapp"
                   width={50}
                   height={50}
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL="/images/maclabs-cs.webp"
                   className="w-full h-full block overflow-hidden relative rounded-full z-02"
                 />
               </div>

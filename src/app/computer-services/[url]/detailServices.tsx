@@ -1,5 +1,6 @@
 "use client";
 
+import LoadingSkeleton from "@/app/loading";
 import { getDetailServicesByUrl } from "@/services/detailServices";
 import type { DetailServices } from "@/types/detailServices";
 import Image from "next/image";
@@ -12,6 +13,7 @@ type idByPathname = {
 
 const DetailServices = () => {
   const [data, setData] = useState<DetailServices>();
+  const [isLoading, setIsLoading] = useState(true);
 
   const pathname = usePathname();
   const url = pathname.split("/").filter(Boolean);
@@ -23,6 +25,7 @@ const DetailServices = () => {
       );
       if (res && res?.data?.length > 0) {
         setData(res);
+        setIsLoading(false);
       }
     };
 
@@ -36,25 +39,34 @@ const DetailServices = () => {
   return (
     <div className="text-sm max-w-full ">
       <article className="mb-1.5 p-6 rounded-lg bg-white shadow">
-        <h1 className="text-2xl text-center uppercase font-extrabold mb-2">
-          {data?.data[0]?.name}
-        </h1>
-        <div className="w-full flex justify-center my-3">
-          <Image
-            src={`/images/services/${data?.data[0]?.image}` || ""}
-            width={400}
-            height={400}
-            alt={data?.data[0]?.name.toLowerCase() || ""}
-          />
-        </div>
-        <div className="text-lg pt-3 text-slate-800">
-          <div
-            dangerouslySetInnerHTML={convertDescriptionToHTML(
-              data?.data[0]?.content || ""
-            )}
-            className="px-5"
-          />
-        </div>
+        {isLoading ? (
+          <LoadingSkeleton />
+        ) : (
+          <>
+            <h1 className="text-2xl text-center uppercase font-extrabold mb-2">
+              {data?.data[0]?.name}
+            </h1>
+            <div className="w-full flex justify-center my-3">
+              <Image
+                src={`/images/services/${data?.data[0]?.image}` || ""}
+                width={400}
+                height={400}
+                alt={data?.data[0]?.name.toLowerCase() || ""}
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL={`/images/services/${data?.data[0]?.image}` || ""}
+              />
+            </div>
+            <div className="text-lg pt-3 text-slate-800">
+              <div
+                dangerouslySetInnerHTML={convertDescriptionToHTML(
+                  data?.data[0]?.content || ""
+                )}
+                className="px-5"
+              />
+            </div>
+          </>
+        )}
       </article>
     </div>
   );

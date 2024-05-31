@@ -61,6 +61,9 @@ const Navbar = () => {
               width={200}
               height={200}
               alt="logo"
+              loading="lazy"
+              placeholder="blur"
+              blurDataURL="/images/logo-maclabs.webp"
             />
           </div>
         </div>
@@ -71,6 +74,9 @@ const Navbar = () => {
               width={200}
               height={200}
               alt="logo"
+              loading="lazy"
+              placeholder="blur"
+              blurDataURL="/images/logo-maclabs.webp"
             />
           </Link>
           <div className="grid gap-2 py-6">
@@ -102,6 +108,9 @@ const Navbar = () => {
           width={200}
           height={200}
           alt="logo"
+          loading="lazy"
+          placeholder="blur"
+          blurDataURL="/images/logo-maclabs.webp"
         />
       </Link>
       <div className="ml-auto">

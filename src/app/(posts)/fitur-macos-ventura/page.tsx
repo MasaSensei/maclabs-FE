@@ -138,6 +138,9 @@ const FiturMacOSVenturaPage = () => {
                       height={300}
                       alt="fitur-macos-ventura"
                       className="w-full"
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL="/images/Stage-Manager-MacOS-Ventura-1024x579-1-600x339.webp"
                     />
                   </div>
                   <div className="text-lg pt-3 text-slate-800">

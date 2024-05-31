@@ -182,6 +182,9 @@ const CaraMengatasiMacSeringMatiSendiriPage = () => {
                         height={200}
                         alt="cara-mengatasi-mac-sering-mati-sendiri"
                         className="w-1/2"
+                        loading="lazy"
+                        placeholder="blur"
+                        blurDataURL="/images/safe-mode-600x461.webp"
                       />
                     </div>
                     <p className="my-5">

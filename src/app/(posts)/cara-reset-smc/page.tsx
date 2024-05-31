@@ -137,6 +137,9 @@ const ResetSMCPage = () => {
                       height={300}
                       alt="cara-reset-smc"
                       className="w-full"
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL="/images/reset-smc.webp"
                     />
                   </div>
                   <div className="text-lg pt-3 text-slate-800">

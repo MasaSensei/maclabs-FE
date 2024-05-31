@@ -137,6 +137,9 @@ const TipsMerawatMacbookPage = () => {
                       height={300}
                       alt="tips-merawat-macbook"
                       className="w-full"
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL="/images/blog-post-img-03-3-1.webp"
                     />
                   </div>
                   <div className="text-lg pt-3 text-slate-800">

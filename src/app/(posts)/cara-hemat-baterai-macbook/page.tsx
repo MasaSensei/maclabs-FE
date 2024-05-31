@@ -140,6 +140,9 @@ const CaraHematBateraiMacbookPage = () => {
                       height={300}
                       alt="cara-hemat-baterai-macbook"
                       className="w-full"
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL="/images/services/ganti-baterai.webp"
                     />
                   </div>
                   <div className="text-lg pt-3 text-slate-800">
