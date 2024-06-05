@@ -10,8 +10,7 @@ import {
 import Image from "next/image";
 import Cores from "..";
 import Link from "next/link";
-
-import { useRef } from "react";
+import { cn } from "@/lib/utils";
 
 interface CardProps {
   images?: string;
@@ -20,10 +19,11 @@ interface CardProps {
   content?: string;
   link?: string;
   caseType: "blog" | "default";
+  className?: string;
 }
 
 const MyCard: React.FC<CardProps> = (props) => {
-  const { images, name, content, link, caseType, icon } = props;
+  const { images, name, content, link, caseType, icon, className } = props;
 
   switch (caseType) {
     case "blog":
@@ -40,12 +40,14 @@ const MyCard: React.FC<CardProps> = (props) => {
               blurDataURL={images}
               className="w-full h-56 object-cover rounded-lg"
             />
-            <CardTitle className="pt-4 text-zinc-500 uppercase font-bold text-2xl">
+            <CardTitle className="pt-4 text-zinc-500 uppercase text-center font-bold text-2xl">
               {name}
             </CardTitle>
           </CardHeader>
           <CardContent className="overflow-hidden">
-            <p className="max-h-56 overflow-y-hidden">{content}</p>
+            <p className={(cn("max-h-56 overflow-y-hidden"), className)}>
+              {content}
+            </p>
           </CardContent>
           <CardFooter>
             <Cores.Button variant={"default"} className="w-full">

@@ -14,6 +14,7 @@ import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 import Galleries from "@/data/gallery.json";
+import MyCard from "@/components/core/Card";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -156,7 +157,7 @@ export default function RootLayout({
               className="pt-8 grid lg:grid-cols-3 grid-cols-1 gap-8"
             >
               {BenefitLists.map((benefit) => (
-                <Cores.Card
+                <MyCard
                   key={benefit.id}
                   caseType={"default"}
                   icon={benefit.icon}
