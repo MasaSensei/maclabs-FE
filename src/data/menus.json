@@ -8,11 +8,11 @@
     "link": "/home-visit"
   },
   {
-    "name": "Shop",
-    "link": "/shop"
-  },
-  {
     "name": "Contact",
     "link": "/contact"
+  },
+  {
+    "name": "Shop",
+    "link": "/shop"
   }
 ]

@@ -1,5 +1,49 @@
 import Cores from "@/components/core";
 import Layouts from "@/components/layouts";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://maclabs.co.id/"),
+  title: "Sparepart & Service Mac Device di Jadetabek - Maclabs.co.id",
+  description:
+    "MacLabs.co.id menyediakan sparepart dan juga jasa service terbaik untuk Mac Device seperti MacBook, iMac, Mac Mini, dan Mac Pro di Jakarta, Depok, Tangerang, Bekasi. Kunjungi Maclabs.co.id sekarang!",
+  keywords:
+    "sparepart Mac Device, peralatan reparasi MacBook, komponen iMac, Jakarta, Depok, Tangerang, Bekasi",
+  icons: [
+    {
+      rel: "icon",
+      type: "image/png",
+      url: "/images/cropped-logo-ml.webp",
+    },
+    {
+      rel: "apple-touch-icon",
+      sizes: "180x180",
+      url: "/images/cropped-logo-ml.webp",
+    },
+  ],
+  openGraph: {
+    title: "Sparepart & Service Mac Device di Jadetabek - Maclabs.co.id",
+    description:
+      "MacLabs.co.id menyediakan sparepart dan jasa service terbaik untuk Mac Device seperti MacBook, iMac, Mac Mini, dan Mac Pro di Jakarta, Depok, Tangerang, Bekasi. Kunjungi Maclabs.co.id sekarang!",
+    url: "https://maclabs.co.id/shop/",
+    siteName: "Maclabs Service Mac Devices",
+    type: "website",
+    images: [
+      {
+        url: "https://maclabs.co.id/images/cropped-logo-ml.webp",
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "id-ID",
+  },
+  alternates: {
+    canonical: `https://maclabs.co.id/shop/`,
+    languages: {
+      "id-ID": "https://maclabs.co.id/shop/",
+    },
+  },
+};
 
 const ShopPage = () => {
   const devices = [

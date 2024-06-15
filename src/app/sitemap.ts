@@ -1,8 +1,25 @@
 import { detailServices } from "@/services/detailServices";
+import axios from "axios";
 
 export default async function sitemap() {
   const baseUrl = "https://maclabs.co.id";
   const service = await detailServices();
+  const deviceNames = new Set();
+  const categoryUrls = new Set();
+  const partUrls = new Set();
+
+  const partlistApi = async () => {
+    try {
+      const res = await axios.get(
+        `https://server.maclabs.co.id/api/part_lists`
+      );
+      return res?.data;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const partlist = await partlistApi();
+
   const computerServices = service?.data?.map((item: any) => {
     if (item && item.url) {
       return {
@@ -13,6 +30,39 @@ export default async function sitemap() {
       return [];
     }
   });
+  const shopDevices = partlist?.data?.reduce((acc: any, item: any) => {
+    if (item && item.device.name && !deviceNames.has(item.device.name)) {
+      deviceNames.add(item.device.name);
+      acc.push({
+        url: `${baseUrl}/shop/${item.device.name}/`,
+        lastModified: item.updated_at ? new Date(item.updated_at) : new Date(),
+      });
+    }
+    return acc;
+  }, []);
+
+  const shopCategories = partlist?.data?.reduce((acc: any, item: any) => {
+    if (item && item.category.slug && !categoryUrls.has(item.category.slug)) {
+      categoryUrls.add(item.category.slug);
+      acc.push({
+        url: `${baseUrl}/shop/${item.device.name}/${item.category.slug}/`,
+        lastModified: item.updated_at ? new Date(item.updated_at) : new Date(),
+      });
+    }
+    return acc;
+  }, []);
+
+  const shopParts = partlist?.data?.reduce((acc: any, item: any) => {
+    if (item && item.slug && !partUrls.has(item.slug)) {
+      partUrls.add(item.slug);
+      acc.push({
+        url: `${baseUrl}/shop/${item.device.name}/${item.category.slug}/${item.slug}/`,
+        lastModified: item.updated_at ? new Date(item.updated_at) : new Date(),
+      });
+    }
+    return acc;
+  }, []);
+
   return [
     {
       url: `${baseUrl}/`,
@@ -61,5 +111,8 @@ export default async function sitemap() {
     },
     { url: `${baseUrl}/tips-merawat-macbook/`, lastModified: new Date() },
     ...computerServices,
+    ...shopDevices,
+    ...shopCategories,
+    ...shopParts,
   ];
 }

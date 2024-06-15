@@ -48,7 +48,7 @@ export const generateMetadata = async ({
       ],
       locale: "id-ID",
       section: data?.data[0]?.name,
-      tags: [data?.data[0]?.meta_keyword, data.data.name],
+      tags: [data?.data[0]?.meta_keyword],
       url: `https://maclabs.co.id/computer-services/${url}/`,
     },
     alternates: {

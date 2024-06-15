@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Fragments from "@/components/fragments";
 import Layouts from "@/components/layouts";
 import { useForm } from "react-hook-form";
@@ -31,9 +32,16 @@ const PickupDeliveryForm = () => {
     control,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<z.infer<typeof PickupDeliveryFormSchema>>({
     resolver: zodResolver(PickupDeliveryFormSchema),
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<null | "success" | "error">(
+    null
+  );
+  const [submitMessage, setSubmitMessage] = useState("Submit");
 
   const fields = [
     {
@@ -128,7 +136,7 @@ const PickupDeliveryForm = () => {
       label: "Tanggal Reservasi",
       name: "date",
       type: "date",
-      placeholder: "Masukkan Nomor Serial Perangkat",
+      placeholder: "Masukkan Tanggal Reservasi",
     },
     {
       name: "problem",
@@ -139,15 +147,22 @@ const PickupDeliveryForm = () => {
   ];
 
   const onSubmit = async (data: z.infer<typeof PickupDeliveryFormSchema>) => {
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    setSubmitMessage("Submitting...");
+
     const formData = {
       service_type: "pickup_delivery",
       customerService: "Dini",
       ...data,
     };
+
     try {
       const response = await sendEmail(formData);
-      console.log(response);
       if (response.success === true) {
+        setSubmitStatus("success");
+        setSubmitMessage(response.message);
+        reset();
         toast.success(response.message, {
           position: "top-center",
           autoClose: 5000,
@@ -159,9 +174,25 @@ const PickupDeliveryForm = () => {
           theme: "light",
           transition: Slide,
         });
+      } else {
+        throw new Error(response.message);
       }
     } catch (error) {
-      console.log(error);
+      setSubmitStatus("error");
+      setSubmitMessage("Gagal");
+      toast.error("Pengiriman email gagal", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Slide,
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -194,10 +225,17 @@ const PickupDeliveryForm = () => {
         <div className="grid lg:grid-cols-12">
           <div className="col-span-12">
             <Button
-              className="w-full bg-sky-800 hover:bg-sky-900"
+              className={`w-full ${
+                submitStatus === "success"
+                  ? "bg-green-600 hover:bg-green-700"
+                  : submitStatus === "error"
+                  ? "bg-red-600 hover:bg-red-700"
+                  : "bg-sky-800 hover:bg-sky-900"
+              }`}
               type="submit"
+              disabled={isSubmitting}
             >
-              Submit
+              {submitMessage}
             </Button>
           </div>
         </div>

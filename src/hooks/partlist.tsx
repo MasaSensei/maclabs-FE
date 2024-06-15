@@ -9,36 +9,51 @@ interface PartListProps {
   slug?: string;
 }
 
-const usePartList: React.FC<PartListProps> = (props) => {
+interface PartListResponse {
+  data: any;
+  isLoading: boolean;
+}
+
+const usePartList = (props: PartListProps): PartListResponse => {
   const { device, category, slug } = props;
   const [data, setData] = useState<any>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let url = `https://server.maclabs.co.id/api/part_lists/`;
+        let url = `https://server.maclabs.co.id/api/part_lists`;
 
         if (device) {
-          url += `?device=${device}`;
+          url += `/${device}`;
         }
         if (category) {
-          url += `&category=${category}`;
+          url += `/${category}`;
         }
         if (slug) {
-          url += `&category=${category}&slug=${slug}`;
+          url += `/${slug}`;
         }
 
-        const response = await axios.get(url);
-        setData(response.data.data);
-        console.log(setData);
+        const response = await axios.get(url, {
+          headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json",
+          },
+        });
+        setData(response.data);
+        setIsLoading(false);
       } catch (error) {
         console.log(error);
+        setIsLoading(false);
       }
     };
     fetchData();
   }, [device, category, slug]);
 
-  return data;
+  return {
+    data,
+    isLoading,
+  };
 };
 
 export default usePartList;

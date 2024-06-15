@@ -12,32 +12,35 @@ type idByPathname = {
 };
 
 const DetailServices = () => {
-  const [data, setData] = useState<DetailServices>();
+  const [data, setData] = useState<DetailServices | undefined>();
   const [isLoading, setIsLoading] = useState(true);
 
   const pathname = usePathname();
-  const url = pathname.split("/").filter(Boolean);
+  const url = pathname.split("/").filter(Boolean)[1]; // Assuming /detail_services/:url format
 
   useEffect(() => {
     const fetchData = async () => {
-      const res: DetailServices | undefined = await getDetailServicesByUrl(
-        url[1]
-      );
-      if (res && res?.data?.length > 0) {
-        setData(res);
+      try {
+        const res = await getDetailServicesByUrl(url);
+        if (res && res.data?.length > 0) {
+          setData(res);
+        }
+      } catch (error) {
+        console.error("Failed to fetch data:", error);
+      } finally {
         setIsLoading(false);
       }
     };
 
     fetchData();
-  }, []);
+  }, [url]);
 
   const convertDescriptionToHTML = (description: string) => {
     return { __html: description };
   };
 
   return (
-    <div className="text-sm max-w-full ">
+    <div className="text-sm max-w-full">
       <article className="mb-1.5 p-6 rounded-lg bg-white shadow">
         {isLoading ? (
           <LoadingSkeleton />
