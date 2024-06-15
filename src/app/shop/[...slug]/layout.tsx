@@ -19,6 +19,14 @@ import { useSearch } from "@/context/SearchContext";
 import React, { useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import Fragments from "@/components/fragments";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationPrevious,
+  PaginationNext,
+} from "@/components/ui/pagination";
 
 const extractYearFromName = (name: string): number | null => {
   const year = name.match(/\d{4}/);
@@ -35,13 +43,21 @@ const ShopLayout = ({ children }: any) => {
 
   const { searchTerm, setSearchTerm } = useSearch();
   const [sortCriteria, setSortCriteria] = useState<string>("");
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const itemsPerPage = 8;
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
+    setCurrentPage(1);
   };
 
   const handleSortChange = (value: string) => {
     setSortCriteria(value);
+    setCurrentPage(1);
+  };
+
+  const handlePageChange = (newPage: number) => {
+    setCurrentPage(newPage);
   };
 
   // Ensure data is defined and not null before accessing data.data
@@ -76,6 +92,19 @@ const ShopLayout = ({ children }: any) => {
         return 0;
     }
   });
+
+  const paginatedData = sortedAndFilteredData?.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  const totalPages = Math.ceil(
+    (sortedAndFilteredData?.length || 0) / itemsPerPage
+  );
+
+  if (filteredData && filteredData.length > 0 && currentPage > totalPages) {
+    setCurrentPage(1);
+  }
 
   return (
     <Layouts.Section variant={"secondary"}>
@@ -118,10 +147,10 @@ const ShopLayout = ({ children }: any) => {
                     <SelectItem value="default">Default</SelectItem>
                     <SelectItem value="name-asc">Name A to Z</SelectItem>
                     <SelectItem value="name-desc">Name Z to A</SelectItem>
-                    {/* <SelectItem value="price-asc">Price Low to High</SelectItem>
+                    <SelectItem value="price-asc">Price Low to High</SelectItem>
                     <SelectItem value="price-desc">
                       Price High to Low
-                    </SelectItem> */}
+                    </SelectItem>
                     <SelectItem value="year-asc">Year Old to New</SelectItem>
                     <SelectItem value="year-desc">Year New to Old</SelectItem>
                   </SelectContent>
@@ -129,12 +158,12 @@ const ShopLayout = ({ children }: any) => {
               </div>
             )}
           </div>
-          {sortedAndFilteredData?.length === 0 ? (
+          {paginatedData?.length === 0 ? (
             <Fragments.EmptyState />
           ) : (
             <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
-              {sortedAndFilteredData ? (
-                sortedAndFilteredData.map((item: any) => {
+              {paginatedData ? (
+                paginatedData.map((item: any) => {
                   return url[1] === item?.device?.name && url.length === 2 ? (
                     <Card
                       caseType="blog"
@@ -163,6 +192,41 @@ const ShopLayout = ({ children }: any) => {
                 <Skeleton className="w-full h-72 col-span-full" />
               )}
             </div>
+          )}
+          {totalPages > 1 && (
+            <Pagination className="mt-6">
+              <PaginationContent>
+                <PaginationItem>
+                  <PaginationPrevious
+                    onClick={() => handlePageChange(currentPage - 1)}
+                    className={`cursor-pointer ${
+                      currentPage === 1 ? "pointer-events-none opacity-50" : ""
+                    }`}
+                  />
+                </PaginationItem>
+                {[...Array(totalPages)].map((_, index) => (
+                  <PaginationItem key={index}>
+                    <PaginationLink
+                      onClick={() => handlePageChange(index + 1)}
+                      isActive={currentPage === index + 1}
+                      className="cursor-pointer"
+                    >
+                      {index + 1}
+                    </PaginationLink>
+                  </PaginationItem>
+                ))}
+                <PaginationItem>
+                  <PaginationNext
+                    onClick={() => handlePageChange(currentPage + 1)}
+                    className={`cursor-pointer ${
+                      currentPage === totalPages
+                        ? "pointer-events-none opacity-50"
+                        : ""
+                    }`}
+                  />
+                </PaginationItem>
+              </PaginationContent>
+            </Pagination>
           )}
         </>
       )}
