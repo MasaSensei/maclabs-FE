@@ -6,6 +6,7 @@ const detailServices = async () => {
     const response = await axios.get(
       `https://server.maclabs.co.id/api/detail_services`
     );
+    console.log(response?.data);
     return response?.data;
   } catch (error) {
     console.log(error);
