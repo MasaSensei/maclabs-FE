@@ -1,6 +1,9 @@
-import Cores from "@/components/core";
 import Layouts from "@/components/layouts";
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
+
+const Card = dynamic(() => import("@/components/core/Card"), { ssr: false });
+const Title = dynamic(() => import("@/components/core/Title"), { ssr: false });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclabs.co.id/"),
@@ -67,17 +70,23 @@ const ShopPage = () => {
 
   return (
     <Layouts.Section variant={"secondary"}>
-      <Cores.Title title="Shop" content="Our Services" />
+      <Title title="Shop" content="Our Services" />
       <div className="mx-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
-        {devices.map((device, index) => (
-          <Cores.Card
-            caseType="blog"
-            key={index}
-            name={device?.name}
-            images={device?.image}
-            link={`/shop/${device?.name.toLowerCase()}`}
-          />
-        ))}
+        {devices.map((device, index) => {
+          const link =
+            device?.name.toLowerCase() !== "mac-pro"
+              ? `/shop/${device?.name}`
+              : "https://wa.me/62818850509";
+          return (
+            <Card
+              key={index}
+              images={device?.image}
+              name={device?.name}
+              link={link}
+              caseType="blog"
+            />
+          );
+        })}
       </div>
     </Layouts.Section>
   );

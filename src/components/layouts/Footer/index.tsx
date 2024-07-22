@@ -12,7 +12,7 @@ const Footer = () => {
                 <IoStorefront />
               </span>
             </div>
-            <h4 className="pl-0 m-0 text-lg font-bold">Our Store</h4>
+            <h3 className="pl-0 m-0 text-lg font-bold">Our Store</h3>
           </div>
           <div className="text-center">
             <figure className="inline-block m-0 mt-6 max-w-full">

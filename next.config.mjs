@@ -1,13 +1,5 @@
 /** @type {import('next').NextConfig} */
-import { config } from "dotenv";
-import { resolve } from "path";
-import { existsSync, readFileSync } from "fs";
-
-const envFilePath = resolve(process.cwd(), ".env");
-if (existsSync(envFilePath)) {
-  const envFile = readFileSync(envFilePath, "utf8");
-  config({ path: envFilePath, override: true });
-}
+import TerserPlugin from "terser-webpack-plugin";
 
 const nextConfig = {
   env: {
@@ -19,6 +11,23 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     unoptimized: true,
+  },
+  webpack(config, { dev, isServer }) {
+    if (!dev && !isServer) {
+      config.optimization.minimizer.push(
+        new TerserPlugin({
+          terserOptions: {
+            compress: {
+              drop_console: true,
+              drop_debugger: true,
+            },
+            mangle: true,
+          },
+          extractComments: false,
+        })
+      );
+    }
+    return config;
   },
 };
 

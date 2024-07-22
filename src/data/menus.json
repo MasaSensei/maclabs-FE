@@ -4,6 +4,10 @@
     "link": "/services"
   },
   {
+    "name": "Shop",
+    "link": "/shop"
+  },
+  {
     "name": "Home Visit",
     "link": "/home-visit"
   },

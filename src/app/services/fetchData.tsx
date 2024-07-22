@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import LoadingSkeleton from "../loading";
 
 const FetchData = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<any>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const devices = [
@@ -45,7 +45,7 @@ const FetchData = () => {
     <div className="mx-auto">
       {devices.map((device, index) => {
         const filteredData = data.filter(
-          (item) => item?.device?.name === device?.name?.toLowerCase()
+          (item: any) => item?.device?.name === device?.name?.toLowerCase()
         );
 
         return (
@@ -72,7 +72,7 @@ const FetchData = () => {
                 </div>
                 <div className="grid lg:grid-cols-3 grid-cols-1 pb-8 gap-5">
                   {filteredData.length > 0 ? (
-                    filteredData.map((item) => (
+                    filteredData.map((item: any) => (
                       <div className="text-center" key={item?.id}>
                         <Cores.Button variant={"default"} className="flex mx-2">
                           <Link

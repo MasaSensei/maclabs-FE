@@ -6,6 +6,8 @@ export async function generateMetadata({
   params: { slug: string[] };
 }) {
   const { slug } = params;
+  console.log(slug);
+  console.log(slug.length);
 
   if (slug.length === 1) {
     try {
@@ -238,20 +240,15 @@ export async function generateStaticParams() {
   );
 
   return data?.data?.flatMap((item: any) => [
-    {
-      slug: [item?.device?.name],
-    },
-    {
-      slug: [item?.device?.name, item?.category?.slug],
-    },
-    {
-      slug: [item?.device?.name, item?.category?.slug, item?.slug],
-    },
+    { slug: [item?.device?.name] },
+    { slug: [item?.device?.name, item?.category?.slug] },
+    { slug: [item?.device?.name, item?.category?.slug, item?.slug] },
   ]);
 }
 
 const ShopPage = ({ params }: { params: { slug: string[] } }) => {
   const { slug } = params;
+
   return <>{slug[2] && <StoreSection />}</>;
 };
 

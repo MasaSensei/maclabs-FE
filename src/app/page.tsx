@@ -7,7 +7,6 @@ import { YouTubeEmbed } from "@next/third-parties/google";
 import { FaCheckCircle } from "react-icons/fa";
 import { RiArrowRightSFill } from "react-icons/ri";
 import Experiences from "@/data/experiences.json";
-import Motion from "./motion";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -61,7 +60,21 @@ export default function Home() {
       <section className="min-h-screen bg-center bg-black bg-[url('/images/ML-FOTO-05.webp')] bg-cover">
         <div className="px-4 mx-auto flex items-center max-w-screen h-screen max-w-screen-xl text-center">
           <div className="container relative">
-            <Motion />
+            <div className="grid grid-cols-1 mt-12 lg:mt-0 gap-[30px]">
+              <h1 className="text-white font-bold uppercase drop-shadow-2xl lg:text-7xl text-4xl leading-normal relative">
+                Welcome To Maclabs.co.id
+              </h1>
+              <p className="text-white italic text-2xl">
+                One Stop Solution For Apple Device
+              </p>
+              <div className="lg:px-96 flex items-center justify-center">
+                <Cores.Button variant={"default"} className="lg:w-full w-1/2">
+                  <Link href={"https://wa.me/62818850509"} target="_blank">
+                    Contact Us
+                  </Link>
+                </Cores.Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -102,9 +115,9 @@ export default function Home() {
               >
                 <span className="text-black">{step.icon}</span>
               </div>
-              <h4 className="text-2xl w-3/4 mb-0 mt-6">
+              <h3 className="text-2xl w-3/4 mb-0 mt-6">
                 <span className="font-bold">Step {step.id}.</span> {step.title}
-              </h4>
+              </h3>
               <p className="mt-2.5 mx-auto w-72">{step.description}</p>
             </div>
           ))}
@@ -124,9 +137,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="min-h-48 pt-4 text-xl">
-                <h5 className="font-bold text-2xl capitalize mb-0 text-slate-800">
+                <h3 className="font-bold text-2xl capitalize mb-0 text-slate-800">
                   Berkualitas
-                </h5>
+                </h3>
                 <p className="mt-2.5 mb-0 text-sm">
                   Kami mengutamakan kualitas. Setiap perangkat yang sudah
                   selesai, selalu dilakukan running test dan Quality Control.
@@ -140,9 +153,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="min-h-48 pt-4 text-xl">
-                <h5 className="font-bold text-2xl capitalize mb-0 text-slate-800">
+                <h3 className="font-bold text-2xl capitalize mb-0 text-slate-800">
                   Tepat Waktu
-                </h5>
+                </h3>
                 <p className="mt-2.5 mb-0 text-sm">
                   Kami sangat menghargai waktu Anda. Untuk penggantian part bisa
                   di tunggu, kecuali perbaikan Logic Board estimasi 2-3 hari.
@@ -161,9 +174,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="min-h-48 pt-4 text-xl">
-                <h5 className="font-bold text-2xl capitalize mb-0 text-slate-800">
+                <h3 className="font-bold text-2xl capitalize mb-0 text-slate-800">
                   Harga Kompetitif & Transparan
-                </h5>
+                </h3>
                 <p className="mt-2.5 mb-0 text-sm">
                   Harga yang kami tawarkan sangat beralasan. Anda bisa mengecek
                   terlebih dahulu harga sparepart yang akan diganti sebelum
@@ -178,9 +191,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="min-h-48 pt-4 text-xl">
-                <h5 className="font-bold text-2xl capitalize mb-0 text-slate-800">
+                <h3 className="font-bold text-2xl capitalize mb-0 text-slate-800">
                   Bergaransi
-                </h5>
+                </h3>
                 <p className="mt-2.5 mb-0 text-sm">
                   Layanan garansi selama 90 Hari sampai dengan 1 Tahun. Anda
                   dapat mengklaim kembali device tersebut tanpa adanya biaya
@@ -207,9 +220,9 @@ export default function Home() {
                   experience.id === 2 && "border-red-600"
                 } lg:w-52 lg:h-52 mt-0 w-56 h-56 mt-0 mx-auto rounded-full flex flex-col justify-center items-center bg-white border-2 border-transparent shadow-xl border-solid transition-color hover:border-red-600 duration-300`}
               >
-                <h5 className="lg:text-4xl text-3xl mb-0">
+                <h3 className="lg:text-4xl text-3xl mb-0">
                   {experience.title}
-                </h5>
+                </h3>
                 <p className="mt-2 text-sm">{experience.content}</p>
               </div>
             </div>

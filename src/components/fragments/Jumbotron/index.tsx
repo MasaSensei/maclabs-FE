@@ -9,6 +9,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import React from "react";
+import Image from "next/image";
 
 const Jumbotron = () => {
   const pathname = usePathname();
@@ -16,7 +17,14 @@ const Jumbotron = () => {
   const data = splitPathname[splitPathname.length - 1].replaceAll("-", " ");
 
   return (
-    <section className="py-36 max-w-full w-full h-full max-h-full relative bg-[url('/images/ML-FOTO-05.webp')] bg-cover rounded-none table bg-center bg-no-repeat">
+    <section className="py-36 relative bg-cover bg-center bg-no-repeat">
+      <Image
+        src="/images/ML-FOTO-05.webp"
+        alt="Deskripsi"
+        layout="fill"
+        objectFit="cover"
+        priority
+      />
       <div className="container relative mx-auto">
         <div className="grid grid-cols-1 pb-8 text-center">
           <h3 className="md:text-4xl uppercase text-3xl font-medium leading-normal tracking-wide text-white">
@@ -40,7 +48,7 @@ const Jumbotron = () => {
                 .slice(0, index + 1)
                 .join("/");
               return (
-                <div className="flex items-center gap-2" key={index}>
+                <ul className="flex items-center gap-2" key={index}>
                   <BreadcrumbSeparator />
                   <BreadcrumbItem key={index}>
                     <BreadcrumbLink
@@ -50,7 +58,7 @@ const Jumbotron = () => {
                       {item.replaceAll("-", " ")}
                     </BreadcrumbLink>
                   </BreadcrumbItem>
-                </div>
+                </ul>
               );
             })}
           </BreadcrumbList>
