@@ -13,10 +13,7 @@ const detailServices = async () => {
   }
 };
 
-const getDetailServicesId = async (category: number, url: string) => {
-  if (!Number.isInteger(category) || category <= 0) {
-    throw new Error("Invalid category value");
-  }
+const getDetailServicesId = async (category: string, url: string) => {
   try {
     const response = await axios.get(
       `

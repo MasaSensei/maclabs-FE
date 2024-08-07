@@ -1,11 +1,7 @@
 import Layouts from "@/components/layouts";
 import { FaPhoneAlt, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 
-const ComputerServicesLayout = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
+const ServicesLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <Layouts.Section variant={"secondary"}>
       <div className="relative">
@@ -58,4 +54,4 @@ const ComputerServicesLayout = ({
   );
 };
 
-export default ComputerServicesLayout;
+export default ServicesLayout;

@@ -30,6 +30,18 @@ export default async function sitemap() {
       return [];
     }
   });
+
+  const services = service?.data?.map((item: any) => {
+    if (item && item.url) {
+      return {
+        url: `${baseUrl}/services/${item.device.name}/${item.url}/`,
+        lastModified: item.updated_at ? new Date(item.updated_at) : new Date(),
+      };
+    } else {
+      return [];
+    }
+  });
+
   const shopDevices = partlist?.data?.reduce((acc: any, item: any) => {
     if (item && item.device.name && !deviceNames.has(item.device.name)) {
       deviceNames.add(item.device.name);
@@ -114,5 +126,6 @@ export default async function sitemap() {
     ...shopDevices,
     ...shopCategories,
     ...shopParts,
+    ...services,
   ];
 }

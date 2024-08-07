@@ -2,12 +2,10 @@ import Cores from "@/components/core";
 import Layouts from "@/components/layouts";
 import Link from "next/link";
 import Steps from "@/data/steps";
-import Devices from "@/data/device_list.json";
 import { YouTubeEmbed } from "@next/third-parties/google";
 import { FaCheckCircle } from "react-icons/fa";
 import { RiArrowRightSFill } from "react-icons/ri";
 import Experiences from "@/data/experiences.json";
-import Motion from "./motion";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -36,7 +34,18 @@ export default function AltAds2() {
       <section className="min-h-screen bg-center bg-black bg-[url('/images/ML-FOTO-05.webp')] bg-cover">
         <div className="px-4 mx-auto flex items-center max-w-screen h-screen max-w-screen-xl text-center">
           <div className="container relative">
-            <Motion />
+            <div className="flex flex-col items-center justify-center grid-cols-1 mt-12 lg:mt-0 gap-[30px]">
+              <h1 className="text-white font-bold uppercase drop-shadow-2xl lg:text-7xl text-4xl leading-normal relative">
+                Pengerjaan Express
+              </h1>
+              <div className="lg:px-96 flex items-center justify-center">
+                <Cores.Button variant={"default"} className="w-full">
+                  <Link href={"https://wa.me/62818850509"} target="_blank">
+                    Contact Us
+                  </Link>
+                </Cores.Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -16,12 +16,12 @@ const DetailServices = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const pathname = usePathname();
-  const url = pathname.split("/").filter(Boolean)[1]; // Assuming /detail_services/:url format
+  const url = pathname.split("/").filter(Boolean); // Assuming /detail_services/:url format
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await getDetailServicesByUrl(url);
+        const res = await getDetailServicesByUrl(url[2]);
         if (res && res.data?.length > 0) {
           setData(res);
         }

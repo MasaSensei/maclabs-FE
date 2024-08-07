@@ -38,6 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <GoogleTagManager gtmId="GTM-KRM4XB7" />
+      <GoogleAnalytics gaId="G-1QDMKN9GJ3" />
       <GoogleAnalytics gaId="AW-459096540" />
       <body className={inter.className}>
         <SearchProvider>
@@ -74,12 +75,17 @@ export default function RootLayout({
               <p className="mb-6 leading-6 text-slate-800">
                 MacLabs menerima segala jenis kerusakan pada perangkat Mac Anda
                 dari kerusakan ringan hingga berat yang dapat diselesaikan
-                dengan waktu yang cepat, diagnosa yang akurat, dan part yang
-                berkualitas! Service Macbook menjadi mudah dengan lokasi kami
-                yang strategis di Jakarta Pusat, karena Anda bisa mengunjungi
-                alamat kami yang berlokasi di <b>Senayan Trade Center</b>. Sibuk
-                untuk visit store? Kami menyediakan kurir khusus untuk
-                menjangkau area lainnya seperti
+                dengan waktu yang cepat seperti MacBook M2 dan M3 Anda yang
+                terkena air, not charging, mati total, baterai not charging,
+                dll.
+                <br />
+                <br />
+                Dengan diagnosa yang akurat, dan part yang berkualitas! Service
+                Macbook menjadi mudah dengan lokasi kami yang strategis di
+                Jakarta Pusat, karena Anda bisa mengunjungi alamat kami yang
+                berlokasi di <b>Senayan Trade Center</b>. Sibuk untuk visit
+                store? Kami menyediakan kurir khusus untuk menjangkau area
+                lainnya seperti
                 <b> Sudirman</b>, <b>Kuningan</b>, <b>Ambassador</b>, dan
                 sekitarnya.
               </p>

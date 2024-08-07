@@ -61,7 +61,7 @@ export default function Home() {
         <div className="px-4 mx-auto flex items-center max-w-screen h-screen max-w-screen-xl text-center">
           <div className="container relative">
             <div className="grid grid-cols-1 mt-12 lg:mt-0 gap-[30px]">
-              <h1 className="text-white font-bold uppercase drop-shadow-2xl lg:text-7xl text-4xl leading-normal relative">
+              <h1 className="text-white font-bold uppercase drop-shadow-2xl lg:text-7xl text-2xl leading-normal relative">
                 Welcome To Maclabs.co.id
               </h1>
               <p className="text-white italic text-2xl">

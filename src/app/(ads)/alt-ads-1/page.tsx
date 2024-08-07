@@ -1,9 +1,9 @@
 import Cores from "@/components/core";
 import Layouts from "@/components/layouts";
-import Motion from "./motion";
 import { Metadata } from "next";
 import ServicesList from "@/data/services";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclabs.co.id/"),
@@ -31,7 +31,28 @@ export default function AltAds() {
       <section className="min-h-screen bg-center bg-black bg-[url('/images/ML-FOTO-05.webp')] bg-cover">
         <div className="px-4 mx-auto flex items-center max-w-screen h-screen max-w-screen-xl text-center">
           <div className="container relative">
-            <Motion />
+            <div className="flex flex-col items-center justify-center grid-cols-1 mt-12 lg:mt-0 gap-[30px]">
+              <div>
+                <Image
+                  src="/images/DESIGN-MAC-RUSAK.webp"
+                  alt="macbook"
+                  width={500}
+                  height={500}
+                  className="text-center flex items-center justify-center"
+                />
+              </div>
+              <h1 className="text-white font-bold uppercase drop-shadow-2xl lg:text-7xl text-4xl leading-normal relative">
+                Sehari Selesai!!
+              </h1>
+              <p className="text-white italic text-2xl">Pengecekan Gratis!!</p>
+              <div className="lg:px-96 flex items-center justify-center">
+                <Cores.Button variant={"default"} className="w-full">
+                  <Link href={"https://wa.me/62818850509"} target="_blank">
+                    Contact Us
+                  </Link>
+                </Cores.Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>

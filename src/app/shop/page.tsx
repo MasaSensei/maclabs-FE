@@ -75,7 +75,7 @@ const ShopPage = () => {
         {devices.map((device, index) => {
           const link =
             device?.name.toLowerCase() !== "mac-pro"
-              ? `/shop/${device?.name}`
+              ? `/shop/${device?.name.toLowerCase()}`
               : "https://wa.me/62818850509";
           return (
             <Card
