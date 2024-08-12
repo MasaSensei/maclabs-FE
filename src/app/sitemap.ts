@@ -34,7 +34,7 @@ export default async function sitemap() {
   const services = service?.data?.map((item: any) => {
     if (item && item.url) {
       return {
-        url: `${baseUrl}/services/${item.device.name}/${item.url}/`,
+        url: `${baseUrl}/services/${item.device.slug}/${item.url}/`,
         lastModified: item.updated_at ? new Date(item.updated_at) : new Date(),
       };
     } else {
@@ -43,10 +43,10 @@ export default async function sitemap() {
   });
 
   const shopDevices = partlist?.data?.reduce((acc: any, item: any) => {
-    if (item && item.device.name && !deviceNames.has(item.device.name)) {
-      deviceNames.add(item.device.name);
+    if (item && item.device.slug && !deviceNames.has(item.device.slug)) {
+      deviceNames.add(item.device.slug);
       acc.push({
-        url: `${baseUrl}/shop/${item.device.name}/`,
+        url: `${baseUrl}/shop/${item.device.slug}/`,
         lastModified: item.updated_at ? new Date(item.updated_at) : new Date(),
       });
     }
@@ -57,7 +57,7 @@ export default async function sitemap() {
     if (item && item.category.slug && !categoryUrls.has(item.category.slug)) {
       categoryUrls.add(item.category.slug);
       acc.push({
-        url: `${baseUrl}/shop/${item.device.name}/${item.category.slug}/`,
+        url: `${baseUrl}/shop/${item.device.slug}/${item.category.slug}/`,
         lastModified: item.updated_at ? new Date(item.updated_at) : new Date(),
       });
     }
@@ -68,7 +68,7 @@ export default async function sitemap() {
     if (item && item.slug && !partUrls.has(item.slug)) {
       partUrls.add(item.slug);
       acc.push({
-        url: `${baseUrl}/shop/${item.device.name}/${item.category.slug}/${item.slug}/`,
+        url: `${baseUrl}/shop/${item.device.slug}/${item.category.slug}/${item.slug}/`,
         lastModified: item.updated_at ? new Date(item.updated_at) : new Date(),
       });
     }

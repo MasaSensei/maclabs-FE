@@ -111,9 +111,7 @@ const ShopLayout = ({ children }: any) => {
       <Cores.Title
         title={`${
           url.length === 2
-            ? `Shop - Device ${url[1].charAt(0).toUpperCase()}${url[1].slice(
-                1
-              )}`
+            ? `Shop - Device ${data?.data?.[0]?.device?.name}`
             : url.length === 3
             ? `Shop - Category ${data?.data?.[0]?.category?.name}`
             : `Shop - ${data?.data?.[0]?.name}`
@@ -164,7 +162,7 @@ const ShopLayout = ({ children }: any) => {
             <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
               {paginatedData ? (
                 paginatedData.map((item: any) => {
-                  return url[1] === item?.device?.name && url.length === 2 ? (
+                  return url[1] === item?.device?.slug && url.length === 2 ? (
                     <Card
                       caseType="blog"
                       key={item.id}
@@ -172,7 +170,7 @@ const ShopLayout = ({ children }: any) => {
                         "https://server.maclabs.co.id/public/" + item?.image
                       }
                       name={item?.category?.name}
-                      link={`/shop/${item?.device?.name}/${item?.category?.slug}`}
+                      link={`/shop/${item?.device?.slug}/${item?.category?.slug}`}
                     />
                   ) : (
                     url[2] === item?.category?.slug && (
@@ -182,7 +180,7 @@ const ShopLayout = ({ children }: any) => {
                         key={item.id}
                         images={`https://server.maclabs.co.id/public/${item?.image}`}
                         name={item?.name}
-                        link={`/shop/${item?.device?.name}/${item?.category?.slug}/${item?.slug}`}
+                        link={`/shop/${item?.device?.slug}/${item?.category?.slug}/${item?.slug}`}
                         // content={formatIDR(item?.price)}
                       />
                     )

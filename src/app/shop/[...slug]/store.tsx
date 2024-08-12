@@ -92,11 +92,11 @@ const StoreSection = () => {
           <h5 className="font-semibold lg:text-3xl text-xl">
             {data?.data?.[0]?.name}
           </h5>
-          {/* <div className="mt-2">
+          <div className="mt-2">
             <span className="text-slate-900 font-semibold lg:text-2xl text-lg me-5">
               {formatIDR(data?.data?.[0]?.price)}
             </span>
-          </div> */}
+          </div>
           <div className="mt-4">
             <h5 className="text-lg font-semibold">Deskripsi: </h5>
             <p className="text-slate-600 mt-2">

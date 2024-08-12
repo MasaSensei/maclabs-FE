@@ -75,7 +75,7 @@ export default function RootLayout({
               <p className="mb-6 leading-6 text-slate-800">
                 MacLabs menerima segala jenis kerusakan pada perangkat Mac Anda
                 dari kerusakan ringan hingga berat yang dapat diselesaikan
-                dengan waktu yang cepat seperti MacBook M2 dan M3 Anda yang
+                dengan waktu yang cepat seperti macbook M2 dan M3 Anda yang
                 terkena air, not charging, mati total, baterai not charging,
                 dll.
                 <br />

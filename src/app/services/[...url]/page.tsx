@@ -66,7 +66,7 @@ export async function generateStaticParams() {
   const dataUrl = data?.data?.map((item: any) => {
     if (item && item.url) {
       return {
-        url: [item?.device?.name, item?.url],
+        url: [item?.device?.slug, item?.url],
       };
     } else {
       return [];

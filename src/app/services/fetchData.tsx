@@ -39,13 +39,11 @@ const FetchData = () => {
     fetchData();
   }, []);
 
-  console.log(data);
-
   return (
     <div className="mx-auto">
       {devices.map((device, index) => {
         const filteredData = data.filter(
-          (item: any) => item?.device?.name === device?.name?.toLowerCase()
+          (item: any) => item?.device?.slug === device?.name?.toLowerCase()
         );
 
         return (

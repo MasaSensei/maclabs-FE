@@ -6,8 +6,6 @@ export async function generateMetadata({
   params: { slug: string[] };
 }) {
   const { slug } = params;
-  console.log(slug);
-  console.log(slug.length);
 
   if (slug.length === 1) {
     try {
@@ -15,13 +13,13 @@ export async function generateMetadata({
         `https://server.maclabs.co.id/api/part_lists/${slug[0]}`
       ).then((res) => res.json());
       const data = response?.data?.find(
-        (item: any) => item?.device?.name === slug[0]
+        (item: any) => item?.device?.slug === slug[0]
       );
       return {
         metadataBase: new URL("https://maclabs.co.id/"),
-        title: `Sparepart ${data?.device?.name.toUpperCase()} terbaik di Jadetabek | Maclabs.co.id`,
-        description: `Jelajahi berbagai macam sparepart untuk ${data?.device?.name.toUpperCase()} di Jadetabek. Kami menyediakan produk berkualitas dengan layanan yang handal, menjadi mitra ideal untuk pemeliharaan dan perbaikan perangkat Anda.`,
-        keywords: `Sparepart ${data?.device?.name.toUpperCase()}, Komponen ${data?.device?.name.toUpperCase()}, Service ${data?.device?.name.toUpperCase()}, Maclabs.co.id`,
+        title: `Sparepart ${data?.device?.name} terbaik di Jadetabek | Maclabs.co.id`,
+        description: `Jelajahi berbagai macam sparepart untuk ${data?.device?.name} di Jadetabek. Kami menyediakan produk berkualitas dengan layanan yang handal, menjadi mitra ideal untuk pemeliharaan dan perbaikan perangkat Anda.`,
+        keywords: `Sparepart ${data?.device?.name}, Komponen ${data?.device?.name}, Service ${data?.device?.name}, Maclabs.co.id`,
         icons: [
           {
             rel: "icon",
@@ -35,9 +33,9 @@ export async function generateMetadata({
           },
         ],
         openGraph: {
-          title: `Sparepart ${data?.device?.name.toUpperCase()} terbaik di Jadetabek - Maclabs.co.id`,
+          title: `Sparepart ${data?.device?.name} terbaik di Jadetabek - Maclabs.co.id`,
           siteName: "Maclabs Service Mac Devices",
-          description: `Jelajahi berbagai macam sparepart untuk ${data?.device?.name.toUpperCase()} di Jadetabek. Kami menyediakan produk berkualitas dengan layanan yang handal, menjadi mitra ideal untuk pemeliharaan dan perbaikan perangkat Anda.`,
+          description: `Jelajahi berbagai macam sparepart untuk ${data?.device?.name} di Jadetabek. Kami menyediakan produk berkualitas dengan layanan yang handal, menjadi mitra ideal untuk pemeliharaan dan perbaikan perangkat Anda.`,
           type: "website",
           authors: "Maclabs.co.id",
           publishedTime: data?.created_at,
@@ -85,19 +83,13 @@ export async function generateMetadata({
       ).then((res) => res.json());
       const data = response?.data?.find(
         (item: any) =>
-          item?.device?.name === slug[0] && item?.category?.slug === slug[1]
+          item?.device?.slug === slug[0] && item?.category?.slug === slug[1]
       );
       return {
         metadataBase: new URL("https://maclabs.co.id/"),
-        title: `Sparepart ${
-          data?.category?.name
-        } untuk ${data?.device?.name.toUpperCase()} terbaik di Jadetabek | Maclabs.co.id`,
-        description: `Cari ${
-          data?.category?.name
-        } original untuk ${data?.device?.name.toUpperCase()} di Jadetabek? Temukan pilihan berkualitas di Maclabs.co.id. Kami menyediakan produk berkualitas dengan layanan yang handal, menjadi mitra ideal untuk pemeliharaan dan perbaikan perangkat Anda.`,
-        keywords: `${
-          data?.category?.name
-        } ${data?.device?.name.toUpperCase()}, Komponen ${data?.device?.name.toUpperCase()}, Sparepart ${data?.device?.name.toUpperCase()}, Service ${data?.device?.name.toUpperCase()}, Jadetabek, Maclabs.co.id`,
+        title: `Sparepart ${data?.category?.name} untuk ${data?.device?.name} terbaik di Jadetabek | Maclabs.co.id`,
+        description: `Cari ${data?.category?.name} original untuk ${data?.device?.name} di Jadetabek? Temukan pilihan berkualitas di Maclabs.co.id. Kami menyediakan produk berkualitas dengan layanan yang handal, menjadi mitra ideal untuk pemeliharaan dan perbaikan perangkat Anda.`,
+        keywords: `${data?.category?.name} ${data?.device?.name}, Komponen ${data?.device?.name}, Sparepart ${data?.device?.name}, Service ${data?.device?.name}, Jadetabek, Maclabs.co.id`,
         icons: [
           {
             rel: "icon",
@@ -111,12 +103,8 @@ export async function generateMetadata({
           },
         ],
         openGraph: {
-          title: `Sparepart ${
-            data?.category?.name
-          } untuk ${data?.device?.name.toUpperCase()} terbaik di Jadetabek - Maclabs.co.id`,
-          description: `Cari ${
-            data?.category?.name
-          } original untuk ${data?.device?.name.toUpperCase()} di Jadetabek? Temukan pilihan berkualitas di Maclabs.co.id. Kami menyediakan produk berkualitas dengan layanan yang handal, menjadi mitra ideal untuk pemeliharaan dan perbaikan perangkat Anda.`,
+          title: `Sparepart ${data?.category?.name} untuk ${data?.device?.name} terbaik di Jadetabek - Maclabs.co.id`,
+          description: `Cari ${data?.category?.name} original untuk ${data?.device?.name} di Jadetabek? Temukan pilihan berkualitas di Maclabs.co.id. Kami menyediakan produk berkualitas dengan layanan yang handal, menjadi mitra ideal untuk pemeliharaan dan perbaikan perangkat Anda.`,
           siteName: "Maclabs Service Mac Devices",
           type: "website",
           authors: "Maclabs.co.id",
@@ -165,7 +153,7 @@ export async function generateMetadata({
       ).then((res) => res.json());
       const data = response?.data?.find(
         (item: any) =>
-          item?.device?.name === slug[0] &&
+          item?.device?.slug === slug[0] &&
           item?.category?.slug === slug[1] &&
           item?.slug === slug[2]
       );
@@ -240,9 +228,9 @@ export async function generateStaticParams() {
   );
 
   return data?.data?.flatMap((item: any) => [
-    { slug: [item?.device?.name] },
-    { slug: [item?.device?.name, item?.category?.slug] },
-    { slug: [item?.device?.name, item?.category?.slug, item?.slug] },
+    { slug: [item?.device?.slug] },
+    { slug: [item?.device?.slug, item?.category?.slug] },
+    { slug: [item?.device?.slug, item?.category?.slug, item?.slug] },
   ]);
 }
 

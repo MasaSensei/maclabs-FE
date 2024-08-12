@@ -6,6 +6,7 @@ import type { DetailServices } from "@/types/detailServices";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import styles from "./detailServices.module.css";
 
 type idByPathname = {
   [key: string]: number;
@@ -35,8 +36,8 @@ const DetailServices = () => {
     fetchData();
   }, [url]);
 
-  const convertDescriptionToHTML = (description: string) => {
-    return { __html: description };
+  const cleanHtml = (html: string) => {
+    return html.replace(/\\n/g, "");
   };
 
   return (
@@ -68,10 +69,10 @@ const DetailServices = () => {
             </div>
             <div className="text-lg pt-3 text-slate-800">
               <div
-                dangerouslySetInnerHTML={convertDescriptionToHTML(
-                  data?.data[0]?.content || ""
-                )}
-                className="px-5"
+                className={`${styles.contentContainer} px-5`}
+                dangerouslySetInnerHTML={{
+                  __html: cleanHtml(data?.data[0]?.content || ""),
+                }}
               />
             </div>
           </>

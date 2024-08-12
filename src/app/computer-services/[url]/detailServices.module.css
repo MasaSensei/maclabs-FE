@@ -1,0 +1,13 @@
+/* DetailLayananPage.module.css */
+.contentContainer {
+  color: #1e293b; /* menggantikan text-slate-800 */
+  margin-top: 1rem;
+}
+
+.contentContainer ul {
+  list-style-type: disc;
+}
+
+.contentContainer li {
+  margin-bottom: 0.5rem; /* Menambahkan jarak antar item */
+}
