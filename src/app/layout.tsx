@@ -46,36 +46,12 @@ export default function RootLayout({
           {!disableJumbotron.includes(pathname) && <Fragments.Jumbotron />}
           {children}
           <Layouts.Section variant="default">
-            <Cores.Title
-              title="Our Testimonials"
-              content="See what our customers are saying about us"
-            />
-            <div>
-              <Link
-                href="https://maps.app.goo.gl/p1BFVtKkv1d3oVDLA"
-                className="flex justify-center items-center"
-                target="_blank"
-              >
-                <Image
-                  src="/images/google_review.webp"
-                  alt="Google Review"
-                  width={500}
-                  height={500}
-                  layout="intrinsic"
-                  loading="lazy"
-                  placeholder="blur"
-                  blurDataURL="/images/google_review.webp"
-                />
-              </Link>
-            </div>
-          </Layouts.Section>
-          <Layouts.Section variant="default">
             <Cores.Title title="Teknisi Kami Siap Memperbaiki Perangkat Anda!" />
             <div className="lg:text-center text-justify lg:mt-12">
               <p className="mb-6 leading-6 text-slate-800">
                 MacLabs menerima segala jenis kerusakan pada perangkat Mac Anda
                 dari kerusakan ringan hingga berat yang dapat diselesaikan
-                dengan waktu yang cepat seperti macbook M2 dan M3 Anda yang
+                dengan waktu yang cepat seperti Macbook M2 dan M3 Anda yang
                 terkena air, not charging, mati total, baterai not charging,
                 dll.
                 <br />
@@ -89,7 +65,7 @@ export default function RootLayout({
                 <b> Sudirman</b>, <b>Kuningan</b>, <b>Ambassador</b>, dan
                 sekitarnya.
               </p>
-              <div>
+              {/* <div>
                 <h3 className="lg:text-5xl text-2xl text-slate-800 hover:text-green-500 transition-colors duration-300">
                   <Link
                     href="https://wa.me/62818850509"
@@ -100,9 +76,9 @@ export default function RootLayout({
                     <span className="mb-0">+62-818-850-509</span>
                   </Link>
                 </h3>
-              </div>
+              </div> */}
             </div>
-            <div className="px-0 w-full relative">
+            {/* <div className="px-0 w-full relative">
               <div className="pt-8 grid lg:grid-cols-3 grid-cols-1 gap-8">
                 {BenefitLists.map((benefit) => (
                   <MyCard
@@ -114,12 +90,12 @@ export default function RootLayout({
                   />
                 ))}
               </div>
-            </div>
+            </div> */}
           </Layouts.Section>
-          <Layouts.Section variant="secondary">
+          {/* <Layouts.Section variant="secondary">
             <Cores.Title title="Gallery" content="Maclabs Gallery" />
             <div className="m-1 flex flex-wrap md:m-2">
-              {Galleries.slice(0, 6).map((gallery, index) => (
+              {Galleries.slice(0, 3).map((gallery, index) => (
                 <div key={index} className="flex w-1/3 flex-wrap">
                   <div className="inline-flex justify-center items-center p-1 md:p-2">
                     <Image
@@ -136,7 +112,7 @@ export default function RootLayout({
                 </div>
               ))}
             </div>
-          </Layouts.Section>
+          </Layouts.Section> */}
           <Cores.WhatsappPopup />
           <Layouts.Footer />
         </SearchProvider>
