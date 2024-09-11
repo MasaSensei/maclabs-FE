@@ -2,6 +2,7 @@ import Cores from "@/components/core";
 import Layouts from "@/components/layouts";
 import FetchData from "./fetchData";
 import { Metadata } from "next";
+import Autocomplete from "@/components/fragments/Autocomplete";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclabs.co.id/"),
@@ -51,7 +52,9 @@ export const metadata: Metadata = {
 const ServicesPage = () => {
   return (
     <Layouts.Section variant={"secondary"}>
+      <Autocomplete variant="default" className="lg:flex hidden" />
       <Cores.Title title="Services" content="Our Services" />
+      <Autocomplete variant="default" className="lg:hidden" />
       <FetchData />
     </Layouts.Section>
   );

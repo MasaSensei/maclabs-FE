@@ -51,15 +51,15 @@ export const metadata: Metadata = {
 const ShopPage = () => {
   const devices = [
     {
-      image: "/images/MACBOOK-A1534-2016.webp",
+      image: "/images/devices/Macbook.png",
       name: "Macbook",
     },
     {
-      image: "/images/image-removebg-preview-6-300x300-1.webp",
+      image: "/images/devices/Untitled-2.png",
       name: "iMac",
     },
     {
-      image: "/images/mac-mini-3.webp",
+      image: "/images/devices/Untitled-2 2.png",
       name: "Mac-Mini",
     },
     {

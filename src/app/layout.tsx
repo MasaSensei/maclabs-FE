@@ -6,17 +6,11 @@ import Layouts from "@/components/layouts";
 import Cores from "@/components/core";
 import { usePathname } from "next/navigation";
 import Fragments from "@/components/fragments";
-import BenefitLists from "@/data/benefits";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
-import Image from "next/image";
-import Link from "next/link";
-import { FaWhatsapp } from "react-icons/fa";
-import Galleries from "@/data/gallery.json";
-import MyCard from "@/components/core/Card";
 import { SearchProvider } from "@/context/SearchContext";
 
 // Memuat font secara efisien
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export default function RootLayout({
   children,

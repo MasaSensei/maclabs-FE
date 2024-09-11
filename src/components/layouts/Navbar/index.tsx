@@ -60,7 +60,7 @@ const Navbar = () => {
             <Image
               src={"/images/logo-maclabs.webp"}
               width={200}
-              height={200}
+              height={50}
               alt="logo"
               loading="lazy"
               placeholder="blur"
@@ -73,7 +73,7 @@ const Navbar = () => {
             <Image
               src={"/images/logo-maclabs.webp"}
               width={200}
-              height={200}
+              height={50}
               alt="logo"
               loading="lazy"
               placeholder="blur"
@@ -107,7 +107,7 @@ const Navbar = () => {
         <Image
           src={"/images/logo-maclabs.webp"}
           width={200}
-          height={200}
+          height={50}
           alt="logo"
           loading="lazy"
           placeholder="blur"
