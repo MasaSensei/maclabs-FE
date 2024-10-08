@@ -227,11 +227,13 @@ export async function generateStaticParams() {
     (res) => res.json()
   );
 
-  return data?.data?.flatMap((item: any) => [
+  const params = data?.data?.flatMap((item: any) => [
     { slug: [item?.device?.slug] },
     { slug: [item?.device?.slug, item?.category?.slug] },
     { slug: [item?.device?.slug, item?.category?.slug, item?.slug] },
   ]);
+
+  return params;
 }
 
 const ShopPage = ({ params }: { params: { slug: string[] } }) => {

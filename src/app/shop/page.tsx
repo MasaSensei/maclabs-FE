@@ -70,7 +70,7 @@ const ShopPage = () => {
 
   return (
     <Layouts.Section variant={"secondary"}>
-      <Title title="Shop" content="Our Services" />
+      <Title title="Replacement Parts" content="Pilih Device Yang Anda Butuh" />
       <div className="mx-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
         {devices.map((device, index) => {
           const link =

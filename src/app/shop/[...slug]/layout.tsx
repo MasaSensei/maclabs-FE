@@ -111,10 +111,10 @@ const ShopLayout = ({ children }: any) => {
       <Cores.Title
         title={`${
           url.length === 2
-            ? `Shop - Device ${data?.data?.[0]?.device?.name}`
+            ? `Replacement Parts - Device ${data?.data?.[0]?.device?.name}`
             : url.length === 3
-            ? `Shop - Category ${data?.data?.[0]?.category?.name}`
-            : `Shop - ${data?.data?.[0]?.name}`
+            ? `Replacement Parts - Category ${data?.data?.[0]?.category?.name}`
+            : `Replacement Parts - ${data?.data?.[0]?.name}`
         }`}
         content="Our Store"
       />

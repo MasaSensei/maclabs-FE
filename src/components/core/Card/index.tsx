@@ -38,7 +38,7 @@ const MyCard: React.FC<CardProps> = (props) => {
               loading="lazy"
               placeholder="blur"
               blurDataURL={images}
-              className="w-full rounded-lg"
+              className="w-full h-[228px] rounded-lg object-cover"
             />
             <CardTitle className="pt-4 text-zinc-500 uppercase text-center font-bold text-xl">
               {name}

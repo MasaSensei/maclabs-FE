@@ -28,7 +28,7 @@ const Jumbotron = () => {
       <div className="container relative mx-auto">
         <div className="grid grid-cols-1 pb-8 text-center">
           <h3 className="md:text-4xl uppercase text-3xl font-medium leading-normal tracking-wide text-white">
-            {data}
+            {data === "shop" ? "replacement parts" : data}
           </h3>
         </div>
       </div>
@@ -47,6 +47,7 @@ const Jumbotron = () => {
               const breadcrumbPath = splitPathname
                 .slice(0, index + 1)
                 .join("/");
+
               return (
                 <ul className="flex items-center gap-2" key={index}>
                   <BreadcrumbSeparator />
@@ -55,7 +56,9 @@ const Jumbotron = () => {
                       className="lg:text-2xl hover:text-white duration-300 transition ease-in-out text-base"
                       href={`/${breadcrumbPath}`}
                     >
-                      {item.replaceAll("-", " ")}
+                      {item === "shop"
+                        ? "replacement parts"
+                        : item.replaceAll("-", " ")}
                     </BreadcrumbLink>
                   </BreadcrumbItem>
                 </ul>
