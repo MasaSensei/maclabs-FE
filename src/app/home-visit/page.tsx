@@ -7,11 +7,11 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclabs.co.id/"),
   title:
-    "Home Visit: Service MacBook, Mac Mini, iMac, dan Mac Pro di Rumah Anda - Maclabs.co.id",
+    "Service panggilan: Service MacBook, Mac Mini, iMac, dan Mac Pro di Rumah Anda - Maclabs.co.id",
   description:
-    "Dapatkan layanan home visit untuk servis MacBook, Mac Mini, iMac, dan Mac Pro di Jakarta, Depok, Tangerang, dan Bekasi. Kami datang ke rumah Anda untuk perbaikan dan perawatan perangkat Apple. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
+    "Dapatkan layanan service panggilan untuk service MacBook, Mac Mini, iMac, dan Mac Pro di Jakarta, Depok, Tangerang, dan Bekasi. Kami datang ke rumah Anda untuk perbaikan dan perawatan perangkat Apple. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
   keywords:
-    "home visit servis macbook, layanan home visit mac, servis mac mini, servis imac, servis mac pro, perbaikan mac di rumah, perawatan mac di rumah, layanan mac apple, jakarta, depok, tangerang, bekasi, maclabs.co.id",
+    "service panggilan service macbook, layanan service panggilan mac, service mac mini, service imac, service mac pro, perbaikan mac di rumah, perawatan mac di rumah, layanan mac apple, jakarta, depok, tangerang, bekasi, maclabs.co.id",
   icons: [
     {
       rel: "icon",
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      "Home Visit: Service MacBook, Mac Mini, iMac, dan Mac Pro di Rumah Anda - Maclabs.co.id",
+      "Service Panggilan: Service MacBook, Mac Mini, iMac, dan Mac Pro di Rumah Anda - Maclabs.co.id",
     description:
-      "Dapatkan layanan home visit untuk servis MacBook, Mac Mini, iMac, dan Mac Pro di Jakarta, Depok, Tangerang, dan Bekasi. Kami datang ke rumah Anda untuk perbaikan dan perawatan perangkat Apple. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
+      "Dapatkan layanan service panggilan untuk service MacBook, Mac Mini, iMac, dan Mac Pro di Jakarta, Depok, Tangerang, dan Bekasi. Kami datang ke rumah Anda untuk perbaikan dan perawatan perangkat Apple. Kunjungi Maclabs.co.id untuk informasi lebih lanjut.",
     url: "https://maclabs.co.id/home-visit/",
     type: "website",
     images: [
@@ -135,8 +135,8 @@ const HomevisitPage = () => {
       </Layouts.Section>
       <Layouts.Section variant={"secondary"}>
         <Cores.Title
-          title={"Home Visit"}
-          content="Isi Form Di Bawah Ini Untuk Reservasi Home Visit"
+          title={"Service Panggilan"}
+          content="Isi Form Di Bawah Ini Untuk Reservasi Service Panggil Maclabs"
         />
         <div className="bg-white p-5 rounded-lg">
           <div className="container">

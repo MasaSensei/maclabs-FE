@@ -28,7 +28,11 @@ const Jumbotron = () => {
       <div className="container relative mx-auto">
         <div className="grid grid-cols-1 pb-8 text-center">
           <h3 className="md:text-4xl uppercase text-3xl font-medium leading-normal tracking-wide text-white">
-            {data === "shop" ? "replacement parts" : data}
+            {data === "shop"
+              ? "replacement parts" || data
+              : data === "home visit"
+              ? "Service Panggilan"
+              : data}
           </h3>
         </div>
       </div>
@@ -57,7 +61,9 @@ const Jumbotron = () => {
                       href={`/${breadcrumbPath}`}
                     >
                       {item === "shop"
-                        ? "replacement parts"
+                        ? "replacement parts" || item
+                        : item === "home-visit"
+                        ? "Service Panggilan"
                         : item.replaceAll("-", " ")}
                     </BreadcrumbLink>
                   </BreadcrumbItem>

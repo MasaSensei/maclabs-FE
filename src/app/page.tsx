@@ -8,6 +8,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import { RiArrowRightSFill } from "react-icons/ri";
 import Experiences from "@/data/experiences.json";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclabs.co.id/"),
@@ -163,8 +164,14 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="relative hidden lg:inline-block min-w-72 min-w-full w-full lg:mt-14">
+          <div className="relative hidden items-center justify-center lg:inline-block min-w-72 min-w-full w-full lg:mt-14">
             <YouTubeEmbed videoid="fA2GqKMNfKY" />
+            {/* <Image
+              src="/images/maclabs-home-visit.webp"
+              alt="hero"
+              width={300}
+              height={300}
+            /> */}
           </div>
           <div className="relative min-w-full lg:min-w-72 lg:mt-14">
             <div className="flex lg:text-left lg:flex-row mb-2">
