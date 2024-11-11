@@ -141,13 +141,15 @@ const FetchData = () => {
                       </SwiperSlide>
                     ))
                   ) : (
-                    <div className="text-center col-span-3">
-                      <Cores.Button variant={"default"} className="flex mx-2">
-                        <h2 className="cursor-pointer">
-                          Service {device?.name}
-                        </h2>
-                      </Cores.Button>
-                    </div>
+                    <SwiperSlide className="flex items-center justify-center">
+                      <div className="text-center col-span-3">
+                        <Cores.Button variant={"default"} className="flex mx-2">
+                          <h2 className="cursor-pointer">
+                            Service {device?.name}
+                          </h2>
+                        </Cores.Button>
+                      </div>
+                    </SwiperSlide>
                   )}
                 </Swiper>
               </>

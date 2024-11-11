@@ -27,6 +27,12 @@ const nextConfig = {
         })
       );
     }
+
+    // Matikan cache Webpack jika tidak dalam mode pengembangan (development mode)
+    if (!dev) {
+      config.cache = false; // Nonaktifkan cache Webpack untuk build production
+    }
+
     return config;
   },
 };
