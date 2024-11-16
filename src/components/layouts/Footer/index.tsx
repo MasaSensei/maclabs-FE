@@ -4,7 +4,7 @@ import { IoStorefront } from "react-icons/io5";
 const Footer = () => {
   return (
     <footer className="relative max-w-full w-full ">
-      <div className="relative overflow-hidden grid grid-cols-1 pb-6 bg-gray-200">
+      <div className="relative overflow-hidden grid lg:grid-cols-2 grid-cols-1 pb-6 bg-gray-200">
         <div className="flex flex-row flex-wrap items-center justify-center">
           <div className="px-0 relative pt-9 flex justify-center gap-5 items-center mx-auto my-0 w-full">
             <div className="before:absolute before:inset-0 before:top-14 before:h-[4px] before:left-8 before:w-1/4 before:bg-gray-900 after:absolute after:top-14 after:h-[4px] after:right-8 after:w-1/4 after:bg-gray-900">
@@ -45,7 +45,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        {/* <div className="m-4">
+        <div className="m-4">
           <iframe
             className="mb-4 mb-lg-0"
             src="https://www.google.com/maps/embed/v1/place?q=Maclabs.id,+Jalan+Asia+Afrika,+Gelora,+Central+Jakarta+City,+Jakarta,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
@@ -53,7 +53,7 @@ const Footer = () => {
             style={{ border: 0, width: "100%", height: "100%" }}
             allowFullScreen
           ></iframe>
-        </div> */}
+        </div>
       </div>
     </footer>
   );
