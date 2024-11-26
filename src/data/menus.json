@@ -12,6 +12,10 @@
     "link": "/home-visit"
   },
   {
+    "name": "Videos",
+    "link": "/videos"
+  },
+  {
     "name": "Contact",
     "link": "/contact"
   }

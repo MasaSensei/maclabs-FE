@@ -122,6 +122,7 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     { url: `${baseUrl}/tips-merawat-macbook/`, lastModified: new Date() },
+    { url: `${baseUrl}/videos/`, lastModified: new Date() },
     ...computerServices,
     ...shopDevices,
     ...shopCategories,

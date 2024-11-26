@@ -172,7 +172,7 @@ export async function generateMetadata({
           {
             rel: "apple-touch-icon",
             sizes: "180x180",
-            url: "/images/cropped-logo-ml.webp",
+            url: "/images/crodapped-logo-ml.webp",
           },
         ],
         openGraph: {
