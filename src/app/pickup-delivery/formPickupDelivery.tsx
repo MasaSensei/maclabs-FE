@@ -153,7 +153,7 @@ const PickupDeliveryForm = () => {
 
     const formData = {
       service_type: "pickup_delivery",
-      customerService: "Dini",
+      customerService: "Ayu",
       ...data,
     };
 

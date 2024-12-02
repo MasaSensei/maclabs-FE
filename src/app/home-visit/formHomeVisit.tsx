@@ -153,7 +153,7 @@ const HomeVisitForm = () => {
 
     const formData = {
       service_type: "home_visit",
-      customerService: "Dini",
+      customerService: "Ayu",
       ...data,
     };
 
