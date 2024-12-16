@@ -1,12 +1,10 @@
 import Cores from "@/components/core";
 import Layouts from "@/components/layouts";
 import Link from "next/link";
+import Steps from "@/data/steps";
+import Devices from "@/data/device_list.json";
 import { YouTubeEmbed } from "@next/third-parties/google";
-import { FaCheckCircle } from "react-icons/fa";
-import { RiArrowRightSFill } from "react-icons/ri";
-import Experiences from "@/data/experiences.json";
 import { Metadata } from "next";
-import FetchData from "./fetchData";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclabs.co.id/"),
@@ -28,7 +26,7 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function AltAds3() {
+export default function AltAds4() {
   return (
     <>
       <section className="min-h-screen bg-center bg-black bg-[url('/images/ML-FOTO-05.webp')] bg-cover">
@@ -36,7 +34,7 @@ export default function AltAds3() {
           <div className="container relative">
             <div className="flex flex-col items-center justify-center grid-cols-1 mt-12 lg:mt-0 gap-[30px]">
               <h1 className="text-white font-bold uppercase drop-shadow-2xl lg:text-7xl text-4xl leading-normal relative">
-                Pengerjaan Express
+                Bisa Ditunggu!!
               </h1>
               <div className="lg:px-96 flex items-center justify-center">
                 <Cores.Button variant={"default"} className="w-full">
@@ -50,10 +48,52 @@ export default function AltAds3() {
         </div>
       </section>
       <Layouts.Section variant={"secondary"}>
-        <Cores.Title title="Layanan Dari MacLabs.co.id" />
-        <FetchData />
+        <Cores.Title
+          title="For All Mac Devices, All Problems"
+          content="Apapun permasalahan perangkat Apple Anda, Service Mac? Maclabs.co.id Solusinya!"
+        />
+        <div className="grid lg:grid-cols-4 lowercase md:grid-cols-2 grid-cols-1 gap-4">
+          {Devices.map((device) => (
+            <Cores.Card
+              caseType="blog"
+              key={device.id}
+              images={device.image}
+              name={device.name}
+              content={device.content}
+              link={device.link}
+            />
+          ))}
+        </div>
       </Layouts.Section>
+
       <Layouts.Section variant={"default"}>
+        <Cores.Title
+          title="Bagaimana Cara Kami Bekerja"
+          content="Dapatkan tiga langkah mudah hanya di Maclabs.co.id"
+        />
+        <div className="flex flex-wrap lg:flex-nowrap justify-center items-center overflow-hidden gap-4">
+          {Steps.map((step) => (
+            <div
+              className={`relative group flex items-center justify-center flex-col text-center`}
+              key={step.id}
+            >
+              <div
+                className={`${
+                  step.id === 1 && "border-2 border-red-500"
+                } p-6 rounded-full flex items-center group-hover:border-red-500 group-hover:border-2 transition-color duration-300 justify-center w-32 h-32 shadow-lg
+            `}
+              >
+                <span className="text-black">{step.icon}</span>
+              </div>
+              <h4 className="text-2xl w-3/4 mb-0 mt-6">
+                <span className="font-bold">Step {step.id}.</span> {step.title}
+              </h4>
+              <p className="mt-2.5 mx-auto w-72">{step.description}</p>
+            </div>
+          ))}
+        </div>
+      </Layouts.Section>
+      <Layouts.Section variant={"secondary"}>
         <Cores.Title
           title="Benefits Untuk Anda"
           content="Apa keuntungan yang akan Kalian dapatkan di Maclabs.id?"
@@ -130,83 +170,6 @@ export default function AltAds3() {
                   tambahan dalam masa garansi.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </Layouts.Section>
-      <Layouts.Section variant={"secondary"}>
-        <Cores.Title
-          title="Pengalaman Kami"
-          content="We are proud of our victories and achievements!"
-        />
-        <div className="grid lg:grid-cols-4 lg:pt-10 pt-5 md:grid-cols-2 grid-cols-1 gap-8">
-          {Experiences.map((experience) => (
-            <div
-              className="relative min-h-1 px-4 text-center"
-              key={experience.id}
-            >
-              <div
-                className={`${
-                  experience.id === 2 && "border-red-600"
-                } lg:w-52 lg:h-52 mt-0 w-56 h-56 mt-0 mx-auto rounded-full flex flex-col justify-center items-center bg-white border-2 border-transparent shadow-xl border-solid transition-color hover:border-red-600 duration-300`}
-              >
-                <h5 className="lg:text-4xl text-3xl mb-0">
-                  {experience.title}
-                </h5>
-                <p className="mt-2 text-sm">{experience.content}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Layouts.Section>
-      <Layouts.Section variant={"default"}>
-        <div className="grid lg:grid-cols-2 grid-cols-1 gap-8">
-          <div className="relative min-w-1/2">
-            <YouTubeEmbed videoid="9LbWheup1Q0" />
-          </div>
-          <div className="relative w-full">
-            <Cores.Title
-              title="Buy, Sell, Trade"
-              content="Anda bosan dengan perangkat yang lama dan berencana untuk menukar dengan perangkat yang baru?"
-            />
-            <p className="mt-6 text-slate-800">
-              Berencana upgrade perangkat? MACLABS.ID menyediakan tukar tambah
-              dan jual beli produk terbaru
-            </p>
-            <ul className="mt-0 flex flex-col items-start gap-2 justify-start mx-0 mb-3 pt-2.5 px-0 pb-0 list-none">
-              <li className="flex justify-center items-center">
-                <FaCheckCircle className="text-red-600" />
-                <span className="ml-3">
-                  {" "}
-                  Kami akan membayar sesuai perangkat Anda!
-                </span>
-              </li>
-              <li className="flex justify-center items-center">
-                <FaCheckCircle className="text-red-600" />
-                <span className="ml-3"> Perangkat baru yang terjamin!</span>
-              </li>
-              <li className="flex justify-center items-center">
-                <FaCheckCircle className="text-red-600" />
-                <span className="ml-3"> Perangkat baru yang terjamin!</span>
-              </li>
-            </ul>
-            <div className="grid lg:grid-cols-2 mt-9 gap-8 grid-cols-1">
-              <Cores.Button variant={"default"} className="w-1/2">
-                <Link href="https://wa.me/62818850509" target="_blank">
-                  Jual Perangkat{" "}
-                  <span className="ml-2">
-                    <RiArrowRightSFill />
-                  </span>
-                </Link>
-              </Cores.Button>
-              <Cores.Button variant={"secondary"} className="w-1/2">
-                <Link href="https://wa.me/62818850509" target="_blank">
-                  Beli Baru
-                  <span className="ml-2">
-                    <RiArrowRightSFill />
-                  </span>
-                </Link>
-              </Cores.Button>
             </div>
           </div>
         </div>

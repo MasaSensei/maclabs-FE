@@ -24,9 +24,10 @@ export default function RootLayout({
     "/",
     "/alt-ads-1/",
     "/alt-ads-2/",
-    "/alt-ads-3/",
-    "/alt-ads-4/",
     "/alt-ads-5/",
+    "/alt-ads-6/",
+    "/alt-ads-7/",
+    "/alt-ads-8/",
   ];
 
   return (
