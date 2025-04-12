@@ -28,6 +28,15 @@ export default function RootLayout({
     "/alt-ads-6/",
     "/alt-ads-7/",
     "/alt-ads-8/",
+    "/alt-ads-9/",
+    "/alt-ads-10/",
+  ];
+
+  const devicesSeo = [
+    { name: "Macbook" },
+    { name: "iMac" },
+    { name: "Mac Mini" },
+    { name: "Mac Pro" },
   ];
 
   return (
@@ -73,19 +82,6 @@ export default function RootLayout({
                 </h3>
               </div> */}
             </div>
-            {/* <div className="px-0 w-full relative">
-              <div className="pt-8 grid lg:grid-cols-3 grid-cols-1 gap-8">
-                {BenefitLists.map((benefit) => (
-                  <MyCard
-                    key={benefit.id}
-                    caseType="default"
-                    icon={benefit.icon}
-                    name={benefit.name}
-                    content={benefit.content}
-                  />
-                ))}
-              </div>
-            </div> */}
           </Layouts.Section>
           {/* <Layouts.Section variant="secondary">
             <Cores.Title title="Gallery" content="Maclabs Gallery" />

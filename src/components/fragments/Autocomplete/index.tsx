@@ -48,7 +48,7 @@ const Autocomplete: React.FC<AutocompleteProps> = ({
         const res = await detailServices();
         const fetchedSuggestions = res?.data.map((item: any) => ({
           original: item.name,
-          url: item.slug, // Assuming `slug` is used as URL
+          url: item.url, // Assuming `slug` is used as URL
           lowercase: item.name.toLowerCase(),
         }));
         setSuggestions(fetchedSuggestions);
@@ -91,7 +91,7 @@ const Autocomplete: React.FC<AutocompleteProps> = ({
           {filteredSuggestions.map((suggestion, index) => (
             <Link
               key={index}
-              href={`/computer-services/${suggestion.url}`} // Use `url` here
+              href={`/computer-services/${suggestion?.url}`} // Use `url` here
               target="_blank"
               className="py-3 max-h-32 h-full"
             >

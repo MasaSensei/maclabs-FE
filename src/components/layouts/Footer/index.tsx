@@ -1,6 +1,13 @@
 import Image from "next/image";
 import { IoStorefront } from "react-icons/io5";
 
+const devicesSeo = [
+  { name: "Macbook" },
+  { name: "iMac" },
+  { name: "Mac Mini" },
+  { name: "Mac Pro" },
+];
+
 const Footer = () => {
   return (
     <footer className="relative max-w-full w-full ">
@@ -54,6 +61,27 @@ const Footer = () => {
             allowFullScreen
           ></iframe>
         </div>
+      </div>
+      <div className="flex flex-row flex-wrap items-center text-center text-slate-800 text-xs justify-center bg-gray-200">
+        <p>
+          {devicesSeo.map((device) => (
+            <span key={device.name}>Service {device.name} </span>
+          ))}
+
+          {devicesSeo.map((device) => (
+            <span key={device.name}>
+              Service {device.name} Jakarta, Service {device.name} Depok,
+              Service {device.name} Tangerang, Service {device.name} Bekasi{" "}
+            </span>
+          ))}
+
+          {devicesSeo.map((device) => (
+            <span key={device.name}>
+              Service {device.name} Terbaik, Service {device.name} Terdekat,
+              Service {device.name} Berkualitas{" "}
+            </span>
+          ))}
+        </p>
       </div>
     </footer>
   );

@@ -29,7 +29,7 @@ const Jumbotron = () => {
         <div className="grid grid-cols-1 pb-8 text-center">
           <h3 className="md:text-4xl uppercase text-3xl font-medium leading-normal tracking-wide text-white">
             {data === "shop"
-              ? "replacement parts" || data
+              ? data || "replacement parts"
               : data === "home visit"
               ? "Service Panggilan"
               : data}
@@ -61,7 +61,7 @@ const Jumbotron = () => {
                       href={`/${breadcrumbPath}`}
                     >
                       {item === "shop"
-                        ? "replacement parts" || item
+                        ? item || "replacement parts"
                         : item === "home-visit"
                         ? "Service Panggilan"
                         : item.replaceAll("-", " ")}
