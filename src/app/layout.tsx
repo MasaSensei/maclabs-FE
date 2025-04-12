@@ -30,6 +30,9 @@ export default function RootLayout({
     "/alt-ads-8/",
     "/alt-ads-9/",
     "/alt-ads-10/",
+    "/alt-ads-11/",
+    "/alt-ads-12/",
+    "/alt-ads-13/",
   ];
 
   const devicesSeo = [
